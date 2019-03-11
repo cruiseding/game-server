@@ -1,7 +1,5 @@
 package com.jzy.game.model.constant;
 
-import org.simpleframework.xml.Element;
-
 /**
  * 全局常量
  * 
@@ -31,8 +29,6 @@ public class Config {
 	// =============常量 end============
 
 	// =============配置变量 begin============
-	
-
 
 	public static long getId() {
 		synchronized (obj) {
@@ -41,10 +37,6 @@ public class Config {
 					| id & 0xFFFF;
 		}
 	}
-
-
-
-	
 	
 	
 }

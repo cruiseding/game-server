@@ -24,9 +24,6 @@ public final class NetPort {
 	/** 网关用户WebSocket端口 */
 	public static int GATE_USER_WEBSOCKET_PORT = 8007;
 	
-	
-	
-	
 	// ======游戏服端口9000开始=======
 
 	/** 捕鱼达人 */
