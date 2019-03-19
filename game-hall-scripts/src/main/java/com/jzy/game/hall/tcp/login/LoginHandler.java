@@ -29,7 +29,7 @@ import com.jzy.game.hall.script.IRoleScript;
 /**
  * 登陆
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 @HandlerEntity(mid = MID.LoginReq_VALUE, desc = "登陆", thread = ThreadType.IO, msg = LoginRequest.class)

@@ -30,7 +30,7 @@ import redis.clients.jedis.JedisCluster;
 /**
  * redis集群管理类
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月18日 下午5:32:34
  */
 public class JedisManager {
@@ -103,7 +103,7 @@ public class JedisManager {
 	/**
 	 * 初始化脚本
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月7日 下午6:18:37
 	 * @param path
 	 *            脚本路径
@@ -165,7 +165,7 @@ public class JedisManager {
 	/**
 	 * 获取脚本 sha
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月7日 下午6:05:24
 	 * @param fileName
 	 *            脚本名称
@@ -182,7 +182,7 @@ public class JedisManager {
 	/**
 	 * 执行脚本
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月7日 下午6:10:31
 	 * @param scriptName
 	 *            脚本文件名称
@@ -208,7 +208,7 @@ public class JedisManager {
 	/**
 	 * 获取所有map对象
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月24日 上午10:05:43
 	 * @param key
 	 * @param keyClass
@@ -231,7 +231,7 @@ public class JedisManager {
 	/**
 	 * 获取map指定属性对象
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月24日 上午10:08:43
 	 * @param key
 	 * @param field
@@ -247,7 +247,7 @@ public class JedisManager {
 	
 	/**
 	 * 存储map对象
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月24日 上午10:13:21
 	 * @param key
@@ -262,7 +262,7 @@ public class JedisManager {
 	/**
 	 * 解析key对象
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月24日 上午9:57:45
 	 * @param key
 	 * @param keyClass

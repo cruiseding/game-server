@@ -17,7 +17,7 @@ import com.jzy.game.model.struct.Mail.MailType;
  * 个人邮件单独存储，系统通用邮件只存一封,直接操作mongodb，不缓存
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月21日 下午3:25:17
  */
 public class MailManager {
@@ -46,7 +46,7 @@ public class MailManager {
 	/**
 	 * 发送邮件
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月21日 下午4:26:31
 	 * @param title
 	 * @param content
@@ -61,7 +61,7 @@ public class MailManager {
 	/**
 	 * 构建邮箱信息
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月21日 下午5:45:09
 	 * @param mail
 	 * @return

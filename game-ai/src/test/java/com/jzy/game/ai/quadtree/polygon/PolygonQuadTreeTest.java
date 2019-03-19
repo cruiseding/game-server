@@ -16,7 +16,7 @@ import com.jzy.game.engine.util.TimeUtil;
 /**
  * 多边形四叉树测试
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class PolygonQuadTreeTest {

@@ -9,7 +9,7 @@ import com.jzy.game.engine.mina.config.MinaServerConfig;
 /**
  * 服务器状态监测脚本
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午4:36:25
  */
 public class GameServerCheckScript implements IGameServerCheckScript {

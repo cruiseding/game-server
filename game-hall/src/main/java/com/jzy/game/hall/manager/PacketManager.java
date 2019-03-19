@@ -13,7 +13,7 @@ import com.jzy.game.model.struct.Role;
 /**
  * 背包
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月18日 下午2:49:17
  */
 public class PacketManager {
@@ -38,7 +38,7 @@ public class PacketManager {
 	/**
 	 * 使用道具
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午4:25:54
 	 * @param id
 	 * @param num
@@ -53,7 +53,7 @@ public class PacketManager {
 	/**
 	 * 添加道具
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午4:23:47
 	 * @param configId
 	 * @param num
@@ -69,7 +69,7 @@ public class PacketManager {
 	/**
 	 * 构建
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午4:07:49
 	 * @param item
 	 * @return
@@ -85,7 +85,7 @@ public class PacketManager {
 	/**
 	 * 获取物品
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午5:10:36
 	 * @param rid
 	 * @param itemId

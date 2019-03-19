@@ -14,7 +14,7 @@ import com.jzy.game.hall.manager.RoleManager;
 /**
  * 背包物品列表
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月18日 下午3:26:33
  */
 @HandlerEntity(mid = MID.PacketItemsReq_VALUE, msg = PacketItemsRequest.class)

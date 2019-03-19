@@ -3,7 +3,7 @@ package com.jzy.game.engine.thread;
 /**
  * 线程类型
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30
  * QQ:359135103
  */

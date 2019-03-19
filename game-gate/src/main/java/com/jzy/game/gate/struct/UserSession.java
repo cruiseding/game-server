@@ -12,7 +12,7 @@ import com.jzy.game.gate.manager.UserSessionManager;
 /**
  * 用户连接会话
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午2:13:54
  */
 public class UserSession {
@@ -236,7 +236,7 @@ public class UserSession {
 
 	/**
 	 * 移除游戏连接状态
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年7月27日 上午9:41:13
 	 */

@@ -9,7 +9,7 @@ import com.jzy.game.engine.util.TimeUtil;
 /**
  * navmesh主界面
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class PolygonNavStart extends javax.swing.JFrame {
 

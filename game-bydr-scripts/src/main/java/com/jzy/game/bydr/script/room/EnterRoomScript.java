@@ -21,7 +21,7 @@ import com.jzy.game.message.bydr.BydrRoomMessage.RoomType;
 /**
  * 进入房间脚本
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月14日 上午10:09:16
  */
 public class EnterRoomScript implements IRoomScript {

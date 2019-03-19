@@ -12,7 +12,7 @@ import io.netty.channel.Channel;
  * 带用户ID的消息
  * <br>
  * netty消息发送必须设置msgID,mina不能设置
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31
  * QQ:359135103
  */

@@ -24,7 +24,7 @@ import com.jzy.game.engine.util.MsgUtil;
  * decoder 已去掉包长度
  * </p>
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-01 QQ:359135103
  */
 public class ClientProtocolHandler extends DefaultProtocolHandler {

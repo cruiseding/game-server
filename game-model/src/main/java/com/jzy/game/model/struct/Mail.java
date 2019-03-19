@@ -12,7 +12,7 @@ import com.jzy.game.model.constant.Config;
  * 邮件 <br>
  * 直接操作mongodb数据库
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月18日 下午2:19:59
  */
 @Entity(value = "mail", noClassnameStored = true)
@@ -138,7 +138,7 @@ public class Mail {
 	/**
 	 * 邮件状态
 	 * <br>优先级依次递增
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月21日 下午3:12:11
 	 */
 	public enum MailState {
@@ -155,7 +155,7 @@ public class Mail {
 	/**
 	 * 邮件类型
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月21日 下午3:14:51
 	 */
 	public enum MailType {

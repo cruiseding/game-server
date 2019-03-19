@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 
 /**
  * 属性的set get方法对象封装
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月7日 上午11:42:55
  */

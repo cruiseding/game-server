@@ -12,7 +12,7 @@ import com.jzy.game.model.constant.Reason;
 
 /**
  * 房间角色监测更新
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月26日 下午2:28:29
  */

@@ -11,7 +11,7 @@ import com.jzy.game.engine.thread.timer.event.ServerHeartTimer;
 /**
  * netty 连接网关服
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月14日 下午4:52:20
  */
 public class Bydr2GateClientNetty extends MutilNettyTcpClientService {

@@ -23,7 +23,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
  * 默认接收消息处理器 <br>
  * 消息直接用netty线程池处理，分发请重新实现messagehandler
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月25日 上午11:29:37
  */
 public abstract class DefaultInBoundHandler extends SimpleChannelInboundHandler<IDMessage> {
@@ -54,7 +54,7 @@ public abstract class DefaultInBoundHandler extends SimpleChannelInboundHandler<
 	/**
 	 * 消息处理
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月25日 下午12:01:04
 	 * @param handler
 	 */
@@ -72,7 +72,7 @@ public abstract class DefaultInBoundHandler extends SimpleChannelInboundHandler<
 	/**
 	 * 消息跳转
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月25日 下午12:01:51
 	 * @param idMessage
 	 */

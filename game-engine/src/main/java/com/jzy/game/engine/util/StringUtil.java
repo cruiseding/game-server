@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 /**
  * 字符串工具
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public final class StringUtil {

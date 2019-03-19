@@ -23,7 +23,7 @@ import com.jzy.game.engine.util.FileUtil;
 /**
  * TCP消息处理器生成
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月18日 下午7:42:49
  */
 @Mojo(name = "tcpHandler", defaultPhase = LifecyclePhase.INITIALIZE)
@@ -111,7 +111,7 @@ public class TcpHanderBuilder extends AbstractMojo {
 	/**
 	 * 生成handler
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月19日 下午5:06:31
 	 * @param file
 	 *            protobuf消息文件
@@ -162,7 +162,7 @@ public class TcpHanderBuilder extends AbstractMojo {
 			}
 			// 组装类文件
 			StringBuffer sb = new StringBuffer();
-			sb.append("/**工具生成，请遵循规范<br>\n @auther JiangZhiYong\n */\n");
+			sb.append("/**工具生成，请遵循规范<br>\n @auther CruiseDing\n */\n");
 			// 包路径
 			sb.append("package ").append(handlerPackage).append(";\n\n");
 			// 引入依赖
@@ -210,7 +210,7 @@ public class TcpHanderBuilder extends AbstractMojo {
 	/**
 	 * 获取子包目录
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月19日 下午5:25:39
 	 * @param file
 	 * @return

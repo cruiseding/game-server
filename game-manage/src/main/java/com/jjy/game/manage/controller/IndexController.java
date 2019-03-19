@@ -12,7 +12,7 @@ import com.jjy.game.manage.constant.SessionKey;
 /**
  * 首页管理
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-05-23 QQ:359135103
  */
 @Controller

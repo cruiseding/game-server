@@ -5,7 +5,7 @@ import com.jzy.game.engine.util.StringUtil;
 /**
  * 对象模型
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月31日 上午10:47:59
  */
 public class FieldModel {

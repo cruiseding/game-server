@@ -12,7 +12,7 @@ import com.jzy.game.engine.server.ServerInfo;
  * http://127.0.0.1:8001/server/gate/ip
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  * 
  */

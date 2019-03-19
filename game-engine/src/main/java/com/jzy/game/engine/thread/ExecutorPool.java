@@ -5,7 +5,7 @@ import java.util.concurrent.Executor;
 /**
  * 自定义线程池
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-21
  * QQ:359135103
  */

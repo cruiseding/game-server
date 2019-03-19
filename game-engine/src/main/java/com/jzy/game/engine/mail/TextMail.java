@@ -2,7 +2,7 @@ package com.jzy.game.engine.mail;
 
 /**
  * 文本邮件
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月22日 下午5:14:12
  */

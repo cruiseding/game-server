@@ -11,7 +11,7 @@ import org.mongodb.morphia.annotations.Id;
 /**
  * 全局大厅服务器信息
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 @Entity(value = "hall_info", noClassnameStored = true)

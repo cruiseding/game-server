@@ -16,7 +16,7 @@ import org.junit.Test;
 
 /**
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class MongoTest {

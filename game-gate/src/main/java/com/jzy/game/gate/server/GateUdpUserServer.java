@@ -23,7 +23,7 @@ import com.jzy.game.gate.server.handler.GateUdpUserServerHandler;
  * 3.udp消息是不可靠的，只能辅助进行消息处理（可考虑实现可靠udp）
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月1日 下午1:45:20
  */
 public class GateUdpUserServer extends Service<MinaServerConfig>{

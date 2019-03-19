@@ -9,7 +9,7 @@ import com.jzy.game.engine.thread.ThreadType;
 /**
  * 消息处理注解
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 @Retention(RetentionPolicy.RUNTIME)

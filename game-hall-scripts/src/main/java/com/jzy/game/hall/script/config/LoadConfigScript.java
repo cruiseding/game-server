@@ -15,7 +15,7 @@ import com.jzy.game.hall.manager.ConfigManager;
 /**
  * 加载配置脚本
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月18日 下午3:21:41
  */
 public class LoadConfigScript implements IConfigScript {

@@ -22,7 +22,7 @@ import com.jzy.game.engine.mina.service.MinaClientService;
 /**
  * Mina客户端
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-01
  * QQ:359135103
  */

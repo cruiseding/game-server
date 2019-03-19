@@ -10,7 +10,7 @@ import com.jzy.game.model.struct.Item;
 
 /**
  * json
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月29日 下午5:26:13
  */
@@ -18,7 +18,7 @@ public class JsonUtilTest {
 
 	/**
 	 * 测试jackson和fastjson格式
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月29日 下午5:28:29
 	 */

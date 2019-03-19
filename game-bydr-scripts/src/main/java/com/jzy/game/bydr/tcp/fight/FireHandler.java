@@ -17,7 +17,7 @@ import com.jzy.game.engine.util.TimeUtil;
 /**
  * 开炮
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-21 QQ:359135103
  */
 @HandlerEntity(mid = MID.FireReq_VALUE, msg = FireRequest.class, thread = ThreadType.ROOM)

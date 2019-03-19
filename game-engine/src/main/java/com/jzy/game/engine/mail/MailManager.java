@@ -20,7 +20,7 @@ import com.jzy.game.engine.util.FileUtil;
 /**
  * 邮件发送
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月22日 下午5:09:21
  */
 public class MailManager {
@@ -45,7 +45,7 @@ public class MailManager {
 	/**
 	 * 初始化邮件配置，如果不存在，使用默认配置
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月22日 下午5:18:20
 	 * @param configPath
 	 */
@@ -73,7 +73,7 @@ public class MailManager {
 	 * 异步发送邮件 <br>
 	 * 邮件发送比较耗时
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月22日 下午5:24:57
 	 * @param title
 	 * @param content
@@ -90,7 +90,7 @@ public class MailManager {
 	/**
 	 * 发送文本邮件
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月22日 下午5:36:45
 	 * @param title
 	 * @param content

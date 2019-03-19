@@ -6,7 +6,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 相连接三角形的共享边
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年11月7日 下午4:50:11
  */
 public class TriangleEdge implements Connection<Triangle> {

@@ -20,7 +20,7 @@ import org.apache.mina.http.HttpRequestImpl;
 /**
  * http消息处理器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public abstract class HttpServerIoHandler implements IoHandler {

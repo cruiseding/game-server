@@ -17,7 +17,7 @@ import com.jzy.game.model.redis.channel.BydrChannel;
 /**
  * 报名竞技赛结果
  * <p>广播人数变化 人数满后，进行跨服处理</p>
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月3日 上午9:44:01
  */

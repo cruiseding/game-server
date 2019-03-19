@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 /**
  * 密码工具
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月16日 下午3:41:31
  */
 public final class CipherUtil {

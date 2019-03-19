@@ -250,7 +250,7 @@ public final class FileUtil {
     
     /**
      * 获取文件对象
-     * @author JiangZhiYong
+     * @author CruiseDing
      * @QQ 359135103
      * 2017年9月28日 下午2:11:20
      * @param file

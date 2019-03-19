@@ -6,7 +6,7 @@ import com.jzy.game.engine.mina.service.SingleMinaTcpClientService;
 /**
  * 连接到集群管理
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-05 QQ:359135103
  */
 public class Gate2ClusterClient extends SingleMinaTcpClientService {

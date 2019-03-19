@@ -14,7 +14,7 @@ import com.jzy.game.engine.math.Vector3;
  * navmesh寻路三角形网格数据 <br>
  * 依次三个顶点确定一个三角形
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  *
  */
 public class NodeData extends NavMeshData {

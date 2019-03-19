@@ -11,7 +11,7 @@ import com.jzy.game.engine.util.TimeUtil;
 
 /**
  * 测试寻路
- * @author JiangZhiYong
+ * @author CruiseDing
  *
  */
 public class NodeNavMeshTest {

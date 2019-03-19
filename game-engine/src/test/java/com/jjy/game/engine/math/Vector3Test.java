@@ -10,7 +10,7 @@ import com.jzy.game.engine.math.Vector3;
 
 /**
  * 向量测试
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class Vector3Test {

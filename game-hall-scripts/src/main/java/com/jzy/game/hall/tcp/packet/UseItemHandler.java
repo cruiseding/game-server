@@ -13,7 +13,7 @@ import com.jzy.game.hall.manager.RoleManager;
 
 /**
  * 使用物品
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月18日 下午3:28:53
  */

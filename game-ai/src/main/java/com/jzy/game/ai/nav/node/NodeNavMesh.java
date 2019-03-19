@@ -25,7 +25,7 @@ import com.vividsolutions.jts.shape.random.RandomPointsBuilder;
  * 寻路navmesh地图 <br>
  * 数据分为阻挡层和行走层,以三角形网格数据寻路
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class NodeNavMesh extends NavMesh implements Serializable, Cloneable {
 

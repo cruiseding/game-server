@@ -18,7 +18,7 @@ import com.jzy.game.gate.struct.UserSession;
 
 /**
  * 游戏服、大厅服等内部共用的服务器
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午2:05:46
  */
 public class GateTcpGameServerHandler extends DefaultProtocolHandler {

@@ -14,7 +14,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 寻路数据
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  *
  */
 public class PathData implements Serializable, Cloneable {
@@ -24,7 +24,7 @@ public class PathData implements Serializable, Cloneable {
 	/**
 	 * 寻路结果
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @mail 359135103@qq.com
 	 */
 	public enum Result {

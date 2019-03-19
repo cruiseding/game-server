@@ -11,7 +11,7 @@ import com.jzy.game.hall.script.IMailScript;
 /**
  * 发送邮件
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月21日 下午4:52:57
  */
 public class SendMailScript implements IMailScript {

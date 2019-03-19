@@ -13,7 +13,7 @@ import com.jzy.game.gate.struct.UserSession;
 /**
  * 退出子游戏返回
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月20日 下午2:06:00
  */
 @HandlerEntity(mid = MID.QuitSubGameRes_VALUE, msg = QuitSubGameResponse.class)

@@ -13,7 +13,7 @@ import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 /**
  * 客户端默认初始化channel
  * ，服务器内部使用客户端
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月25日 上午9:28:47
  */

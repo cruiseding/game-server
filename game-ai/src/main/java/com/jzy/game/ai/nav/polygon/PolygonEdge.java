@@ -6,7 +6,7 @@ import com.jzy.game.engine.math.Vector3;
 
 /**
  * 多边形共享边
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class PolygonEdge implements Connection<Polygon>{

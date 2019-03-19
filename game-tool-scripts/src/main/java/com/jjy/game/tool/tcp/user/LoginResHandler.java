@@ -19,7 +19,7 @@ import com.jzy.game.engine.server.ServerType;
 /**
  * 登录返回
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午6:26:19
  */
 @HandlerEntity(mid = MID.LoginRes_VALUE, msg = LoginResponse.class)

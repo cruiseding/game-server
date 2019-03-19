@@ -13,7 +13,7 @@ import com.jzy.game.model.constant.Config;
 /**
  * 公会
  * <p>直接操作mongodb数据库，不缓存</p>
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * @Date 2017/9/18 0018
  */

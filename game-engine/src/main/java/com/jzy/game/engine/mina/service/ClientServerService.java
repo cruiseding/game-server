@@ -17,7 +17,7 @@ import com.jzy.game.engine.thread.timer.event.ServerHeartTimer;
 /**
  * 游戏前端消息接收 服务
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月29日 下午2:15:38
  */
 public class ClientServerService extends Service<MinaServerConfig> {

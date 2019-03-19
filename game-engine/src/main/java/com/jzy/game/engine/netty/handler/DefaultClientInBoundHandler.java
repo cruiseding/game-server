@@ -11,7 +11,7 @@ import io.netty.channel.ChannelHandlerContext;
 /**
  * 内部客户端 默认消息
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月25日 下午3:24:23
  */
 public class DefaultClientInBoundHandler extends DefaultInBoundHandler {

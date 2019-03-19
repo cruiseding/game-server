@@ -12,7 +12,7 @@ import redis.clients.jedis.JedisPubSub;
 /**
  * Redis 监听事件
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午2:00:34
  */
 public class JedisPubListener extends JedisPubSub implements Runnable {

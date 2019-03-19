@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * GM 管理
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月4日 下午5:05:36
  */
@@ -35,7 +35,7 @@ public class GMController {
 
 	/**
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月4日 下午5:07:25
 	 * @return

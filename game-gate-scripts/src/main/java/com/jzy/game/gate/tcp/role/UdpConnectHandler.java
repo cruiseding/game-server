@@ -15,7 +15,7 @@ import com.jzy.game.gate.struct.UserSession;
 /**
  * 请求进行udp连接
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月1日 下午3:55:27
  */
 @HandlerEntity(mid = MID.UdpConnectReq_VALUE, msg = UdpConnectRequest.class)

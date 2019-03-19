@@ -47,7 +47,7 @@ import com.jzy.game.model.timer.GameServerCheckTimer;
  * TODO 添加netty多连接测试？ 
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月28日 下午3:37:19
  */
 public class BydrServer implements Runnable {
@@ -165,7 +165,7 @@ public class BydrServer implements Runnable {
 	
 	/**
 	 * 获取线程 在连接网关服的service中获取
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月14日 下午4:33:48
 	 * @param threadType
@@ -215,7 +215,7 @@ public class BydrServer implements Runnable {
 
 	/**
 	 * 消息转换
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月29日 下午2:21:52
 	 * @param info

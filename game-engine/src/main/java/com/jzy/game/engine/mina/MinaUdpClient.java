@@ -18,7 +18,7 @@ import com.jzy.game.engine.mina.config.MinaClientConfig;
 /**
  * mina udp 客户端
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月1日 上午11:31:39
  */
 public final class MinaUdpClient implements Runnable {

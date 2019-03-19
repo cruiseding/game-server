@@ -13,7 +13,7 @@ import org.mongodb.morphia.query.Query;
 /**
  * 用戶
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class UserDao extends BasicDAO<User, Long> {

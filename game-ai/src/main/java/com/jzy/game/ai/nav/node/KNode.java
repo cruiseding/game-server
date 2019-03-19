@@ -11,7 +11,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 节点（多边形的顶点坐标+寻路需要的属性）
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月3日
  * @mail 359135103@qq.com
  */

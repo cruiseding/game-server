@@ -20,7 +20,7 @@ import com.jzy.game.engine.util.TimeUtil;
  * management of telegrams.
  * 
  * @author davebaol
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 public class MessageDispatcher implements Telegraph {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MessageDispatcher.class);

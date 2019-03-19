@@ -10,7 +10,7 @@ import com.jzy.game.engine.handler.HttpHandler;
  * http://127.0.0.1:9002/favicon.ico
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月13日 上午10:07:42
  */

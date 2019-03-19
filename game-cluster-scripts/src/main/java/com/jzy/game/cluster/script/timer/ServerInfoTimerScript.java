@@ -11,7 +11,7 @@ import com.jzy.game.engine.script.ITimerEventScript;
 /**
  * 服务器信息心跳检查
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月23日 下午3:33:20
  */
 public class ServerInfoTimerScript implements ITimerEventScript {

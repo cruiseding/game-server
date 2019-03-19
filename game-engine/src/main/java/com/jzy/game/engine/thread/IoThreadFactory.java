@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * IO线程池工厂
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-24 QQ:359135103
  */
 public class IoThreadFactory implements ThreadFactory {

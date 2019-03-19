@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 捕鱼达人
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * @Date 2017/9/20 0020
  */

@@ -30,7 +30,7 @@ import com.jzy.game.model.struct.Item;
 /**
  * 角色信息
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-02-27 QQ:359135103
  */
 @Entity(value = "role", noClassnameStored = true)
@@ -386,7 +386,7 @@ public class Role extends Person{
 
 	/**
 	 * 修改金币
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月25日 下午5:23:41
 	 * @param gold
@@ -398,7 +398,7 @@ public class Role extends Person{
 	
 	/**
 	 * 同步金币
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月26日 上午10:42:24
 	 * @param reason

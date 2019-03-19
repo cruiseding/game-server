@@ -35,7 +35,7 @@ import java.util.List;
  * 
  * @author Daniel Holderbaum
  * 
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 public class StackStateMachine<E, S extends State<E>> extends DefaultStateMachine<E, S> {
 

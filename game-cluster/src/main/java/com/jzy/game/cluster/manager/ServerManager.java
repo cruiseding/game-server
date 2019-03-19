@@ -16,7 +16,7 @@ import com.jzy.game.engine.server.ServerType;
 /**
  * 服务器管理类
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-05 QQ:359135103
  */
 public class ServerManager {
@@ -80,7 +80,7 @@ public class ServerManager {
 	/**
 	 * 获取服务器
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月13日 下午3:57:14
 	 * @param serverType
 	 * @param serverId

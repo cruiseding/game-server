@@ -10,7 +10,7 @@ import com.jzy.game.engine.handler.HttpHandler;
 /**
  * 未知请求 404
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  * http://127.0.0.1:8680/
  */

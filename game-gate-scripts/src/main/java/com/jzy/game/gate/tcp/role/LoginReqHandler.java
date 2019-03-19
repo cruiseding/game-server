@@ -26,7 +26,7 @@ import com.jzy.game.gate.struct.UserSession;
  * TODO 重连处理？？？？
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月21日 下午1:31:55
  */
 @HandlerEntity(mid = MID.LoginReq_VALUE, desc = "登陆", msg = LoginRequest.class)

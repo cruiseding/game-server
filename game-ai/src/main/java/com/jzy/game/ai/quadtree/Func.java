@@ -7,7 +7,7 @@ import com.jzy.game.ai.quadtree.polygon.PolygonGuadTree;
 /**
  * 功能函数
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  * @param <K>
  * @param <V>

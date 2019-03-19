@@ -24,7 +24,7 @@ import com.jzy.game.engine.util.MsgUtil;
  * 消息头可能有消息长度、消息ID、用户ID
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 public abstract class DefaultProtocolHandler implements IoHandler {

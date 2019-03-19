@@ -7,7 +7,7 @@ import com.jzy.game.model.constant.Config;
 /**
  * 游戏配置
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-14 QQ:359135103
  */
 @Root

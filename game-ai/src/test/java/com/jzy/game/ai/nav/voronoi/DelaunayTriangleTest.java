@@ -12,7 +12,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * Delaunay三角形测试
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class DelaunayTriangleTest {

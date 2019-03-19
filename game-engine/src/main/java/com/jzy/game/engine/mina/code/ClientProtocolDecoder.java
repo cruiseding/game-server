@@ -31,7 +31,7 @@ import com.jzy.game.engine.util.MsgUtil;
  * </p>
  * TODO 加解密
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class ClientProtocolDecoder extends ProtocolDecoderImpl {
@@ -166,7 +166,7 @@ public class ClientProtocolDecoder extends ProtocolDecoderImpl {
 	/**
 	 * 检测玩家消息发送频率
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月21日 下午1:47:58
 	 * @param session
 	 */

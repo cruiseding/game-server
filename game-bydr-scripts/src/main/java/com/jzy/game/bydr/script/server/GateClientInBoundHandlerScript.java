@@ -22,7 +22,7 @@ import io.netty.channel.ChannelHandler;
 /**
  * netty连接网关客户端消息处理器脚本
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月30日 上午10:52:05
  */
 public class GateClientInBoundHandlerScript implements IChannelHandlerScript {

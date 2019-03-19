@@ -14,7 +14,7 @@ import com.jzy.game.gate.server.GateTcpUserServer;
 /**
  * 设置IP黑名单
  * TODO 是否需要存入数据库，通过后台调用设置
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月4日 上午11:24:58
  */

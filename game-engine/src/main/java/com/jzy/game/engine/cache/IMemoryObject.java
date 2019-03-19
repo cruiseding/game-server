@@ -3,7 +3,7 @@ package com.jzy.game.engine.cache;
 /**
  * 对象池对象
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-26 QQ:359135103
  */
 public interface IMemoryObject {

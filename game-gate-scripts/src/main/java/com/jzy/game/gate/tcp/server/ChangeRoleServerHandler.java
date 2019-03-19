@@ -17,7 +17,7 @@ import com.jzy.game.gate.struct.UserSession;
 /**
  * 修改角色在网关服所连接的其他服务器信息
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月1日 下午4:01:09 TODO 待测试
  */
 @HandlerEntity(mid = MID.ChangeRoleServerReq_VALUE, msg = ChangeRoleServerRequest.class)

@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 消息编码
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public class HttpServerEncoderImpl extends HttpServerEncoder {

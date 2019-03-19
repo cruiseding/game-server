@@ -11,7 +11,7 @@ import com.jjy.game.manage.constant.SessionKey;
 /**
  * 用户
  *
- * @author JiangZhiYong QQ:359135103
+ * @author CruiseDing QQ:359135103
  */
 @Service
 public class UserService {

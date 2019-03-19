@@ -32,7 +32,7 @@ import com.jzy.game.engine.math.MathUtil;
  * 
  * @author implicit-invocation
  * @author davebaol
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 public abstract class SingleRunningChildBranch<E> extends BranchTask<E> {
 

@@ -18,7 +18,7 @@ import com.jzy.game.engine.math.Vector3;
  * <br>
  * TODO 获取不在寻路中，离当前点最近且在寻路层中的点；随机或者指定点的周围坐标点
  * @note 限制：三角形顶点需要在寻路层边缘，不能存在共边不共顶点
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年11月7日 下午4:40:36
  */
 public class TriangleNavMesh extends NavMesh {

@@ -18,7 +18,7 @@ import io.netty.handler.codec.ByteToMessageCodec;
  * 内部默认消息解码器
  * <br>消息有带角色ID的，有不带角色ID的
  * @note IDMessage mina、netty通用
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月25日 上午10:10:54
  */
 public class DefaultMessageCodec extends ByteToMessageCodec<Object> {

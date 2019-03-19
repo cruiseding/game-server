@@ -10,7 +10,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 节点连接关系处理
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月3日
  * @mail 359135103@qq.com
  * @param <T>

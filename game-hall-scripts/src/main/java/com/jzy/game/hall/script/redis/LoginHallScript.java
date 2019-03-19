@@ -13,7 +13,7 @@ import com.jzy.game.model.redis.channel.HallChannel;
  * 监听玩家登录其他大厅服务器，移除在本服务器的相关信息
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午2:19:13
  */
 public class LoginHallScript implements IPubSubScript {

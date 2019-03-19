@@ -12,7 +12,7 @@ import com.jzy.game.engine.util.TimeUtil;
 
 /**
  * 多边形寻路测试
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2018年2月20日 
  * @mail 359135103@qq.com
  */

@@ -4,7 +4,7 @@ import com.jzy.game.ai.nav.NavMeshData;
 
 /**
  * 三角形数据
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class TriangleData extends NavMeshData{

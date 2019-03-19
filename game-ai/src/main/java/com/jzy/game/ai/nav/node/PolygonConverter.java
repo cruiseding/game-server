@@ -14,7 +14,7 @@ import com.vividsolutions.jts.geom.Polygon;
 /**
  * 多边形转换器，KPolygon和Polygon进行转换
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月3日
  * @mail 359135103@qq.com
  */

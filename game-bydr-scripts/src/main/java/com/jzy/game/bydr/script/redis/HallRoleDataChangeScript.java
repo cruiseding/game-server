@@ -13,7 +13,7 @@ import com.jzy.game.model.redis.channel.BydrChannel;
 /**
  * 大厅通知角色数据改变
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月17日 上午10:20:00
  */
 public class HallRoleDataChangeScript implements IPubSubScript {

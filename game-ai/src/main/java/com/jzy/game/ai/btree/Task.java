@@ -13,7 +13,7 @@ import com.jzy.game.engine.cache.IMemoryObject;
  * 
  * @author davebaol
  * @QQ 359135103 2017年11月22日 下午2:33:32
- * @fix JiangZhiYong
+ * @fix CruiseDing
  * @param <E>
  *            黑板对象，所属的对象，如NPC
  */
@@ -43,7 +43,7 @@ public abstract class Task<E> implements IMemoryObject,Serializable {
 	/**
 	 * 添加子任务
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月22日 下午2:54:08
 	 * @param childTask
 	 * @return 子任务所在下标
@@ -59,7 +59,7 @@ public abstract class Task<E> implements IMemoryObject,Serializable {
 	/**
 	 * 子任务个数
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月22日 下午4:01:24
 	 * @return
 	 */
@@ -68,7 +68,7 @@ public abstract class Task<E> implements IMemoryObject,Serializable {
 	/**
 	 * 向该任务添加子任务
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月22日 下午3:32:26
 	 * @param childTask
 	 *            子任务
@@ -98,7 +98,7 @@ public abstract class Task<E> implements IMemoryObject,Serializable {
 	/**
 	 * 设置控制任务
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月22日 下午4:06:58
 	 * @param parentTask
 	 */
@@ -110,7 +110,7 @@ public abstract class Task<E> implements IMemoryObject,Serializable {
 	/**
 	 * 检查条件
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月22日 下午4:09:57
 	 * @param parentTask
 	 *            父任务

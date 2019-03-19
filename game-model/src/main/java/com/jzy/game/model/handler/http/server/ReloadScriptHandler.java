@@ -16,7 +16,7 @@ import com.jzy.game.model.constant.Config;
  * <p>http://127.0.0.1:9002/server/reloadScript?auth=daa0cf5b-e72d-422c-b278-450b28a702c6&scriptPath=com\jjy\game\bydr\tcp\server\ServerListHandler</p>
  * <p>http://127.0.0.1:9002/server/reloadScript?auth=daa0cf5b-e72d-422c-b278-450b28a702c6</p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月21日 下午5:16:26
  */
 @HandlerEntity(path = "/server/reloadScript")

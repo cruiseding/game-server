@@ -11,7 +11,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 
 /**
  * 心跳返回
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月1日 下午5:08:56
  */

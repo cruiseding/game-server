@@ -17,7 +17,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 三角形
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年11月7日 下午4:41:27
  */
 public class Triangle implements Shape{

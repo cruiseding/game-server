@@ -25,7 +25,7 @@ import org.slf4j.LoggerFactory;
 /**
  * excel读写工具类
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class ExcelUtil {
 

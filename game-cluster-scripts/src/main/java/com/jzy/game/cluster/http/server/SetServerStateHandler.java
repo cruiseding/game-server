@@ -17,7 +17,7 @@ import com.jzy.game.engine.util.MsgUtil;
  * http://127.0.0.1:8001/server/state
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月13日 下午3:16:56
  */
 @HandlerEntity(path = "/server/state")

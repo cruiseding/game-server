@@ -10,7 +10,7 @@ import com.jzy.game.model.constant.Config;
 /**
  * 获取jvm信息
  * <p>http://192.168.0.17:9002/server/jvm/info?auth=daa0cf5b-e72d-422c-b278-450b28a702c6</p>
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月12日 下午2:38:44
  */
 @HandlerEntity(path = "/server/jvm/info")

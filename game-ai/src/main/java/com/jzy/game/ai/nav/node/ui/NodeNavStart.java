@@ -7,7 +7,7 @@ import com.jzy.game.engine.math.Vector3;
 
 /**
  * navmesh主界面
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class NodeNavStart extends javax.swing.JFrame {
 

@@ -9,7 +9,7 @@ import com.jzy.game.engine.handler.IHandler;
 /**
  * 脚本管理
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 public class ScriptManager {
@@ -120,7 +120,7 @@ public class ScriptManager {
 	 * 非脚本目录下的需要手动添加到容器中
 	 * </p>
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月24日 下午1:37:13
 	 * @param clazz
 	 */

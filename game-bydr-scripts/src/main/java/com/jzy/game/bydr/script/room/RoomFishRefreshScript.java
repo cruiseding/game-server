@@ -14,7 +14,7 @@ import com.jzy.game.engine.math.MathUtil;
 /**
  * 刷新房间鱼群
  * TODO 新刷新规则
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月14日 上午9:39:23
  */
@@ -38,7 +38,7 @@ public class RoomFishRefreshScript implements IFishScript{
 	
 	/**
 	 * 出生鱼
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月25日 下午4:00:39
 	 * @param configId

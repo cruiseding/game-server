@@ -7,7 +7,7 @@ import com.jzy.game.model.mongo.bydr.dao.CFishDao;
 
 /**
  * mongodb
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年6月28日 下午3:33:14
  */

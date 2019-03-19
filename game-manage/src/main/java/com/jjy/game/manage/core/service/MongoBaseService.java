@@ -9,7 +9,7 @@ import org.mongodb.morphia.query.QueryResults;
 /**
  * 数据操作
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * QQ:359135103
  * @param <T>
  * @param <K>

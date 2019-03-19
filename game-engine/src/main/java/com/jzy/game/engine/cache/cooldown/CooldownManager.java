@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 /**
  * 冷却管理类
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-05-03 QQ:359135103
  */
 

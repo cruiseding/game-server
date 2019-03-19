@@ -6,7 +6,7 @@ import com.jzy.game.engine.netty.config.NettyClientConfig;
 /**
  * Netty 单链接客户端
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月25日 下午3:59:07
  */
 public class SingleNettyTcpClientService extends NettyClientService {

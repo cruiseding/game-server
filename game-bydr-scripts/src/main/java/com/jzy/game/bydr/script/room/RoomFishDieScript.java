@@ -10,7 +10,7 @@ import com.jzy.game.bydr.struct.room.Room;
 /**
  * 定时清理房间死亡的鱼
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月14日 上午10:08:12
  */
 public class RoomFishDieScript implements IRoomScript {

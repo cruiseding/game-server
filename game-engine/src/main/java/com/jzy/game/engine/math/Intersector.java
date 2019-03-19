@@ -13,7 +13,7 @@ import com.jzy.game.engine.math.Plane.PlaneSide;
  * @author badlogicgames@gmail.com
  * @author jan.stria
  * @author Nathan Sweet
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 public final class Intersector {
 	private final static Vector3 v0 = new Vector3();

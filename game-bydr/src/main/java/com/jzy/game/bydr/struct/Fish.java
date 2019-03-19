@@ -12,7 +12,7 @@ import com.jzy.game.model.constant.Config;
 /**
  * 鱼
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-21 QQ:359135103
  */
 public class Fish implements IMemoryObject, Serializable {

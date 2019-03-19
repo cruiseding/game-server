@@ -38,7 +38,7 @@ import com.jzy.game.engine.math.MathUtil;
  *            game state
  * 
  * @author davebaol
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 @TaskConstraint(minChildren = 0, maxChildren = 1)
 public class Random<E> extends Decorator<E> {

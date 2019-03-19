@@ -21,7 +21,7 @@ import java.nio.ByteOrder;
 /**
  * 消息工具
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public final class MsgUtil {
@@ -209,7 +209,7 @@ public final class MsgUtil {
 	/**
 	 * 游戏前端收到消息改为网关内部消息进行转发
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月21日 上午11:01:10
 	 * @param bytes
 	 * @return

@@ -14,7 +14,7 @@ import com.jzy.game.engine.server.ServerType;
 /**
  * 获取服务器列表信息
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月29日 上午11:39:55
  */
 @HandlerEntity(mid = MID.ServerListReq_VALUE, msg = ServerListRequest.class)

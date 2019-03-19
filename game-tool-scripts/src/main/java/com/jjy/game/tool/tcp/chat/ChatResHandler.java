@@ -12,7 +12,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 /**
  * 聊天返回
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月13日 下午4:26:37
  */
 @HandlerEntity(mid = MID.ChatRes_VALUE, msg = ChatResponse.class)

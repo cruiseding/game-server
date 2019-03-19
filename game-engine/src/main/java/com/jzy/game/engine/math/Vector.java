@@ -3,7 +3,7 @@ package com.jzy.game.engine.math;
 /**
  * 向量接口
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public interface Vector<T extends Vector<T>> {

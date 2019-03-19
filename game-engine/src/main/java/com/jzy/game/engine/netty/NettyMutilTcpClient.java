@@ -16,7 +16,7 @@ import io.netty.channel.socket.SocketChannel;
 /**
  * netty多连接tcp，连接多个服务器
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月28日 下午1:52:40
  */
@@ -100,7 +100,7 @@ public class NettyMutilTcpClient {
 	
 	/**
 	 * 监测服务器状态
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月28日 下午5:31:05
 	 */

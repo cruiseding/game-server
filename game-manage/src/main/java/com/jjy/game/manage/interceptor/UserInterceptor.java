@@ -12,7 +12,7 @@ import com.jjy.game.manage.constant.SessionKey;
 /**
  * 登录状态检查，临时处理，以后调整
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * QQ:359135103
  */
 public class UserInterceptor extends HandlerInterceptorAdapter {

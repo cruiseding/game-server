@@ -12,7 +12,7 @@ import com.jzy.game.engine.redis.jedis.JedisPubSubMessage;
 
 /**
  * 游戏服更新大厅金币
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月18日 上午11:19:56
  * @deprecated 子游戏直接操作redis

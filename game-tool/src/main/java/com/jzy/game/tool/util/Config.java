@@ -12,7 +12,7 @@ import org.simpleframework.xml.ElementList;
 /**
  * 配置
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class Config {

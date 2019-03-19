@@ -11,7 +11,7 @@ import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
 
 /**
  * 游戏服http服务器
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月24日 上午11:28:28
  */
@@ -62,7 +62,7 @@ public class GameHttpSevice extends Service<MinaServerConfig>{
 /**
  * 消息处理器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31
  * QQ:359135103
  */

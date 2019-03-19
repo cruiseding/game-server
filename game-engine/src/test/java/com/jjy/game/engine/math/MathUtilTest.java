@@ -9,7 +9,7 @@ import com.jzy.game.engine.math.Vector3;
 
 /**
  * 数学计算工具
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class MathUtilTest {

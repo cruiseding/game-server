@@ -5,7 +5,7 @@ import com.jzy.game.engine.script.IScript;
 
 /**
  * 订阅消息处理器
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月10日 上午10:29:29
  */

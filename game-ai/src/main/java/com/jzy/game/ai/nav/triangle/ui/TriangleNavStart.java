@@ -8,7 +8,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * navmesh主界面
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class TriangleNavStart extends javax.swing.JFrame {
 

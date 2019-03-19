@@ -8,7 +8,7 @@ import com.jzy.game.engine.util.TimeUtil;
 
 /**
  * 移动玩家
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 public class MovePlayer {
 

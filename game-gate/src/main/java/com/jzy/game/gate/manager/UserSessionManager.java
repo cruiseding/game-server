@@ -13,7 +13,7 @@ import com.jzy.game.model.constant.Reason;
 /**
  * 用户连接会话管理类
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午3:58:31
  */
 public class UserSessionManager {
@@ -79,7 +79,7 @@ public class UserSessionManager {
 	/**
 	 * 用户session
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月21日 下午1:49:17
 	 * @param sessionId
 	 * @return
@@ -96,7 +96,7 @@ public class UserSessionManager {
 	
 	/**
 	 * 广播消息给前端客户端
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月13日 下午3:58:17
 	 * @param msg
@@ -107,7 +107,7 @@ public class UserSessionManager {
 	
 	/**
 	 * 所有在线人数
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月12日 下午1:36:58
 	 * @return
@@ -118,7 +118,7 @@ public class UserSessionManager {
 	
 	/**
 	 * 服务器关闭
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月24日 下午1:49:14
 	 */

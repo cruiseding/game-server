@@ -7,7 +7,7 @@ import com.jzy.game.engine.script.IScript;
 /**
  * 机器人脚本
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-27
  * QQ:359135103
  */

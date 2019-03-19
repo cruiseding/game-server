@@ -24,7 +24,7 @@ import com.jzy.game.engine.mina.config.MinaServerConfig;
 /**
  * TCP服务器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 public class TcpServer implements Runnable {

@@ -19,7 +19,7 @@ import com.jzy.game.hall.server.HallServer;
  * 聊天处理 <br>
  * 消息发往网关进行转发
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月13日 下午3:15:49
  */
 @HandlerEntity(mid = MID.ChatReq_VALUE, msg = ChatRequest.class)
@@ -60,7 +60,7 @@ public class ChatHandler extends TcpHandler {
 	/**
 	 * 私聊
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月13日 下午3:23:41
 	 */
 	private void chatPrivate(ChatRequest req, Role role) {
@@ -84,7 +84,7 @@ public class ChatHandler extends TcpHandler {
 	/**
 	 * 世界聊天
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月13日 下午3:46:32
 	 * @param req
 	 * @param role

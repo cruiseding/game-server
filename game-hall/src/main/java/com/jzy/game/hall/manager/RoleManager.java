@@ -20,7 +20,7 @@ import com.jzy.game.model.struct.Role;
 /**
  * 角色管理
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月7日 下午4:00:37
  */
 public class RoleManager {
@@ -82,7 +82,7 @@ public class RoleManager {
 	/**
 	 * 登陆
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午6:23:14
 	 * @param role
 	 */
@@ -94,7 +94,7 @@ public class RoleManager {
 	/**
 	 * 退出
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午6:28:51
 	 * @param rid
 	 * @param reason
@@ -106,7 +106,7 @@ public class RoleManager {
 	/**
 	 * 退出游戏
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午6:09:51
 	 * @param role
 	 * @param reason
@@ -119,7 +119,7 @@ public class RoleManager {
 	/**
 	 * 广播金币改变
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月17日 上午10:11:59
 	 * @param roleId
 	 * @param gold

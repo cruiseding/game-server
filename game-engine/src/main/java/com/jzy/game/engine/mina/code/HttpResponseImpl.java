@@ -15,7 +15,7 @@ import org.apache.mina.http.api.HttpVersion;
 /**
  * http返回消息
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31
  * QQ:359135103
  */

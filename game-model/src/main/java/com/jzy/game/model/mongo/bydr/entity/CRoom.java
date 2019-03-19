@@ -7,7 +7,7 @@ import com.jzy.game.model.mongo.IConfigChecker;
 
 /**
  * 房间配置
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月19日 上午11:42:31
  */

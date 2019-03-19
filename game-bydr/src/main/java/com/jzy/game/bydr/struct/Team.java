@@ -11,7 +11,7 @@ import com.jzy.game.model.redis.key.BydrKey;
 
 /**
  * 组队
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月3日 上午11:24:51
  */

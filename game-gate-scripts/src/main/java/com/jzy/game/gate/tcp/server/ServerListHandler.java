@@ -9,7 +9,7 @@ import com.jzy.game.gate.manager.ServerManager;
 /**
  * 返回游戏服务器列表
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午5:47:25
  */
 @HandlerEntity(mid = MID.ServerListRes_VALUE, msg = ServerListResponse.class)

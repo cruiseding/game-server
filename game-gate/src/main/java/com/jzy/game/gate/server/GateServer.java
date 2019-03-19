@@ -20,7 +20,7 @@ import com.jzy.game.model.redis.key.GateKey;
 /**
  * 网关服务器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 public class GateServer implements Runnable {

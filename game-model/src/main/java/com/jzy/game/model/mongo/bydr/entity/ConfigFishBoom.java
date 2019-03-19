@@ -1,6 +1,6 @@
 /**
 * 工具自动生成,暂时不支持泛型和对象
-* @author JiangZhiYong
+* @author CruiseDing
 * @date 2017-10-31
 */
 package com.jzy.game.model.mongo.bydr.entity;

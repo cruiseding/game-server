@@ -8,7 +8,7 @@ import com.jzy.game.ai.btree.Task;
 /**
  * 分数选择器，分数越高，优先执行
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  * @param <E>
  *            黑板对象

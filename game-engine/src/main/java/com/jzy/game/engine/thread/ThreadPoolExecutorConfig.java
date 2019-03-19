@@ -10,7 +10,7 @@ import org.simpleframework.xml.Root;
 /**
  * 线程池配置
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 @Root

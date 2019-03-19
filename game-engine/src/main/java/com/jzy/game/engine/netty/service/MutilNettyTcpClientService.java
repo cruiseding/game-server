@@ -27,7 +27,7 @@ import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
  * 一般用于子游戏服务器和网关服，所有玩家共享连接
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月28日 下午1:49:39
  */
 public class MutilNettyTcpClientService extends NettyClientService implements IMutilTcpClientService<NettyClientConfig> {
@@ -149,7 +149,7 @@ public class MutilNettyTcpClientService extends NettyClientService implements IM
 	 * 多客户端连接初始化 <br>
 	 * 消息头为12
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月28日 下午5:49:23
 	 */
 	public class MutilNettyClientChannelInitializer extends DefaultClientChannelInitializer {

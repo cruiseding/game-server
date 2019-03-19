@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 游戏客户端返回消息编码
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class ClientProtocolEncoder extends ProtocolEncoderImpl {

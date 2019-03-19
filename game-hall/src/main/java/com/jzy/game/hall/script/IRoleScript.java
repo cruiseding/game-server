@@ -9,7 +9,7 @@ import com.jzy.game.model.struct.Role;
 /**
  * 玩家脚本
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 public interface IRoleScript extends IScript {
@@ -34,7 +34,7 @@ public interface IRoleScript extends IScript {
 	
 	/**
 	 * 角色退出游戏
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月18日 下午6:01:08
 	 * @param role

@@ -19,7 +19,7 @@ import com.jzy.game.gate.struct.UserSession;
 /**
  * 退出子游戏
  * // TODO 处理用户session 请求处理，还是返回处理，根据客户端需求
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月26日 下午5:34:06
  */

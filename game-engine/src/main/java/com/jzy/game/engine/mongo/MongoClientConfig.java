@@ -5,7 +5,7 @@ import org.simpleframework.xml.Element;
 /**
  * Mongo配置文件
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class MongoClientConfig {

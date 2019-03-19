@@ -3,7 +3,7 @@ package com.jzy.game.ai.nav.node;
 
 /**
  * 多边形持有对象
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月3日 
  * @mail 359135103@qq.com
  */

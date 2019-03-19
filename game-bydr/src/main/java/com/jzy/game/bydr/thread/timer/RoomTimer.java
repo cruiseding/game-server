@@ -15,7 +15,7 @@ import com.jzy.game.engine.thread.timer.TimerEvent;
 /**
  * 房间定时器
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-25 QQ:359135103
  */
 public class RoomTimer extends TimerEvent {

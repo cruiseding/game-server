@@ -14,7 +14,7 @@ import com.jzy.game.tool.util.FileUtil;
 
 /**
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class FileUtilTest {

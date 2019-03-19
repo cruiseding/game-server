@@ -11,7 +11,7 @@ import com.jzy.game.model.struct.User;
 /**
  * json 工具测试
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月7日 下午2:56:27
  */
 @Ignore

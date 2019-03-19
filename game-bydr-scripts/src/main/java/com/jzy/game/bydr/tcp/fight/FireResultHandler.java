@@ -20,7 +20,7 @@ import com.jzy.game.engine.thread.ThreadType;
 /**
  * 使用技能
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-21 QQ:359135103
  */
 @HandlerEntity(mid = MID.FireResultReq_VALUE, msg = FireResultRequest.class, thread = ThreadType.ROOM)

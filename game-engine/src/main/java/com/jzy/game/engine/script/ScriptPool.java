@@ -37,7 +37,7 @@ import org.slf4j.Logger;
  * <br>
  * 服务定位器模式
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 public final class ScriptPool {
@@ -600,7 +600,7 @@ public final class ScriptPool {
 
 	/**
 	 * 添加handler
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年7月24日 下午1:36:27
 	 * @param clazz

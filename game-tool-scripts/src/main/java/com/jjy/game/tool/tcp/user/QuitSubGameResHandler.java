@@ -13,7 +13,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 /**
  * 退出子游戏
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月27日 上午9:32:02
  */
 @HandlerEntity(mid = MID.QuitSubGameRes_VALUE, msg = QuitSubGameResponse.class)

@@ -14,7 +14,7 @@ import com.jzy.game.gate.struct.UserSession;
 
 /**
  * 事件消息
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月17日 下午5:05:36
  */
@@ -37,7 +37,7 @@ public class ServerEventHandler extends TcpHandler {
 	
 	/**
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月17日 下午5:08:15
 	 * @param request

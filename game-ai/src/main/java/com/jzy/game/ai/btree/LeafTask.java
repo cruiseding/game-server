@@ -29,7 +29,7 @@ import com.jzy.game.ai.btree.annotation.TaskConstraint;
  * 
  * @author implicit-invocation
  * @author davebaol
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 @TaskConstraint(minChildren = 0, maxChildren = 0)
 public abstract class LeafTask<E> extends Task<E> {

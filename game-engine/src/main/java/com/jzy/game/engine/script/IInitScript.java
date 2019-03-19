@@ -3,7 +3,7 @@ package com.jzy.game.engine.script;
 /**
  * 初始化 脚本接口
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30
  * QQ:359135103
  */

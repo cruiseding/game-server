@@ -3,7 +3,7 @@ package com.jzy.game.engine.server;
 /**
  * 服务器状态
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月13日 下午3:28:38
  */
 public enum ServerState {

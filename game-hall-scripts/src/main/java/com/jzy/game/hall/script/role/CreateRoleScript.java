@@ -8,7 +8,7 @@ import com.jzy.game.hall.script.IRoleScript;
 
 /**
  * 创建角色
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月7日 下午4:34:02
  */

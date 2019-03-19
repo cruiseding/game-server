@@ -15,7 +15,7 @@ import com.jzy.game.model.script.IConfigScript;
 /**
  * 配置管理
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月2日 下午3:36:16
  */
 public class ConfigManager {
@@ -41,7 +41,7 @@ public class ConfigManager {
 
 	/**
 	 * 加载配置表
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月18日 下午2:48:45
 	 */
@@ -67,7 +67,7 @@ public class ConfigManager {
 	
 	/**
 	 * 鱼配置信息
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月18日 下午3:18:43
 	 * @param configId

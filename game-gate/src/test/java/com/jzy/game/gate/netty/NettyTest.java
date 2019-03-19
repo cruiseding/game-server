@@ -20,7 +20,7 @@ import com.jzy.game.engine.server.ServerType;
 
 /**
  * Netty 测试
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月25日 下午4:23:48
  */
@@ -30,7 +30,7 @@ public class NettyTest {
 	/**
 	 * 测试单客户端
 	 * <br>连接集群服务器
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月25日 下午4:26:30
 	 */
@@ -73,7 +73,7 @@ public class NettyTest {
 	 * 测试连接多服务器客户端
 	 * <br>
 	 * 连接网关服务器
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月25日 下午4:26:30
 	 */

@@ -23,7 +23,7 @@ import com.jzy.game.model.redis.key.HallKey;
 /**
  * 角色管理
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午4:01:42
  */
 public class RoleManager {
@@ -58,7 +58,7 @@ public class RoleManager {
 	/**
 	 * 登录
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月3日 下午3:49:37
 	 * @param roleId
 	 * @param reason
@@ -72,7 +72,7 @@ public class RoleManager {
 	/**
 	 * 退出
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月3日 下午3:21:15
 	 * @param role
 	 * @param reason
@@ -86,7 +86,7 @@ public class RoleManager {
 	/**
 	 * 加载角色数据
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月3日 下午3:43:59
 	 * @param roleId
 	 */
@@ -110,7 +110,7 @@ public class RoleManager {
 	/**
 	 * 存储角色数据
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月3日 下午3:22:58
 	 * @param role
 	 * 

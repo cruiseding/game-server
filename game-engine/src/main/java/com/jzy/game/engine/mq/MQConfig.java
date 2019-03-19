@@ -6,7 +6,7 @@ import org.simpleframework.xml.Root;
 /**
  * mq配置
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-18
  * QQ:359135103
  */
@@ -86,7 +86,7 @@ public class MQConfig {
 
 	/**
 	 * 连接地址
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年7月28日 上午11:53:17
 	 * @return

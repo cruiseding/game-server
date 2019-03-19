@@ -5,7 +5,7 @@ import com.jzy.game.engine.mina.service.SingleMinaTcpClientService;
 
 /**
  * 连接集群 tcp客户端
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年6月28日 下午4:16:19
  */

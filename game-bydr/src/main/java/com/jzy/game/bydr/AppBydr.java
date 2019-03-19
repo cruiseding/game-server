@@ -20,7 +20,7 @@ import com.jzy.game.engine.script.ScriptManager;
 /**
  * 捕鱼达人启动类
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月28日 上午11:30:49
  */
 public final class AppBydr {

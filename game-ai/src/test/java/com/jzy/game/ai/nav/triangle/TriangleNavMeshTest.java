@@ -19,7 +19,7 @@ import com.jzy.game.engine.util.TimeUtil;
 /**
  * 测试寻路
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年11月7日 下午5:38:46
  */
 public class TriangleNavMeshTest {
@@ -42,7 +42,7 @@ public class TriangleNavMeshTest {
 	/**
 	 * 加载NavMesh
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月7日 下午5:39:30
 	 */
 	@Test

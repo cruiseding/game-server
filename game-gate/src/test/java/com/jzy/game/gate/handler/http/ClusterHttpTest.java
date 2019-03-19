@@ -11,7 +11,7 @@ import com.jzy.game.engine.util.HttpUtil;
 /**
  * 集群服务器请求测试
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月12日 下午3:09:49
  */
 @Ignore
@@ -20,7 +20,7 @@ public class ClusterHttpTest {
 	/**
 	 * 获取大厅IP
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月12日 下午3:23:08
 	 */
 	@Test

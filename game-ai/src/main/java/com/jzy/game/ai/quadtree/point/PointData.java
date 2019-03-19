@@ -6,7 +6,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 坐标点数据结构
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class PointData<T> extends Data<T> {

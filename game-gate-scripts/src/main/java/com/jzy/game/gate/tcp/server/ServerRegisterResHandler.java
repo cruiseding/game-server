@@ -12,7 +12,7 @@ import com.jzy.game.engine.thread.ThreadType;
 /**
  * 注册集群服返回
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-09 QQ:359135103
  */
 @HandlerEntity(mid = MID.ServerRegisterRes_VALUE, msg = ServerRegisterResponse.class,thread=ThreadType.SYNC)

@@ -8,7 +8,7 @@ import org.apache.mina.filter.codec.ProtocolEncoder;
 /**
  * 消息解析工厂
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30
  * QQ:359135103
  */

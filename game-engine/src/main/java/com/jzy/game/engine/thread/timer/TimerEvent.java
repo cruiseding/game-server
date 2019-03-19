@@ -3,7 +3,7 @@ package com.jzy.game.engine.thread.timer;
 /**
  * 定时器,end时间大于0表示截至时间到即销毁；loop为-1标识永久循环
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 public abstract class TimerEvent implements Runnable {

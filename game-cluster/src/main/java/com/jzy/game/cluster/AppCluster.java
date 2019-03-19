@@ -47,7 +47,7 @@ import com.jzy.game.engine.util.SysUtil;
  * <br>是否可用zookeeper替换
  * </p>
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public class AppCluster {

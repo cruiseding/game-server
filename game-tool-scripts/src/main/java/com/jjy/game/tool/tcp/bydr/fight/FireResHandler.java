@@ -7,7 +7,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 
 /**
  * 开炮
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月20日 上午11:26:26
  */

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 缓存对象
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-26 QQ:359135103
  * @param <T>
  */
@@ -30,7 +30,7 @@ public class MemoryPool<T extends IMemoryObject> implements Serializable {
 	/**
 	 * 放回对象池并释放资源属性
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月8日 下午2:46:59
 	 * @param value
 	 */
@@ -46,7 +46,7 @@ public class MemoryPool<T extends IMemoryObject> implements Serializable {
 	/**
 	 * 批量放回
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月8日 下午2:53:22
 	 * @param values
 	 */
@@ -68,7 +68,7 @@ public class MemoryPool<T extends IMemoryObject> implements Serializable {
 	/**
 	 * 获取缓存对象，如果没有，新建
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月8日 下午2:50:05
 	 * @param c
 	 * @return

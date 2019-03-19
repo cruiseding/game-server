@@ -6,7 +6,7 @@ import com.jzy.game.engine.script.IScript;
 /**
  * gm
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-17 QQ:359135103
  */
 public interface IGmScript extends IScript{

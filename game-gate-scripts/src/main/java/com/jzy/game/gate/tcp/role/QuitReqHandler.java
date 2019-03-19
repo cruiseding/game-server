@@ -10,7 +10,7 @@ import com.jzy.game.gate.script.IUserScript;
 
 /**
  * 退出游戏
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月26日 下午5:27:23
  */

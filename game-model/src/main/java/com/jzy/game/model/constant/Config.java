@@ -3,7 +3,7 @@ package com.jzy.game.model.constant;
 /**
  * 全局常量
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午3:06:44
  */
 public class Config {

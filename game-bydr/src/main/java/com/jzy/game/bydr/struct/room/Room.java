@@ -18,7 +18,7 @@ import com.jzy.game.model.constant.Config;
 /**
  * 房间信息
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-02-28 QQ:359135103
  */
 @Entity(value = "room", noClassnameStored = true)

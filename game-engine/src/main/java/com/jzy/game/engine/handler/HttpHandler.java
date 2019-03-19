@@ -10,7 +10,7 @@ import com.jzy.game.engine.mina.code.HttpResponseImpl;
 /**
  * http请求
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public abstract class HttpHandler implements IHandler {

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 对多边形重新计算的块
  * <br>包含了多边形、顶点节点
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月3日
  * @mail 359135103@qq.com
  */

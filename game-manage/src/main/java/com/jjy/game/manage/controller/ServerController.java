@@ -29,7 +29,7 @@ import com.jzy.game.engine.util.StringUtil;
 /**
  * 服务器
  *
- * @author JiangZhiYong QQ:359135103
+ * @author CruiseDing QQ:359135103
  */
 @Controller
 @RequestMapping("/server")
@@ -74,7 +74,7 @@ public class ServerController {
      * 获取服务器线形图统计数据
      *
      * @return
-     * @author JiangZhiYong
+     * @author CruiseDing
      * @QQ 359135103 2017年7月21日 下午6:03:48
      */
     @ResponseBody
@@ -136,7 +136,7 @@ public class ServerController {
      * 加载脚本
      *
      * @return
-     * @author JiangZhiYong
+     * @author CruiseDing
      * @QQ 359135103 2017年7月21日 下午6:03:48
      */
     @ResponseBody
@@ -159,7 +159,7 @@ public class ServerController {
      * 关闭服务器
      *
      * @return
-     * @author JiangZhiYong
+     * @author CruiseDing
      * @QQ 359135103 2017年7月21日 下午6:03:48
      */
     @ResponseBody
@@ -177,7 +177,7 @@ public class ServerController {
      * 设置服务器状态
      *
      * @return
-     * @author JiangZhiYong
+     * @author CruiseDing
      * @QQ 359135103 2017年7月21日 下午6:03:48
      */
     @ResponseBody
@@ -198,7 +198,7 @@ public class ServerController {
      * 加载配置
      *
      * @return
-     * @author JiangZhiYong
+     * @author CruiseDing
      * @QQ 359135103 2017年7月21日 下午6:03:48
      */
     @ResponseBody

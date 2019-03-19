@@ -29,7 +29,7 @@ import io.netty.util.concurrent.GlobalEventExecutor;
  * Netty Tcp 客户端
  * 
  * @see MinaTcpClient
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月24日 下午8:13:14
  */
 public class NettyTcpClient implements Runnable {
@@ -84,7 +84,7 @@ public class NettyTcpClient implements Runnable {
 	/**
 	 * 连接服务器
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月24日 下午8:40:13
 	 */
 	private synchronized void connect() {
@@ -128,7 +128,7 @@ public class NettyTcpClient implements Runnable {
 	/**
 	 * 连接服务器完成
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月25日 上午9:14:31
 	 */
 	protected void connectFinsh() {
@@ -147,7 +147,7 @@ public class NettyTcpClient implements Runnable {
 	/**
 	 * 检测tcp连接状态
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月28日 下午1:57:20
 	 */
 	public void checkStatus() {

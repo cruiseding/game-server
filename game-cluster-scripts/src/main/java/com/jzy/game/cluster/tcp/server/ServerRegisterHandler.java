@@ -14,7 +14,7 @@ import com.jzy.game.message.ServerMessage.ServerRegisterResponse;
 /**
  * 注册服务器信息
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-05 QQ:359135103
  */
 @HandlerEntity(mid = MID.ServerRegisterReq_VALUE, msg = ServerRegisterRequest.class)

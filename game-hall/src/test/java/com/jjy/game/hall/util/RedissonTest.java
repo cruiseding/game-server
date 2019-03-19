@@ -10,7 +10,7 @@ import com.jzy.game.engine.redis.redisson.RedissonManager;
 
 /**
  * redisson功能测试
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月30日 上午10:46:17
  */
@@ -25,7 +25,7 @@ public class RedissonTest {
 
 	/**
 	 * 测试过期
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月30日 上午10:46:43
 	 */

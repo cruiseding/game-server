@@ -21,7 +21,7 @@ import com.jzy.game.model.script.IConfigScript;
  * http://192.168.0.17:9002/server/reloadConfig?table=c_fish,c_room&auth=daa0cf5b-e72d-422c-b278-450b28a702c6
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月12日 下午2:43:20
  */
 @HandlerEntity(path = "/server/reloadConfig")

@@ -14,7 +14,7 @@ import com.jzy.game.model.struct.User;
 /**
  * 用户管理
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月7日 下午4:00:13
  */
 public class UserManager {

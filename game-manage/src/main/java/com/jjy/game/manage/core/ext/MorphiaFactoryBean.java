@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.AbstractFactoryBean;
 /**
  * mongodb Morphia 工厂
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-05-22
  * QQ:359135103
  */

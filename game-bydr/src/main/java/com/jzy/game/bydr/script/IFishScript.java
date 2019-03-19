@@ -6,7 +6,7 @@ import com.jzy.game.engine.script.IScript;
 /**
  * 鱼脚本
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-24 QQ:359135103
  */
 public interface IFishScript extends IScript {

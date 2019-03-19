@@ -17,7 +17,7 @@ import com.jzy.game.engine.util.JsonUtil;
 /**
  * 申请竞技赛
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月3日 上午11:07:52
  */
 public class ApplyAthleticsScript implements IPubSubScript {

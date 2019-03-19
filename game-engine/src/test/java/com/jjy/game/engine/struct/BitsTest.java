@@ -7,7 +7,7 @@ import com.jzy.game.engine.struct.Bits;
 
 /**
  * 测试位
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年11月8日 下午3:15:08
  */

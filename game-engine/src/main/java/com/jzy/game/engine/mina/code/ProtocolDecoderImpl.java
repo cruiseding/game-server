@@ -12,7 +12,7 @@ import org.apache.mina.filter.codec.CumulativeProtocolDecoder;
 /**
  * 消息解码
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30
  * QQ:359135103
  */

@@ -16,7 +16,7 @@ import com.jzy.game.gate.server.ssl.GateSslContextFactory;
 /**
  * 网关 用户 TCP服务器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  */
 public class GateTcpUserServer extends ClientServerService {

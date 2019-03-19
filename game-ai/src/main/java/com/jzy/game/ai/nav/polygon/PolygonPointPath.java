@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  *  NavMesh 生成坐标路径点
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2018年2月20日 
  * @mail 359135103@qq.com
  */

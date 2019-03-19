@@ -9,7 +9,7 @@ import io.netty.channel.ChannelHandler;
 
 /**
  * netty handler脚本
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月30日 上午10:33:10
  */
@@ -17,7 +17,7 @@ public interface IChannelHandlerScript extends IScript{
 	
 	/**
 	 * channel 激活
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月30日 上午10:36:11
 	 * @param handlerClass 
@@ -29,7 +29,7 @@ public interface IChannelHandlerScript extends IScript{
 	
 	/**
 	 * channel 激活
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月30日 上午10:36:11
 	 * @param handlerClass 
@@ -41,7 +41,7 @@ public interface IChannelHandlerScript extends IScript{
 	
 	/**
 	 * channel 空闲
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月30日 上午10:36:11
 	 * @param handlerClass

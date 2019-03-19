@@ -12,7 +12,7 @@ import io.netty.channel.Channel;
 /**
  * Netty 内部客户端
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月25日 下午2:44:39
  */
 public abstract class NettyClientService extends Service<NettyClientConfig> implements ITcpClientService<NettyClientConfig> {
@@ -52,7 +52,7 @@ public abstract class NettyClientService extends Service<NettyClientConfig> impl
 	/**
 	 * 连接创建
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月25日 下午3:27:03
 	 * @param channel
 	 */
@@ -63,7 +63,7 @@ public abstract class NettyClientService extends Service<NettyClientConfig> impl
 	/**
 	 * 连接断开
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月25日 下午3:27:19
 	 * @param channel
 	 */
@@ -74,7 +74,7 @@ public abstract class NettyClientService extends Service<NettyClientConfig> impl
 	/**
 	 * 获取空闲连接
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月25日 下午3:49:58
 	 * @return
 	 */

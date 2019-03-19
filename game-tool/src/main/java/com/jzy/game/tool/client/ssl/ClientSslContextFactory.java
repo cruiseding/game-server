@@ -42,7 +42,7 @@ import com.jzy.game.tool.client.PressureClientTool;
  * <code>SSLContext</code>生成工厂，使用tls协议，RSA算法 <br>
  * 暂时测试用，RSA为非对称加密算法，运行速率过慢，实际运用可使用AES算法加解密
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月5日 上午11:49:53
  */
 public class ClientSslContextFactory {
@@ -66,7 +66,7 @@ public class ClientSslContextFactory {
 	/**
 	 * 获取 SSL上下文
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月5日 下午2:11:31
 	 * @param server
 	 *            true服务器模式
@@ -104,7 +104,7 @@ public class ClientSslContextFactory {
 	/**
 	 * 服务器 SSLContext
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月5日 下午2:19:01
 	 * @return
 	 * @throws GeneralSecurityException

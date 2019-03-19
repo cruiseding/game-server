@@ -12,7 +12,7 @@ import com.jzy.game.message.ServerMessage.ServerRegisterResponse;
 /**
  * 服务器注册消息返回
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月29日 上午11:15:57
  */
 @HandlerEntity(mid = MID.ServerRegisterRes_VALUE, msg = ServerRegisterResponse.class, thread = ThreadType.SYNC)

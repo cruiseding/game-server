@@ -24,7 +24,7 @@ import com.jzy.game.engine.util.FileUtil;
  * 		{@link RList} 迭代器每迭代一次都需要向redis服务器请求
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月15日 下午3:25:55
  */
 public final class RedissonManager {
@@ -41,7 +41,7 @@ public final class RedissonManager {
 	/**
 	 * 连接服务器
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月15日 下午3:36:06
 	 * @param configPath
 	 */

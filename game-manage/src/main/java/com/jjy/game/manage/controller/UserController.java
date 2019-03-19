@@ -20,7 +20,7 @@ import com.jzy.game.engine.util.StringUtil;
 /**
  * 用户
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-05-23 QQ:359135103
  */
 @Controller

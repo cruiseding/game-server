@@ -20,7 +20,7 @@ import com.jzy.game.engine.util.SysUtil;
 /**
  * http服务
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public class HttpServer implements Runnable {
@@ -74,7 +74,7 @@ public class HttpServer implements Runnable {
 	/**
 	 * 绑定端口
 	 *
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @date 2017-03-31
 	 * QQ:359135103
 	 */

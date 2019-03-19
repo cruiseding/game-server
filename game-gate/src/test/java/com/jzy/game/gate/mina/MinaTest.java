@@ -12,7 +12,7 @@ import com.jzy.game.engine.server.Service;
 
 /**
  * mina测试
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月1日 上午11:46:00
  */

@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 /**
  * 冷却信息类
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-05-03 QQ:359135103
  */
 public class Cooldown implements IMemoryObject, Serializable {

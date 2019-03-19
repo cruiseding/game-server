@@ -13,7 +13,7 @@ import com.jzy.game.engine.util.TimeUtil;
 
 /**
  * 心跳
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月1日 下午3:39:03
  */

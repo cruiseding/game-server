@@ -10,7 +10,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 
 /**
  * 使用技能，道具
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月18日 下午2:44:50
  */

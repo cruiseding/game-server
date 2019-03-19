@@ -19,7 +19,7 @@ import io.netty.channel.Channel;
  * 服务器信息 <br>
  * 封装了mina和netty连接会话
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-01 QQ:359135103
  */
 public class ServerInfo {
@@ -118,7 +118,7 @@ public class ServerInfo {
 	/**
 	 * 获取空闲连接
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月29日 下午3:36:38
 	 * @return
 	 */

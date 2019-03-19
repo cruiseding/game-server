@@ -19,7 +19,7 @@ import com.jzy.game.engine.util.TimeUtil;
 /**
  * 地图显示面板
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class PolygonViewPane extends JPanel {
 

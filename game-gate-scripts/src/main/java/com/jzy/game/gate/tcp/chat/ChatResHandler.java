@@ -12,7 +12,7 @@ import com.jzy.game.gate.struct.UserSession;
 /**
  * 聊天消息返回
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月13日 下午3:49:36
  */

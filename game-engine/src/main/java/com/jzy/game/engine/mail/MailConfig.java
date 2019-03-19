@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
 /***
  * 邮件收发配置
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月22日 下午5:10:19
  */
 @Root

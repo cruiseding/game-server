@@ -12,7 +12,7 @@ import com.jzy.game.model.constant.NetPort;
 /**
  * 集群管理服务器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public class ClusterServer implements Runnable {

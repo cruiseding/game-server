@@ -7,7 +7,7 @@ import com.jzy.game.engine.mq.MQProducer;
 
 /**
  * 测试MQ
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月28日 下午3:07:49
  */

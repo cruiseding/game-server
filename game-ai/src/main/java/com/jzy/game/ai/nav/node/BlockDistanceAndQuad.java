@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 /**
  * 块排序类
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class BlockDistanceAndQuad implements Serializable, Comparable<BlockDistanceAndQuad> {

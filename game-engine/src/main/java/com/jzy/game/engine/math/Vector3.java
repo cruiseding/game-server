@@ -11,7 +11,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * unity三维向量 <br>
  * 基于unity，部分计算基于2D平面，x，z轴
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class Vector3 implements Serializable, Cloneable, Vector<Vector3> {
 

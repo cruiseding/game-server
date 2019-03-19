@@ -23,7 +23,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 多边形图对象
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class PolygonGraph implements IndexedGraph<Polygon> {

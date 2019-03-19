@@ -6,7 +6,7 @@ import com.jzy.game.engine.redis.jedis.JedisManager;
 
 /**
  * Redis
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月7日 下午3:03:34
  */

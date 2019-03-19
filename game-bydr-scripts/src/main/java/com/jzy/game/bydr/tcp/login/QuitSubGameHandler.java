@@ -15,7 +15,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 /**
  * 退出子游戏 TODO 数据持久化等处理
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月26日 下午5:34:06
  */
 @HandlerEntity(mid = MID.QuitSubGameReq_VALUE, msg = QuitSubGameRequest.class)

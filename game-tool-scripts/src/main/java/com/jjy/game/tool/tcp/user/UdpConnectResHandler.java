@@ -12,7 +12,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 /**
  * udp连接返回
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月1日 下午5:11:56
  */
 @HandlerEntity(mid = MID.UdpConnectRes_VALUE, msg = UdpConnectResponse.class)

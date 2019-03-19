@@ -33,7 +33,7 @@ import com.jzy.game.engine.util.TimeUtil;
  * @param <N> Type of node
  * 
  * @author davebaol 
- * @fix JiangZhiYong
+ * @fix CruiseDing
  * */
 public class IndexedAStarPathFinder<N> implements PathFinder<N> {
 	private static final Logger LOGGER=LoggerFactory.getLogger(IndexedAStarPathFinder.class);

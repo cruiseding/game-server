@@ -23,7 +23,7 @@ import com.jzy.game.hall.server.HallServer;
 	  </tbody>
   </table>
  
-  @author JiangZhiYong
+  @author CruiseDing
   @QQ 359135103 2017年10月16日 下午6:09:48
  */
 public class ChatGmScript implements IGmScript {

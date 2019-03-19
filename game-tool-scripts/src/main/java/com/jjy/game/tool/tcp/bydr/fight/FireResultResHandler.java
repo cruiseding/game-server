@@ -9,7 +9,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 /**
  * 开炮结果
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月20日 上午11:27:32
  */
 @HandlerEntity(mid = MID.FireResultRes_VALUE, msg = FireResultResponse.class)

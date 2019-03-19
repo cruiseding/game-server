@@ -6,7 +6,7 @@ import com.jzy.game.model.struct.Guild;
 
 /**
  * 公会
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月22日 上午10:38:16
  */
@@ -30,7 +30,7 @@ public class GuildDao extends BasicDAO<Guild, Long>{
 	
 	/**
 	 * 存储
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月22日 上午10:45:52
 	 * @param guild

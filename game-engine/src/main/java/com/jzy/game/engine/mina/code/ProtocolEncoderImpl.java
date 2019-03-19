@@ -17,7 +17,7 @@ import org.slf4j.Logger;
  * 消息编码
  * TODO 需要修改
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30
  * QQ:359135103
  */

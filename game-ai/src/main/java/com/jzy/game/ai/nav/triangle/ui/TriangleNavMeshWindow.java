@@ -19,7 +19,7 @@ import com.jzy.game.engine.util.FileUtil;
 /**
  * 地图显示窗口
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class TriangleNavMeshWindow {
 

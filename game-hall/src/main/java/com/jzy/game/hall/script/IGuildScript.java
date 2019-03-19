@@ -4,7 +4,7 @@ import com.jzy.game.engine.script.IScript;
 
 /**
  * 公会脚本
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月22日 上午11:38:03
  */

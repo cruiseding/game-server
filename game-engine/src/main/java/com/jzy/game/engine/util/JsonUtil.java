@@ -29,7 +29,7 @@ import com.jzy.game.engine.struct.json.FieldMethod;
 /**
  * json 工具类
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月7日 上午11:22:15
  */
 public final class JsonUtil {
@@ -123,7 +123,7 @@ public final class JsonUtil {
 
 	/**
 	 * 获取含有指定参数的方法
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月16日 下午5:25:23
 	 * @param cls
@@ -367,7 +367,7 @@ public final class JsonUtil {
     
     /**
      * 通过属性序列化
-     * @author JiangZhiYong
+     * @author CruiseDing
      * @QQ 359135103
      * 2017年9月29日 下午7:33:09
      * @param object

@@ -16,7 +16,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 /**
  * 进入房间
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月5日 下午5:35:36
  */
 @HandlerEntity(mid = MID.EnterRoomReq_VALUE, msg = EnterRoomRequest.class)

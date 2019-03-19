@@ -11,7 +11,7 @@ import com.jzy.game.model.redis.key.HallKey;
 /**
  * 修改角色金币
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月25日 下午5:21:32
  */
 public class RoleGoldChangeScript implements IRoleScript {

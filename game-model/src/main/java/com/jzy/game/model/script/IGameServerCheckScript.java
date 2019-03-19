@@ -5,7 +5,7 @@ import com.jzy.game.message.ServerMessage.ServerInfo;
 
 /**
  *  游戏服务器状态监测脚本
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月10日 下午4:29:45
  */

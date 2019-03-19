@@ -12,7 +12,7 @@ import com.jzy.game.engine.server.ServerInfo;
  * <p>
  * http://127.0.0.1:8001/server/list
  * </p>
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月20日 上午11:04:06
  */
 @HandlerEntity(path = "/server/list")

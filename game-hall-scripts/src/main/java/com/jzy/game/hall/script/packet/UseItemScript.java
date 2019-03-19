@@ -13,7 +13,7 @@ import com.jzy.game.hall.script.IPacketScript;
 
 /**
  * 使用道具脚本
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月18日 下午4:55:43
  */

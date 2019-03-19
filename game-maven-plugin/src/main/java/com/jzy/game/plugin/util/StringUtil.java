@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class StringUtil {

@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 /**
  * 独立周期性单线程
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月3日 上午10:43:19
  */
 public abstract class ScheduledTask {
@@ -59,7 +59,7 @@ public abstract class ScheduledTask {
 	/**
 	 * 任务
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月3日 上午10:45:01
 	 */
 	class Task implements Runnable {

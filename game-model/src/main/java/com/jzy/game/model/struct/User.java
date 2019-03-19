@@ -15,7 +15,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 /**
  * 用戶
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 @Entity(value = "user", noClassnameStored = true)

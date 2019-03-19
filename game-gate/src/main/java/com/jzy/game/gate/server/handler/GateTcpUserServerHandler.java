@@ -21,7 +21,7 @@ import com.jzy.game.model.constant.Reason;
 /**
  * 大厅tcp消息处理器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-09 QQ:359135103
  */
 public class GateTcpUserServerHandler extends ClientProtocolHandler {
@@ -69,7 +69,7 @@ public class GateTcpUserServerHandler extends ClientProtocolHandler {
 	/**
 	 * 消息转发到大厅服务器
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月21日 上午10:14:44
 	 * @param session
 	 * @param msgID

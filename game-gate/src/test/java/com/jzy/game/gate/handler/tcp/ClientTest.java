@@ -25,7 +25,7 @@ import jdk.nashorn.internal.ir.annotations.Ignore;
 /**
  * 消息测试
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-02-28 QQ:359135103
  */
 @Ignore

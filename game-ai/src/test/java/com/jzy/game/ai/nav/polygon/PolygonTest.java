@@ -7,7 +7,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 多边形测试
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class PolygonTest {

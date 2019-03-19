@@ -16,7 +16,7 @@ import com.jzy.game.engine.thread.ThreadType;
  * 一个线程处理多个房间
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-24 QQ:359135103
  */
 public class RoomThread extends ServerThread {

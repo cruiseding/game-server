@@ -6,7 +6,7 @@ import com.jzy.game.model.constant.Reason;
 
 /**
  * 用户接口
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月26日 下午4:42:39
  */
@@ -14,7 +14,7 @@ public interface IUserScript extends IScript {
 	
 	/**
 	 * 用户退出处理
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年7月26日 下午4:47:34
 	 * @param session 游戏客户端会话

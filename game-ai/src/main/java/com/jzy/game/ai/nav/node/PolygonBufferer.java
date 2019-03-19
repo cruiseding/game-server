@@ -12,7 +12,7 @@ import com.vividsolutions.jts.geom.Polygon;
 /**
  * 计算多边形周围缓冲区多边形<br>
  * 如将阻挡多边形边界向外移动
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月3日 
  * @mail 359135103@qq.com
  */

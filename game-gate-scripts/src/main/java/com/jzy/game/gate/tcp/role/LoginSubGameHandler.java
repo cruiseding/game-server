@@ -22,7 +22,7 @@ import com.jzy.game.gate.struct.UserSession;
 /**
  * 登录子游戏
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午5:03:26
  */
 @HandlerEntity(mid = MID.LoginSubGameReq_VALUE, msg = LoginSubGameRequest.class)

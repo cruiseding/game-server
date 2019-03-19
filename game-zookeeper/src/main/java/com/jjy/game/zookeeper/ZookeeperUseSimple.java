@@ -12,7 +12,7 @@ import org.apache.zookeeper.ZooKeeper;
 
 /**
  * zookeeper简单连接使用
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月15日 上午11:12:06
  */

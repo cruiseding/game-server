@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 消息解码
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  *
  */
 public class HttpServerDecoderImpl extends CumulativeProtocolDecoder {

@@ -15,7 +15,7 @@ import com.jzy.game.hall.manager.MailManager;
 /**
  * 修改邮件状态
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月21日 下午5:20:08
  */
 @HandlerEntity(mid = MID.ModifyMailReq_VALUE, msg = ModifyMailRequest.class)

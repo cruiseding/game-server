@@ -14,7 +14,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 点四叉树测试
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class PointQuadTreeTest extends junit.framework.TestCase {

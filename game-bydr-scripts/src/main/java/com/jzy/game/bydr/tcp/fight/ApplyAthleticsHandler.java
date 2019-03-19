@@ -13,7 +13,7 @@ import com.jzy.game.model.redis.channel.BydrWorldChannel;
 /**
  * 报名竞技赛
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月3日 上午9:23:04
  */
 @HandlerEntity(mid = MID.ApplyAthleticsReq_VALUE, msg = ApplyAthleticsRequest.class)

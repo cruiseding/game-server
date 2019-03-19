@@ -15,7 +15,7 @@ import com.jzy.game.model.timer.GameServerCheckTimer;
 /**
  * 世界服务器
  * <p>暂时共用捕鱼服务器类，有修改单独写</p>
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月1日 下午5:34:59
  */
 public class BydrWorldServer implements Runnable {

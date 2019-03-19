@@ -7,7 +7,7 @@ import io.netty.channel.Channel;
 /**
  * 抽象handler
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public abstract class AbsHandler implements IHandler {

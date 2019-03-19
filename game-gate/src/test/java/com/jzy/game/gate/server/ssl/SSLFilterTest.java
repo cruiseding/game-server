@@ -30,7 +30,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * ssl过滤器测试
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月5日 下午4:43:22
  */
 public class SSLFilterTest {

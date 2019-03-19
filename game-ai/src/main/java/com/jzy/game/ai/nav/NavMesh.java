@@ -7,7 +7,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * navmesh寻路入口
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public abstract class NavMesh {

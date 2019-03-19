@@ -21,7 +21,7 @@ import com.jzy.game.engine.thread.ServerThread;
 /**
  * 逻辑执行线程池，将玩家的逻辑操作分配到同一个线程中执行，避免并发数据异常
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-24 QQ:359135103
  */
 public class RoomExecutor implements ExecutorPool {

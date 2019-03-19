@@ -8,7 +8,7 @@ import com.jzy.game.gate.server.handler.GateTcpGameServerHandler;
 /**
  * 子游戏连接 服务
  * <p>游戏服、大厅服等内部共用的服务器</p>
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午2:20:01
  */
 public class GateTcpGameServer extends Service<MinaServerConfig> {

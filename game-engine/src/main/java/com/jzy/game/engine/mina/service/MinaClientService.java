@@ -12,7 +12,7 @@ import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
 /**
  * 内部客户端服务
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-01 QQ:359135103
  */
 public abstract class MinaClientService extends Service<MinaClientConfig> implements ITcpClientService<MinaClientConfig>{

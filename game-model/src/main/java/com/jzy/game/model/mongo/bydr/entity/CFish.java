@@ -8,7 +8,7 @@ import com.jzy.game.model.mongo.IConfigChecker;
 /**
  * 鱼配置信息
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-24 QQ:359135103
  */
 @Entity(value = "c_fish", noClassnameStored = true)

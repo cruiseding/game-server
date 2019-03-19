@@ -8,7 +8,7 @@ package com.jzy.game.tool.util;
 
 /**
  * json工具
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class JsonUtil {

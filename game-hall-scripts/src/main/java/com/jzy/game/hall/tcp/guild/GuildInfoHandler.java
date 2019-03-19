@@ -1,5 +1,5 @@
 /**工具生成，请遵循规范<br>
- @auther JiangZhiYong
+ @auther CruiseDing
  */
 package com.jzy.game.hall.tcp.guild;
 

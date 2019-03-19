@@ -15,8 +15,7 @@ public final class HallChatMessage {
    *聊天类型
    * </pre>
    */
-  public enum ChatType
-      implements com.google.protobuf.ProtocolMessageEnum {
+  public enum ChatType implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <code>PRIVATE = 1;</code>
      *

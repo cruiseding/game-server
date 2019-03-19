@@ -22,7 +22,7 @@ import com.jzy.game.model.constant.Reason;
  * websocket 消息处理器
  * 消息Id(4)+消息内容 
  * @see ClientProtocolHandler
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月19日 下午1:50:02
  */
@@ -74,7 +74,7 @@ public class GateWebSocketUserServerHandler extends DefaultProtocolHandler {
 	/**
 	 * 消息转发到大厅服务器
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月21日 上午10:14:44
 	 * @param session
 	 * @param msgID

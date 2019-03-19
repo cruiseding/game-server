@@ -10,7 +10,7 @@ import org.apache.mina.http.HttpServerDecoder;
 /**
  * http消息解码编码工厂
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public class HttpServerCodecImpl extends ProtocolCodecFilter {

@@ -13,7 +13,7 @@ import org.slf4j.Logger;
 /**
  * 服务器主定时器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-09 QQ:359135103
  */
 public class ServerHeartTimer extends TimerEvent {

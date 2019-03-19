@@ -19,7 +19,7 @@ import com.jzy.game.message.ServerMessage.ServerListResponse;
 /***
  * 返回服务器列表
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月29日 下午1:58:40
  */
 @HandlerEntity(mid = MID.ServerListRes_VALUE, msg = ServerListResponse.class)

@@ -13,7 +13,7 @@ import com.jzy.game.model.handler.http.server.ThreadInfoHandler;
 /**
  * 大厅HTTP服务
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月25日 上午11:46:07
  */
 public class HallHttpServer extends GameHttpSevice {

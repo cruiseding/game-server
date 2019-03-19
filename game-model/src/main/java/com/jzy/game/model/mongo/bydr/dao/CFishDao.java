@@ -8,7 +8,7 @@ import com.jzy.game.model.mongo.bydr.entity.CFish;
 /**
  * 角色
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-02-27 QQ:359135103
  */
 public class CFishDao extends BasicDAO<CFish, Integer> {

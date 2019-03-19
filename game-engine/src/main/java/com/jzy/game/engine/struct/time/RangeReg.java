@@ -4,7 +4,7 @@ import com.jzy.game.engine.util.SymbolUtil;
 
 /**
  * 区间表达
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月2日 上午9:53:24
  */

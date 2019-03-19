@@ -13,7 +13,7 @@ import com.jzy.game.hall.manager.MailManager;
 
 /**
  * 请求邮件列表
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月21日 下午5:18:19
  */

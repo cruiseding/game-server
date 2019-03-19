@@ -8,7 +8,7 @@ import com.jzy.game.model.script.IGameServerCheckScript;
 /**
  * 服务器状态监测脚本
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午4:36:25
  */
 public class GameServerCheckScript implements IGameServerCheckScript {

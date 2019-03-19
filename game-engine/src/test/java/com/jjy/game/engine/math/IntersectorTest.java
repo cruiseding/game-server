@@ -2,7 +2,7 @@ package com.jjy.game.engine.math;
 
 /**
  * 相交测试
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class IntersectorTest {

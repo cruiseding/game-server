@@ -18,7 +18,7 @@ import com.jzy.game.gate.struct.UserSession;
 /**
  * 服务器管理类
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午5:49:38
  */
 public class ServerManager {
@@ -113,7 +113,7 @@ public class ServerManager {
 	/**
 	 * 构建错误信息
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月21日 上午10:37:49
 	 * @param erroCode
 	 * @param msg

@@ -14,7 +14,7 @@ import org.mongodb.morphia.query.UpdateOperations;
 /**
  * 大厅信息
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class HallInfoDao extends BasicDAO<HallInfo, Integer> {

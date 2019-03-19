@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 /**
  * int 位标识
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public final class IntUtil {
@@ -166,7 +166,7 @@ public final class IntUtil {
     
     /**
      * byte数组转long
-     * @author JiangZhiYong
+     * @author CruiseDing
      * @QQ 359135103
      * 2017年10月16日 下午3:06:40
      * @param src

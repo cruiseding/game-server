@@ -7,7 +7,7 @@ import org.apache.mina.core.session.IoSession;
 /**
  * 玩家
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月1日 下午4:16:38
  */
 public class Player {
@@ -36,7 +36,7 @@ public class Player {
 
 	/**
 	 * 发送udp
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月20日 下午1:37:53
 	 * @param msg

@@ -14,7 +14,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 
 /**
  * 创建公会
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月22日 上午11:51:15
  */

@@ -15,7 +15,7 @@ import javax.net.ssl.X509TrustManager;
 /**
  * 网关信任管理工厂
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月5日 下午2:35:24
  */
 public class GateTrustManagerFactory extends TrustManagerFactorySpi {

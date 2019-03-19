@@ -22,7 +22,7 @@ import com.jzy.game.engine.util.StringUtil;
  * Mongodb dao代码生成插件 <br>
  * 根据实体类生成dao,用字符串拼接实现，可以用freemaker模板生成
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月18日 下午5:23:30
  */
 @Mojo(name = "mongoDao", defaultPhase = LifecyclePhase.CLEAN)
@@ -82,7 +82,7 @@ public class MongoDaoBuilder extends AbstractMojo {
 	/**
 	 * 创建DAO实体类
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月19日 上午11:13:46
 	 * @param file
 	 * @return
@@ -100,7 +100,7 @@ public class MongoDaoBuilder extends AbstractMojo {
 		FileUtil.createFile(daoFile);
 		// 生成类文件
 		StringBuilder sb = new StringBuilder();
-		sb.append("/**").append("工具生成，请遵循规范。\n @author JiangZhiYong\n*/\n");
+		sb.append("/**").append("工具生成，请遵循规范。\n @author CruiseDing\n*/\n");
 		
 		String className = file.getName().substring(0,file.getName().indexOf(".")) + "Dao"; //类名
 		String classObject=StringUtil.lowerFirstChar(className);	//类对象
@@ -160,7 +160,7 @@ public class MongoDaoBuilder extends AbstractMojo {
 	/**
 	 * 获得entity实体对象
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月19日 上午11:07:07
 	 * @param files
 	 * @param file

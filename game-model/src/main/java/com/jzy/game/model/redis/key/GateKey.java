@@ -2,7 +2,7 @@ package com.jzy.game.model.redis.key;
 
 /**
  * 网关 redis key枚举
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月25日 上午11:39:16
  */

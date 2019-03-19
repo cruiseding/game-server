@@ -23,7 +23,7 @@ import io.netty.util.CharsetUtil;
  * </p>
  * TODO 待完善
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月29日 下午5:36:35
  */
 public class FastJsonCodec implements Codec {

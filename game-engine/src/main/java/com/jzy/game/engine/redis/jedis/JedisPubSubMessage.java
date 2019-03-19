@@ -7,7 +7,7 @@ import java.util.Set;
 
 /**
  *  redis的订阅发布消息
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月10日 上午10:27:29
  */

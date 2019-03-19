@@ -3,7 +3,7 @@ package com.jzy.game.model.redis.channel;
 /**
  * 大厅订阅发布 通道
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午2:36:31
  */
 public enum HallChannel {

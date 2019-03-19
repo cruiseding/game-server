@@ -50,7 +50,7 @@ public class Dog extends Person{
 
 	/**
 	 * 犬叫
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年11月24日 下午4:37:33
 	 */
@@ -63,7 +63,7 @@ public class Dog extends Person{
 
 	/**
 	 * 开始走路
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年11月24日 下午5:01:08
 	 */
@@ -73,7 +73,7 @@ public class Dog extends Person{
 
 	/**
 	 * 走路
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年11月24日 下午5:01:45
 	 */
@@ -83,7 +83,7 @@ public class Dog extends Person{
 
 	/**
 	 * 停止走路
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年11月24日 下午5:11:08
 	 */
@@ -93,7 +93,7 @@ public class Dog extends Person{
 
 	/**
 	 * 撒尿标记
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年11月24日 下午4:45:04
 	 * @param i

@@ -2,7 +2,7 @@ package com.jzy.game.model.redis.channel;
 
 /**
  * 捕鱼达人世界服监听通道
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月10日 下午2:40:49
  */

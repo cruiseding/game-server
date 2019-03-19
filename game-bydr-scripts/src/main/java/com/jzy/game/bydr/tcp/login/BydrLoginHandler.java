@@ -13,7 +13,7 @@ import com.jzy.game.model.constant.Reason;
 /**
  * 捕鱼达人登录
  * TODO 此次全用的是session写逻辑，用netty需要使用channel
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月29日 下午3:17:01
  */
 @HandlerEntity(mid = MID.LoginSubGameReq_VALUE, msg = LoginSubGameRequest.class)

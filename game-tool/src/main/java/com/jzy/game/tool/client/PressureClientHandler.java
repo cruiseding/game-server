@@ -12,7 +12,7 @@ import com.jzy.game.engine.server.Service;
 /**
  * 压测消息处理handler
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月10日 下午5:48:39
  */

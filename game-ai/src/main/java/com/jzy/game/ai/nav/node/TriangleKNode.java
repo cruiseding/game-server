@@ -7,7 +7,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 三角形顶点节点
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月3日
  * @mail 359135103@qq.com
  */

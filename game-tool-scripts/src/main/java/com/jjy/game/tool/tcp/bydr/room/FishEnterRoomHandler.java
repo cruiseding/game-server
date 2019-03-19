@@ -14,7 +14,7 @@ import com.jzy.game.engine.util.MathUtil;
 
 /**
  * 鱼进入房间
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月20日 上午11:17:49
  */

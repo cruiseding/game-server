@@ -24,7 +24,7 @@ import com.jzy.game.engine.mina.config.MinaServerConfig;
 /**
  * UDP服务器
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月1日 上午10:50:45
  */
 public class UdpServer implements Runnable {

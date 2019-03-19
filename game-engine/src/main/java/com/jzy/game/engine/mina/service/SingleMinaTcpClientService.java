@@ -13,7 +13,7 @@ import com.jzy.game.engine.mina.handler.DefaultClientProtocolHandler;
 /**
  * 单个tcp连接客户端
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-09 QQ:359135103
  */
 public class SingleMinaTcpClientService extends MinaClientService {

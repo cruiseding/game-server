@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * 
  * @author implicit-invocation
  * @author davebaol
- * @fix JiangZhiYong
+ * @fix CruiseDing
  * @QQ 359135103 2017年11月22日 下午2:43:23
  */
 public class BehaviorTree<E> extends Task<E> {
@@ -156,7 +156,7 @@ public class BehaviorTree<E> extends Task<E> {
 	/**
 	 * 通知添加子任务
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月22日 下午4:00:00
 	 * @param task
 	 * @param index
@@ -170,7 +170,7 @@ public class BehaviorTree<E> extends Task<E> {
 	/**
 	 * 通知任务更新
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月22日 下午5:04:00
 	 * @param task
 	 * @param previousStatus
@@ -203,7 +203,7 @@ public class BehaviorTree<E> extends Task<E> {
 	/**
 	 * 添加监听器
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月22日 下午5:39:57
 	 * @param listener
 	 */
@@ -229,7 +229,7 @@ public class BehaviorTree<E> extends Task<E> {
 	/**
 	 * 行为树事件
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月22日 下午3:50:50
 	 * @param <E>
 	 */
@@ -238,7 +238,7 @@ public class BehaviorTree<E> extends Task<E> {
 		/**
 		 * 状态更新
 		 * 
-		 * @author JiangZhiYong
+		 * @author CruiseDing
 		 * @QQ 359135103 2017年11月22日 下午3:52:23
 		 * @param task
 		 * @param previousStatus
@@ -249,7 +249,7 @@ public class BehaviorTree<E> extends Task<E> {
 		/**
 		 * 添加子任务
 		 * 
-		 * @author JiangZhiYong
+		 * @author CruiseDing
 		 * @QQ 359135103 2017年11月22日 下午3:55:20
 		 * @param task
 		 *            子任务

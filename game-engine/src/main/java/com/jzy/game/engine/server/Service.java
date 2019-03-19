@@ -18,7 +18,7 @@ import com.jzy.game.engine.thread.ThreadType;
 /**
  * 抽象服务
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30 QQ:359135103
  * @param <Conf>
  */
@@ -126,7 +126,7 @@ public abstract class Service<Conf extends BaseServerConfig> implements Runnable
 	/**
 	 * 关服回调
 	 *
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @date 2017-03-30 QQ:359135103
 	 */
 	private static final class CloseByExit implements Runnable {

@@ -19,7 +19,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 地图显示面板
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class TriangleViewPane extends JPanel {
 

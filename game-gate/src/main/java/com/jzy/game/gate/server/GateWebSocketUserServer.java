@@ -15,7 +15,7 @@ import com.jzy.game.gate.server.handler.GateWebSocketUserServerHandler;
 
 /**
  * 网关 用户WebSocket 服务器（网页链接）
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月19日 下午1:37:02
  */

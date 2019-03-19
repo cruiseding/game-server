@@ -21,7 +21,7 @@ import com.jzy.game.model.redis.key.HallKey;
  * 大厅角色数据实时存储,小心消息覆盖
  * 
  * @note 其他子游戏单独在另外定义角色实体，要求各子游戏数据独立，分开
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 @Entity(value = "role", noClassnameStored = true)
@@ -135,7 +135,7 @@ public class Role extends Person {
 
 	/**
 	 * 道具数量
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月24日 上午10:23:57
 	 * @return
@@ -148,7 +148,7 @@ public class Role extends Person {
 	
 	/**
 	 * 获取道具
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月24日 上午10:21:18
 	 * @param itemId
@@ -161,7 +161,7 @@ public class Role extends Person {
 	
 	/**
 	 * 所有道具
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月24日 上午10:36:11
 	 * @return
@@ -175,7 +175,7 @@ public class Role extends Person {
 	/**
 	 * 角色存redis key
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月26日 下午5:02:40
 	 * @return
 	 */
@@ -185,7 +185,7 @@ public class Role extends Person {
 
 	/**
 	 * 存储整个role对象
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月26日 下午5:06:51
 	 */

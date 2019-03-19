@@ -11,7 +11,7 @@ import com.jzy.game.model.mongo.hall.dao.UserDao;
 /**
  * mongodb
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月28日 下午3:33:14
  */
 public class MongoManager extends AbsMongoManager {

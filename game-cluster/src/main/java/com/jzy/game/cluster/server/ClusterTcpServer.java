@@ -20,7 +20,7 @@ import com.jzy.game.engine.util.MsgUtil;
 /**
  * TCP连接
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public class ClusterTcpServer extends Service<MinaServerConfig> {
@@ -72,7 +72,7 @@ public class ClusterTcpServer extends Service<MinaServerConfig> {
 	/**
 	 * 消息处理器
 	 *
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @date 2017-03-31 QQ:359135103
 	 */
 	public class ClusterTcpServerHandler extends DefaultProtocolHandler {

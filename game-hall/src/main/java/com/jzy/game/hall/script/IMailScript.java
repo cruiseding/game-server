@@ -8,7 +8,7 @@ import com.jzy.game.model.struct.Mail.MailType;
 
 /**
  * 邮件
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月21日 下午4:45:19
  */
@@ -16,7 +16,7 @@ public interface IMailScript extends IScript {
 
 	/**
 	 * 发送邮件
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月21日 下午4:26:31
 	 * @param title

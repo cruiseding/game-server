@@ -7,7 +7,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * 多边形路径点
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2018年2月20日
  * @mail 359135103@qq.com
  */

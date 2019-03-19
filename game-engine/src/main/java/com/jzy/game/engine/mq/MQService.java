@@ -11,7 +11,7 @@ import com.jzy.game.engine.util.FileUtil;
 /**
  * MQ服务
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月28日 下午1:31:13
  */
 public abstract class MQService {
@@ -35,7 +35,7 @@ public abstract class MQService {
 
 	/**
 	 * 获取连接
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年7月28日 下午1:38:28
 	 * @return
@@ -54,7 +54,7 @@ public abstract class MQService {
 
 	/**
 	 * 关闭连接
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年7月28日 下午1:38:20
 	 */

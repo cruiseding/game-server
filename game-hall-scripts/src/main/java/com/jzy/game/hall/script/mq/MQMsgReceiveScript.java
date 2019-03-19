@@ -7,7 +7,7 @@ import com.jzy.game.engine.mq.IMQScript;
 
 /**
  * MQ 消息接收
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月28日 下午3:01:03
  */

@@ -7,7 +7,7 @@ import com.jzy.game.model.struct.User;
 /**
  * 用户接口
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月7日 下午4:16:57
  */
 public interface IUserScript extends IScript {

@@ -12,7 +12,7 @@ import com.jzy.game.tool.util.ExcelUtil;
 /**
  * excel 测试
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public class ExcelUtilTest {
 

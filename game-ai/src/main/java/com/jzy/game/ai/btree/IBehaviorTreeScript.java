@@ -5,7 +5,7 @@ import com.jzy.game.engine.struct.Person;
 
 /**
  * 行为树脚本
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年11月
  */
@@ -13,7 +13,7 @@ public interface IBehaviorTreeScript extends IScript{
 	
 	/**
 	 * 为对象添加行为树
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * @param person 
 	 */

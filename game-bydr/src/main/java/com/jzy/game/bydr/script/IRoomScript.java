@@ -9,7 +9,7 @@ import com.jzy.game.message.bydr.BydrRoomMessage.RoomType;
 /**
  * 房间脚本
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-21 QQ:359135103
  */
 public interface IRoomScript extends IScript {
@@ -29,7 +29,7 @@ public interface IRoomScript extends IScript {
 	/**
 	 * 进入房间
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月14日 下午2:42:25
 	 * @param role
 	 * @param roomType
@@ -69,7 +69,7 @@ public interface IRoomScript extends IScript {
 	/**
 	 * 销毁房间
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月14日 上午9:47:12
 	 * @param room
 	 */
@@ -79,7 +79,7 @@ public interface IRoomScript extends IScript {
 	
 	/**
 	 * 每秒执行
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月26日 下午2:07:00
 	 * @param localTime
@@ -90,7 +90,7 @@ public interface IRoomScript extends IScript {
 
 	/**
 	 * 每分钟执行
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月26日 下午1:51:45
 	 * @param localTime
@@ -101,7 +101,7 @@ public interface IRoomScript extends IScript {
 
 	/**
 	 * 每小时执行
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月26日 下午1:51:59
 	 * @param localTime

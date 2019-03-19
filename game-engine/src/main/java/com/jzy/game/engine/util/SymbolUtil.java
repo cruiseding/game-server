@@ -3,7 +3,7 @@ package com.jzy.game.engine.util;
 
 /**
  * 符号工具
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月2日 上午9:53:55
  */

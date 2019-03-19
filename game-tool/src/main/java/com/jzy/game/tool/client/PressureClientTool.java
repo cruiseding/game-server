@@ -27,7 +27,7 @@ import javax.swing.JTextArea;
 /**
  * 压力测试客户端
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午4:48:24
  */
 public class PressureClientTool {

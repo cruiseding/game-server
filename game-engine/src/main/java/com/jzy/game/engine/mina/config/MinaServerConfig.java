@@ -9,7 +9,7 @@ import com.jzy.game.engine.server.ServerType;
 /**
  * 主要配置Mina服务器相关配置
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30
  * QQ:359135103
  */

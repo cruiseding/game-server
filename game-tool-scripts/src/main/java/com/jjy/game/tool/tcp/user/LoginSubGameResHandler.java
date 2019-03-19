@@ -11,7 +11,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 /**
  * 登录子游戏返回
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月11日 上午11:13:57
  */
 @HandlerEntity(mid = MID.LoginSubGameRes_VALUE, msg = LoginSubGameResponse.class)

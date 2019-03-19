@@ -13,7 +13,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 /**
  * 改变服务器结果
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月3日 下午4:11:03
  */
 @HandlerEntity(mid = MID.ChangeRoleServerRes_VALUE, msg = ChangeRoleServerResponse.class)

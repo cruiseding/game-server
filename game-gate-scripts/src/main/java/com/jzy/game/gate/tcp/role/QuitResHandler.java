@@ -18,7 +18,7 @@ import com.jzy.game.gate.struct.UserSession;
  * 退出游戏返回<br>
  * 
  * @note 在请求消息时已经移除了角色的连接会话信息,所有返回消息会话是游戏内部会话，不能从session中获取属性,不能关闭
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月20日 下午2:18:08
  */
 @HandlerEntity(mid = MID.QuitRes_VALUE, msg = QuitResponse.class)

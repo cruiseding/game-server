@@ -18,7 +18,7 @@ import com.jzy.game.model.handler.http.server.ThreadInfoHandler;
 /**
  * http连接
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public class ClusterHttpServer extends Service<MinaServerConfig> {
@@ -62,7 +62,7 @@ public class ClusterHttpServer extends Service<MinaServerConfig> {
 /**
  * 消息处理器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 class ClusterHttpServerHandler extends HttpServerIoHandler {

@@ -10,7 +10,7 @@ import com.jzy.game.engine.util.IntUtil;
 /**
  * 默认内部客户端消息处理器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-09 QQ:359135103
  */
 public class DefaultClientProtocolHandler extends DefaultProtocolHandler {

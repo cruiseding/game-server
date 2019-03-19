@@ -18,7 +18,7 @@ import com.jzy.game.engine.math.MathUtil;
 
 /**
  * 分数选择器
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class ScoreSelectorTest {
@@ -29,9 +29,6 @@ public class ScoreSelectorTest {
 	@Test
 	public void testScoreSelector() throws Exception{
 		ScoreSelector<Dog> selector = new DogRandomSocreSelector();
-
-
-
 
 		BarkTask bark1 = new BarkTask();
 		bark1.times=10;

@@ -2,7 +2,7 @@ package com.jjy.game.manage.constant;
 
 /**
  * session 常量
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月20日 下午1:54:34
  */

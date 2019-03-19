@@ -3,7 +3,7 @@ package com.jzy.game.ai.btree;
 /**
  * 行为树常量
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  *
  */

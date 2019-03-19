@@ -9,7 +9,7 @@ import com.jzy.game.engine.server.ServerType;
 /**
  * netty 客户端配置
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月24日 下午8:18:20 TODO 需要修改配置
  */
 @Root

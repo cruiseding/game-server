@@ -8,7 +8,7 @@ import com.jzy.game.model.struct.Role;
 
 /**
  * 道具
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月18日 下午4:18:44
  */
@@ -16,7 +16,7 @@ public interface IPacketScript extends IScript {
 
 	/**
 	 * 使用道具
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月18日 下午4:20:16
 	 * @param id 道具Id
@@ -29,7 +29,7 @@ public interface IPacketScript extends IScript {
 	
 	/**
 	 * 添加道具
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年9月18日 下午4:23:47
 	 * @param configId

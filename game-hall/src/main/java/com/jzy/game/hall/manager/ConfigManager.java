@@ -9,7 +9,7 @@ import com.jzy.game.model.mongo.bydr.entity.CFish;
 
 /**
  * 配置表
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月18日 下午2:31:04
  */
@@ -45,7 +45,7 @@ public class ConfigManager {
 	
 	/**
 	 * 鱼配置信息
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月18日 下午3:18:43
 	 * @param configId

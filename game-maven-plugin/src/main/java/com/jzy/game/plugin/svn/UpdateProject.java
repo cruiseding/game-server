@@ -20,7 +20,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 /**
  * 更新项目
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月18日 下午7:44:31
  * 
  */

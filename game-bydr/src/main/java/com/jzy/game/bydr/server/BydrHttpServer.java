@@ -14,7 +14,7 @@ import com.jzy.game.model.handler.http.server.ThreadInfoHandler;
 /**
  * http服务器
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月24日 下午1:46:00
  */
 public class BydrHttpServer extends GameHttpSevice {

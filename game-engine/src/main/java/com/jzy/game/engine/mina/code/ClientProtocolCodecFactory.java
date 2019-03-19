@@ -8,7 +8,7 @@ package com.jzy.game.engine.mina.code;
 /**
  * 客户端消息解码
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class ClientProtocolCodecFactory extends ProtocolCodecFactoryImpl {

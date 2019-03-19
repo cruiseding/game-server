@@ -23,7 +23,7 @@ import com.jzy.game.message.bydr.BydrRoomMessage.RoomType;
 /**
  * 房间管理类
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月14日 下午2:27:59
  */
 public class RoomManager {
@@ -50,7 +50,7 @@ public class RoomManager {
 	/**
 	 * 进入房间
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月14日 下午2:32:40
 	 * @param role
 	 * @param roomType
@@ -64,7 +64,7 @@ public class RoomManager {
 	/**
 	 * 退出房间
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月26日 下午4:08:55
 	 * @param role
 	 * @param roomId
@@ -88,7 +88,7 @@ public class RoomManager {
 	/**
 	 * 添加房间
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月14日 下午2:45:19
 	 * @param room
 	 */
@@ -105,7 +105,7 @@ public class RoomManager {
 	/**
 	 * 获取房间
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月14日 下午2:56:29
 	 * @param roomId
 	 * @return
@@ -117,7 +117,7 @@ public class RoomManager {
 	/**
 	 * 获取房间列表
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月14日 下午3:11:11
 	 * @param roomType
 	 * @return
@@ -134,7 +134,7 @@ public class RoomManager {
 	/**
 	 * 广播鱼进入房间
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月25日 下午4:13:23
 	 * @param room
 	 * @param fishs
@@ -182,7 +182,7 @@ public class RoomManager {
 	/**
 	 * 构建房间信息
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月25日 下午5:59:28
 	 * @param role
 	 * @return
@@ -201,7 +201,7 @@ public class RoomManager {
 	
 	/**
 	 * 构建房间信息
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月20日 上午10:51:45
 	 * @param room

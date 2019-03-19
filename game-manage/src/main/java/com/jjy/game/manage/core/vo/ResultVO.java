@@ -3,7 +3,7 @@ package com.jjy.game.manage.core.vo;
 /**
  * 
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-05-23
  * QQ:359135103
  * @param <T>

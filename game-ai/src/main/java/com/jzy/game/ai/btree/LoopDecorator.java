@@ -26,7 +26,7 @@ package com.jzy.game.ai.btree;
  *            game state
  * 
  * @author davebaol
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 public abstract class LoopDecorator<E> extends Decorator<E> {
 

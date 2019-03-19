@@ -10,7 +10,7 @@ import com.jzy.game.model.constant.Reason;
 
 /**
  * 退出游戏
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月27日 上午9:49:28
  */

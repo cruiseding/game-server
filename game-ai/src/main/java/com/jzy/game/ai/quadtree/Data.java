@@ -2,7 +2,7 @@ package com.jzy.game.ai.quadtree;
 
 /**
  * 数据
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public abstract class Data<T> implements Comparable<Data<T>>{

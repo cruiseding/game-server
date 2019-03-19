@@ -17,7 +17,7 @@ import com.jzy.game.gate.struct.UserSession;
 /**
  * 登陆返回
  *<p>处理用户的连接session,设置UserSession用户ID，角色ID</p>
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 @HandlerEntity(mid = MID.LoginRes_VALUE, desc = "登陆", thread = ThreadType.IO, msg = LoginResponse.class)

@@ -6,7 +6,7 @@ import com.jzy.game.engine.util.SysUtil;
 
 /**
  * 系统工具测试
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月12日 下午2:28:07
  */

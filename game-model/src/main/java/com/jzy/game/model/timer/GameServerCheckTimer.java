@@ -24,7 +24,7 @@ import com.jzy.game.model.script.IGameServerCheckScript;
  * 每隔10秒监测一次
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月3日 上午10:47:45
  */
 public class GameServerCheckTimer extends ScheduledTask {

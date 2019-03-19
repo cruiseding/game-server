@@ -10,7 +10,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 
 /**
  * 竞技场报名
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月3日 下午6:26:10
  */

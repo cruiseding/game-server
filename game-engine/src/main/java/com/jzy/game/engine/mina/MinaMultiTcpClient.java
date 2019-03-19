@@ -14,7 +14,7 @@ import com.jzy.game.engine.mina.service.MinaClientService;
 /**
  * 多客戶端管理,连接多个服务器
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-01 QQ:359135103
  */
 public class MinaMultiTcpClient {

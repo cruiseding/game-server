@@ -16,7 +16,7 @@ import com.jzy.game.gate.struct.UserSession;
 /**
  * 角色退出
  * <p>TODO 需要向大厅服、游戏服广播,断线重连和玩家真实退出的不同处理</p>
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年7月26日 下午4:51:31
  */

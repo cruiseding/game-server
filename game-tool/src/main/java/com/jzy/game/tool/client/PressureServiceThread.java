@@ -24,7 +24,7 @@ import com.jzy.game.engine.thread.timer.event.ServerHeartTimer;
 /**
  * 压力测试线程
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月10日 下午5:20:22
  */
 public class PressureServiceThread extends Thread {
@@ -73,7 +73,7 @@ public class PressureServiceThread extends Thread {
 	/**
 	 * 玩家定时器
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月20日 上午11:39:45
 	 */
 	public class PlayerTimerEvent extends ServerHeartTimer {

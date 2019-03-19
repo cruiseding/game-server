@@ -15,7 +15,7 @@ import com.jzy.game.engine.script.ScriptManager;
 /**
  * MQ 消费者，监听器
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月28日 上午10:37:44
  */
 public class MQConsumer extends MQService implements Runnable {

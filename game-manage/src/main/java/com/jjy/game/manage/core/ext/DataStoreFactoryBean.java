@@ -10,7 +10,7 @@ import com.mongodb.MongoClientURI;
 /**
  * mongodb
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * QQ:359135103
  */
 public class DataStoreFactoryBean extends AbstractFactoryBean<Datastore> {

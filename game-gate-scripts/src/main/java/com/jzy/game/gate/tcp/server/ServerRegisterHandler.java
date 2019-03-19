@@ -15,7 +15,7 @@ import com.jzy.game.gate.manager.ServerManager;
 /**
  * 游戏服循环注册更新
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-09 QQ:359135103
  */
 @HandlerEntity(mid = MID.ServerRegisterReq_VALUE, msg = ServerRegisterRequest.class, thread = ThreadType.SYNC)

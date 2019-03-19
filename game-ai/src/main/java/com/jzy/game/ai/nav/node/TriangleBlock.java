@@ -12,7 +12,7 @@ import com.vividsolutions.jts.geom.Coordinate;
  * <br>
  * 将原始的三角形网格进行加工后的数据，包含原始多边形，重新计算后的多边线，顶点坐标节点，块中的随机坐标点
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月3日
  * @mail 359135103@qq.com
  */

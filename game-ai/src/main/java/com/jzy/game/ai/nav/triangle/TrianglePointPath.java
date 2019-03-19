@@ -16,7 +16,7 @@ import java.util.List;
  * NavMesh 生成坐标路径点 
  * 
  * @author jsjolund
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 public class TrianglePointPath implements Iterable<Vector3> {
 	public static final Vector3 V3_UP = Vector3.Y;

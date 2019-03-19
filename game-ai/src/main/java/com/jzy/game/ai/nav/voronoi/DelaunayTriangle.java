@@ -12,7 +12,7 @@ import com.jzy.game.engine.math.Vector3;
 /**
  * Delaunay 三角形
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class DelaunayTriangle extends Triangle {

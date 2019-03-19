@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
 /**
  * http请求工具
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  */
 public final class HttpUtil {
     private static final Logger LOGGER=LoggerFactory.getLogger(HttpUtil.class);

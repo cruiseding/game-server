@@ -27,7 +27,7 @@ import com.jzy.game.hall.script.IRoleScript;
  * 登陆脚本 <br>
  * 临时数据处理，如发临时发补偿，数据处理等
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月18日 下午6:02:29
  */
 public class RoleLoginScript implements IRoleScript {
@@ -44,7 +44,7 @@ public class RoleLoginScript implements IRoleScript {
 	/**
 	 * 加载数据
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午5:28:12
 	 * @param role
 	 */
@@ -68,7 +68,7 @@ public class RoleLoginScript implements IRoleScript {
 	/**
 	 * 临时初始化
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午6:30:10
 	 * @param role
 	 */

@@ -14,7 +14,7 @@ import redis.clients.jedis.Jedis;
 /**
  * 角色退出游戏
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月18日 下午6:01:57
  */
 public class RoleQuitScript implements IRoleScript {
@@ -28,7 +28,7 @@ public class RoleQuitScript implements IRoleScript {
 	/**
 	 * 存储数据
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年9月18日 下午6:06:41
 	 * @param role
 	 */

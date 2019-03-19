@@ -3,7 +3,7 @@ package com.jzy.game.model.constant;
 /**
  * 网络端口常量
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午2:57:34
  */
 public final class NetPort {

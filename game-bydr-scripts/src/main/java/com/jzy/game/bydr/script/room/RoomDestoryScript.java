@@ -4,7 +4,7 @@ import com.jzy.game.bydr.script.IRoomScript;
 
 /**
  * 房间销毁
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年9月14日 上午9:48:26
  */

@@ -5,7 +5,7 @@ import com.jzy.game.model.struct.Role;
 
 /**
  * gm脚本
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月16日 下午6:04:35
  */
@@ -17,7 +17,7 @@ public interface IGmScript extends IScript {
 	
 	/**
 	 * 是否为gm命令
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月16日 下午6:07:32
 	 * @param gmCmd

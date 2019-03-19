@@ -18,7 +18,7 @@ import com.jzy.game.engine.struct.Person;
 
 /**
  * 行为树测试
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年11月22日 下午6:03:17
  */
@@ -28,7 +28,7 @@ public class BehaviorTreeTest {
 	/**
 	 * Selector
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年11月24日 下午5:20:06
 	 * @throws Exception

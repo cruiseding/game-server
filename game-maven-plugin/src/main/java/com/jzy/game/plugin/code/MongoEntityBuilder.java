@@ -33,7 +33,7 @@ import com.jzy.game.plugin.util.FreeMarkerUtil;
  * Mongodb entity代码生成插件 <br>
  * 暂时不支持泛型
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月31日 上午10:18:14
  */
 @Mojo(name = "mongoEntity", defaultPhase = LifecyclePhase.CLEAN)
@@ -144,7 +144,7 @@ public class MongoEntityBuilder extends AbstractMojo {
 	/**
 	 * 表单名转换为类名
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月31日 上午11:33:09
 	 * @param sheetName
 	 * @return
@@ -164,7 +164,7 @@ public class MongoEntityBuilder extends AbstractMojo {
 	/**
 	 * 解析属性类型
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月31日 下午1:56:05
 	 * @param filedType
 	 * @return

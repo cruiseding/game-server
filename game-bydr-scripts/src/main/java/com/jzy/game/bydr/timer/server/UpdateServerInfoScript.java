@@ -16,7 +16,7 @@ package com.jzy.game.bydr.timer.server;
 ///**
 // * 更新服务器信息脚本
 // *
-// * @author JiangZhiYong
+// * @author CruiseDing
 // * @date 2017-04-09 QQ:359135103
 // */
 //public class UpdateServerInfoScript implements ITimerEventScript {

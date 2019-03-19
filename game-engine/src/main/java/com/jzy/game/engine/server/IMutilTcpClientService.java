@@ -8,7 +8,7 @@ import com.jzy.game.engine.thread.ThreadType;
 
 /**
  * 连接多服务器客户端接口
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年8月29日 上午9:48:52
  */
@@ -16,7 +16,7 @@ public interface IMutilTcpClientService<T extends BaseServerConfig> extends Runn
 
 	/**
 	 * 移除一个客户端
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月29日 上午10:00:27
 	 * @param serverId
@@ -32,7 +32,7 @@ public interface IMutilTcpClientService<T extends BaseServerConfig> extends Runn
 	
 	/**
 	 * 服务器列表
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年8月29日 上午10:06:41
 	 * @return

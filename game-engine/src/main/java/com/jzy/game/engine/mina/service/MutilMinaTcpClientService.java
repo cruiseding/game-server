@@ -22,7 +22,7 @@ import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
  * 一般用于子游戏服务器和网关服，所有玩家共享连接
  * </p>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午3:23:32
  */
 public class MutilMinaTcpClientService extends MinaClientService implements IMutilTcpClientService<MinaServerConfig>{
@@ -165,7 +165,7 @@ public class MutilMinaTcpClientService extends MinaClientService implements IMut
 	/**
 	 * 多连接消息处理器
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年7月4日 下午3:22:48
 	 */
 	public class MutilTcpProtocolHandler extends DefaultClientProtocolHandler {

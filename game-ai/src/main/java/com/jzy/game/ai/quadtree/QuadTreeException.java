@@ -2,7 +2,7 @@ package com.jzy.game.ai.quadtree;
 
 /**
  * 四叉树异常
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class QuadTreeException extends RuntimeException {

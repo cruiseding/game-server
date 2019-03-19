@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
 /**
  * mongodb
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class MongoUtil {

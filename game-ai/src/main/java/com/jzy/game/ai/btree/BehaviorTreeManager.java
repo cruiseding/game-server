@@ -45,7 +45,7 @@ import com.jzy.game.engine.util.StringUtil;
 /**
  * 行为树 <br>
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年11月24日
  */
 public class BehaviorTreeManager {

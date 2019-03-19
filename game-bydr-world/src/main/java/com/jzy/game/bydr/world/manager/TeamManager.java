@@ -9,7 +9,7 @@ import com.jzy.game.bydr.struct.Team;
 /**
  * 组队管理
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年8月3日 上午11:42:22
  */
 public class TeamManager {

@@ -14,7 +14,7 @@ import freemarker.template.Version;
 /**
  * freemarker工具
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年10月31日 上午10:27:31
  */
 public class FreeMarkerUtil {

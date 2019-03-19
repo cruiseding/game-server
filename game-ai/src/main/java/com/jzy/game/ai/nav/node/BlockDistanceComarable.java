@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 方块距离比较器
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月10日 
  * @mail 359135103@qq.com
  */

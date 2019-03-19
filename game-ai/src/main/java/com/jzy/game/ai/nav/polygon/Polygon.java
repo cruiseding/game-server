@@ -21,7 +21,7 @@ import com.jzy.game.engine.script.IIDScript;
 /**
  * 多边形,用于navmesh寻路
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2018年2月20日
  * @mail 359135103@qq.com
  */

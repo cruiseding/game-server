@@ -10,7 +10,7 @@ import com.jzy.game.gate.script.IGateServerScript;
 /**
  * 注册udp消息和udp服务器
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年9月1日 下午2:43:00
  */
 public class UdpMsgRegisterScript implements IGateServerScript, IInitScript {

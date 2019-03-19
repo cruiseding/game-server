@@ -22,7 +22,7 @@ import com.jzy.game.engine.math.Vector3;
  * 导航网格图像数据 <br>
  * 数据对象预处理
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年11月7日 下午4:43:33
  */
 public class TriangleGraph implements IndexedGraph<Triangle> {
@@ -91,7 +91,7 @@ public class TriangleGraph implements IndexedGraph<Triangle> {
 	/**
 	 * 创建三角形列表
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月7日 下午5:58:20
 	 * @return
 	 */
@@ -122,7 +122,7 @@ public class TriangleGraph implements IndexedGraph<Triangle> {
 	/**
 	 * 获得三角形顶点坐标的共享边
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年11月8日 下午4:12:33
 	 * @param indices
 	 *            顶点下标列表

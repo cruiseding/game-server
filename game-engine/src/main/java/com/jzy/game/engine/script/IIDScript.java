@@ -3,7 +3,7 @@ package com.jzy.game.engine.script;
 /**
  * 有ID的脚本
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-30
  * QQ:359135103
  */

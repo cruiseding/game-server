@@ -12,7 +12,7 @@ import com.jzy.game.engine.math.Vector3;
  *
  * @author Keith Woodward
  * 
- * @fix JiangZhiYong
+ * @fix CruiseDing
  */
 public class PathFinder implements Serializable {
 

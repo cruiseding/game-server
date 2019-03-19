@@ -11,7 +11,7 @@ import com.mongodb.MongoClientURI;
 /**
  * mongodb 管理类
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-04-14 QQ:359135103
  */
 public abstract class AbsMongoManager {

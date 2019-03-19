@@ -22,7 +22,7 @@ import reactor.rx.broadcast.BehaviorBroadcaster;
  * <br>
  * TODO 组合替换继承
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月26日 下午1:40:11
  */
 public abstract class Person {
@@ -201,7 +201,7 @@ public abstract class Person {
 	/**
 	 * 发送消息，带ID头
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年8月3日 下午2:53:28
 	 * @param object
 	 */

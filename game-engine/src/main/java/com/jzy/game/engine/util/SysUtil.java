@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 系统工具
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
 public final class SysUtil {
@@ -50,7 +50,7 @@ public final class SysUtil {
 	/**
 	 * 虚拟机可用cpu
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月12日 下午1:56:46
 	 * @return
 	 */
@@ -61,7 +61,7 @@ public final class SysUtil {
 	/**
 	 * 空闲内存
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月12日 下午1:59:56
 	 * @return
 	 */
@@ -72,7 +72,7 @@ public final class SysUtil {
 	/**
 	 * 可用内存
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月12日 下午2:01:32
 	 * @return
 	 */
@@ -83,7 +83,7 @@ public final class SysUtil {
 	/**
 	 * 虚拟机能获取的最大内存
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月12日 下午2:03:08
 	 * @return
 	 */
@@ -94,7 +94,7 @@ public final class SysUtil {
 	/**
 	 * 类加载信息
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月12日 下午3:39:22
 	 * @param spliteStr
 	 * @return
@@ -111,7 +111,7 @@ public final class SysUtil {
 	/**
 	 * 类编译信息
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月12日 下午3:39:22
 	 * @param spliteStr
 	 * @return
@@ -128,7 +128,7 @@ public final class SysUtil {
 	/**
 	 * 垃圾回收信息
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月12日 下午3:39:22
 	 * @param spliteStr
 	 * @return
@@ -147,7 +147,7 @@ public final class SysUtil {
 	/**
 	 * 内存信息
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月12日 下午3:39:22
 	 * @param spliteStr
 	 * @return
@@ -178,7 +178,7 @@ public final class SysUtil {
 	
 	/**
 	 * 操作系统信息
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月12日 下午5:21:19
 	 * @param spliteStr
@@ -197,7 +197,7 @@ public final class SysUtil {
 	
 	/**
 	 * 线程信息
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月12日 下午5:21:19
 	 * @param spliteStr
@@ -222,7 +222,7 @@ public final class SysUtil {
 	 * 
 	 * @param spliteStr
 	 *            分隔符
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月12日 下午2:18:01
 	 * @return
 	 */

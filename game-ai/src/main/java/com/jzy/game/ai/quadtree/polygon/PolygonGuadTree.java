@@ -24,7 +24,7 @@ import com.jzy.game.engine.math.Vector3;
  * 多边形和和象限相交,包含与被包含者插入
  * 
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public class PolygonGuadTree extends QuadTree<Vector3, Polygon> {

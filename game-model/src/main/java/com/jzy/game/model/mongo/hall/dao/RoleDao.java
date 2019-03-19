@@ -12,7 +12,7 @@ import org.mongodb.morphia.dao.BasicDAO;
 /**
  * 角色
  *
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  */
 public class RoleDao extends BasicDAO<Role, Long> {

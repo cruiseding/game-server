@@ -3,7 +3,7 @@ package com.jzy.game.model.constant;
 /**
  * 全局原因、类型区别
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103 2017年7月26日 下午4:43:39
  */
 public enum Reason {

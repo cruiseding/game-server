@@ -23,7 +23,7 @@ import com.jzy.game.hall.server.HallServer;
  * <p>
  * 	http://192.168.0.17:9102/gm?cmd=addGold&roleId=1&gold=10000&auth=daa0cf5b-e72d-422c-b278-450b28a702c6
  * </p>
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月16日 下午5:07:12
  */
@@ -50,7 +50,7 @@ public class GmHandler extends HttpHandler {
 	
 	/**
 	 * 执行命令
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月16日 下午6:32:04
 	 * @return
@@ -75,7 +75,7 @@ public class GmHandler extends HttpHandler {
 	
 	/**
 	 * 增减金币
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月16日 下午5:45:05
 	 * @return
@@ -92,7 +92,7 @@ public class GmHandler extends HttpHandler {
 	
 	/**
 	 * 设置角色等级
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月16日 下午5:57:26
 	 * @return
@@ -110,7 +110,7 @@ public class GmHandler extends HttpHandler {
 	
 	/**
 	 * 下线玩家
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月17日 下午4:59:54
 	 * @return

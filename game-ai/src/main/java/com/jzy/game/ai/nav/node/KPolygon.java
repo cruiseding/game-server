@@ -16,7 +16,7 @@ import com.jzy.game.engine.math.Vector3;
  * 自定义多边形,包括三角形<br>
  * 封装了在java2D图像显示，多边形可凸或凹，但不能相交
  * 
- * @author JiangZhiYong
+ * @author CruiseDing
  * @date 2017年12月3日
  * @mail 359135103@qq.com
  */

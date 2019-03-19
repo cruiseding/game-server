@@ -8,7 +8,7 @@ import com.jzy.game.engine.script.IScript;
 
 /**
  * 配置加载脚本
- * @author JiangZhiYong
+ * @author CruiseDing
  * @QQ 359135103
  * 2017年10月12日 下午2:34:03
  */
@@ -16,7 +16,7 @@ public interface IConfigScript extends IScript{
 
 	/**
 	 * 加载配置
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103
 	 * 2017年10月12日 下午2:35:19
 	 * @param tableName 指定的配置表 null加载所有
@@ -29,7 +29,7 @@ public interface IConfigScript extends IScript{
 	/**
 	 * 是否包含加载表
 	 * 
-	 * @author JiangZhiYong
+	 * @author CruiseDing
 	 * @QQ 359135103 2017年10月18日 下午4:15:17
 	 * @param tables
 	 * @param clazz
