@@ -3,14 +3,14 @@ package com.jzy.game.model.mongo;
 import java.util.Map;
 
 /**
- * 配置实体检测接口
- * <br>
+ * 配置实体检测接口 <br>
  * 配置文件之间存在依赖关系，在加载检测策划配置数据是否正确
  * 
  * @author CruiseDing
  * @QQ 359135103 2017年10月18日 下午4:25:11
  */
 public interface IConfigChecker {
+	
 	default <V> boolean check(Map<Integer, V> source) throws Exception {
 		return true;
 	}

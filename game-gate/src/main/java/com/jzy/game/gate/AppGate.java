@@ -47,18 +47,16 @@ public final class AppGate {
 	private static final Logger LOGGER = LoggerFactory.getLogger(AppGate.class);
 
 	private static String configPath;
-	static JedisManager redisManager;
+	
+	private static JedisManager redisManager;
+	
 	private static GateServer gateServer;
-
-	private AppGate() {
-	}
 
 	public static void main(String[] args) {
 		initConfigPath();
 
 		// redis
-		JedisClusterConfig jedisClusterConfig = FileUtil.getConfigXML(configPath, "jedisClusterConfig.xml",
-				JedisClusterConfig.class);
+		JedisClusterConfig jedisClusterConfig = FileUtil.getConfigXML(configPath, "jedisClusterConfig.xml", JedisClusterConfig.class);
 		if (jedisClusterConfig == null) {
 			LOGGER.error("redis配置{}未找到", configPath);
 			System.exit(1);
@@ -73,9 +71,10 @@ public final class AppGate {
 
 		// 通信服务
 		gateServer = new GateServer();
+		
 		new Thread(gateServer).start();
 	}
-
+	
 	private static void initConfigPath() {
 		File file = new File(System.getProperty("user.dir"));
 		if ("target".equals(file.getName())) {
@@ -92,6 +91,10 @@ public final class AppGate {
 
 	public static GateServer getHallServer() {
 		return gateServer;
+	}
+	
+	public static JedisManager getJedisManager() {
+		return redisManager;
 	}
 
 }

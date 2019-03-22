@@ -41,12 +41,14 @@ public class GateServer implements Runnable {
 			LOGGER.error("线程池配置不存在");
 			System.exit(1);
 		}
+		
 		MinaServerConfig minaServerConfig_user = FileUtil.getConfigXML(AppGate.getConfigPath(),
 				"minaServerConfig_user.xml", MinaServerConfig.class);
 		if (minaServerConfig_user == null) {
 			LOGGER.error("mina服务器配置不存在");
 			System.exit(1);
 		}
+		
 		MinaServerConfig minaServerConfig_udp_user = FileUtil.getConfigXML(AppGate.getConfigPath(),
 				"minaServerConfig_udp_user.xml", MinaServerConfig.class);
 

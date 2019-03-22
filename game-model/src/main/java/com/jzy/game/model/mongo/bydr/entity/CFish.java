@@ -12,7 +12,7 @@ import com.jzy.game.model.mongo.IConfigChecker;
  * @date 2017-04-24 QQ:359135103
  */
 @Entity(value = "c_fish", noClassnameStored = true)
-public class CFish implements IConfigChecker{
+public class CFish implements IConfigChecker {
 
 	@Id
 	@Indexed
@@ -24,8 +24,6 @@ public class CFish implements IConfigChecker{
 	private int type;
 
 	private int baseSpeed;
-
-
 
 	public int getId() {
 		return id;
@@ -51,9 +49,6 @@ public class CFish implements IConfigChecker{
 		this.type = type;
 	}
 
-	
-	
-
 	public int getBaseSpeed() {
 		return baseSpeed;
 	}
@@ -61,9 +56,5 @@ public class CFish implements IConfigChecker{
 	public void setBaseSpeed(int baseSpeed) {
 		this.baseSpeed = baseSpeed;
 	}
-
-
-
-	
 
 }

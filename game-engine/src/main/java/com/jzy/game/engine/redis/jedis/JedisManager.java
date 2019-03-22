@@ -75,7 +75,7 @@ public class JedisManager {
 		poolConfig.setTestWhileIdle(config.isTestWhileIdle());
 		poolConfig.setTestOnReturn(config.isTestOnReturn());
 		jedisCluster = new JedisCluster(jedisClusterNodes, config.getConnectionTimeout(), config.getSoTimeout(),
-				config.getMaxRedirections(), poolConfig);
+				config.getMaxRedirections(), config.getPassword(), poolConfig);
 	}
 
 	private static JedisClusterConfig loadJedisClusterConfig(String configPath) {

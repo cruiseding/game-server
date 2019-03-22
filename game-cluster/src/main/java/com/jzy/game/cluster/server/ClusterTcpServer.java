@@ -24,10 +24,13 @@ import com.jzy.game.engine.util.MsgUtil;
  * @date 2017-03-31 QQ:359135103
  */
 public class ClusterTcpServer extends Service<MinaServerConfig> {
+	
 	private static final Logger log = LoggerFactory.getLogger(ClusterTcpServer.class);
 
 	private final TcpServer minaServer;
+	
 	private final MinaServerConfig minaServerConfig;
+	
 	public static final String SERVER_INFO = "serverInfo"; // 服务器信息
 
 	public ClusterTcpServer(ThreadPoolExecutorConfig threadExcutorConfig, MinaServerConfig minaServerConfig) {
@@ -85,9 +88,10 @@ public class ClusterTcpServer extends Service<MinaServerConfig> {
 
 		@Override
 		public void sessionIdle(IoSession ioSession, IdleStatus idleStatus) {
-			MsgUtil.close(ioSession, "链接空闲:" + ioSession.toString() + " " + idleStatus.toString()); // 客户端长时间不发送请求，将断开链接LoginTcpServer->minaServerConfig->readerIdleTime
-																									// 60
-																									// 1分钟
+			// 客户端长时间不发送请求，将断开链接LoginTcpServer->minaServerConfig->readerIdleTime
+			// 60
+			// 1分钟
+			MsgUtil.close(ioSession, "链接空闲:" + ioSession.toString() + " " + idleStatus.toString()); 
 		}
 
 		@Override
