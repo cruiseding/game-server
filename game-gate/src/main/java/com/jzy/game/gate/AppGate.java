@@ -4,14 +4,13 @@ import java.io.File;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import com.jzy.game.engine.redis.jedis.JedisClusterConfig;
 import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.util.FileUtil;
 import com.jzy.game.gate.manager.MongoManager;
 import com.jzy.game.gate.server.GateServer;
-import com.jzy.game.model.redis.key.GateKey;
-import com.jzy.game.model.redis.key.HallKey;
 
 /**
                    _oo0oo_

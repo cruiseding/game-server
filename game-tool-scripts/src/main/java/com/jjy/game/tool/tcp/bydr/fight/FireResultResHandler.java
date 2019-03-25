@@ -1,8 +1,8 @@
 package com.jjy.game.tool.tcp.bydr.fight;
 
-import com.jjy.game.message.Mid.MID;
-import com.jjy.game.message.bydr.BydrFightMessage.FireResultResponse;
-import com.jjy.game.tool.client.Player;
+import com.jzy.game.message.Mid.MID;
+import com.jzy.game.message.bydr.BydrFightMessage.FireResultResponse;
+import com.jzy.game.tool.client.Player;
 import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.TcpHandler;
 
@@ -15,7 +15,6 @@ import com.jzy.game.engine.handler.TcpHandler;
 @HandlerEntity(mid = MID.FireResultRes_VALUE, msg = FireResultResponse.class)
 public class FireResultResHandler extends TcpHandler {
 
-	@Override
 	public void run() {
 		FireResultResponse res = getMsg();
 		Player player = (Player) session.getAttribute(Player.PLAYER);

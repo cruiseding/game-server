@@ -3,8 +3,8 @@ package com.jjy.game.bydr.world.tcp.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jjy.game.message.Mid.MID;
-import com.jjy.game.message.ServerMessage.ServerRegisterResponse;
+import com.jzy.game.message.Mid.MID;
+import com.jzy.game.message.ServerMessage.ServerRegisterResponse;
 import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.TcpHandler;
 import com.jzy.game.engine.server.ServerState;

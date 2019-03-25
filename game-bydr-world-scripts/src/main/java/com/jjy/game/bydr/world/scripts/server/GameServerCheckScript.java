@@ -1,9 +1,9 @@
 package com.jjy.game.bydr.world.scripts.server;
 
-import com.jjy.game.bydr.manager.RoleManager;
-import com.jjy.game.bydr.server.BydrServer;
-import com.jjy.game.bydr.world.server.BydrWorldServer;
-import com.jjy.game.model.script.IGameServerCheckScript;
+import com.jzy.game.bydr.manager.RoleManager;
+import com.jzy.game.message.ServerMessage;
+import com.jzy.game.bydr.world.server.BydrWorldServer;
+import com.jzy.game.model.script.IGameServerCheckScript;
 import com.jzy.game.engine.mina.config.MinaServerConfig;
 
 /**
@@ -15,7 +15,7 @@ import com.jzy.game.engine.mina.config.MinaServerConfig;
 public class GameServerCheckScript implements IGameServerCheckScript {
 
 	@Override
-	public void buildServerInfo(com.jjy.game.message.ServerMessage.ServerInfo.Builder builder) {
+	public void buildServerInfo(ServerMessage.ServerInfo.Builder builder) {
 		IGameServerCheckScript.super.buildServerInfo(builder);
 		MinaServerConfig minaServerConfig = BydrWorldServer.getInstance().getGameHttpServer().getMinaServerConfig();
 		builder.setHttpport(minaServerConfig.getHttpPort());

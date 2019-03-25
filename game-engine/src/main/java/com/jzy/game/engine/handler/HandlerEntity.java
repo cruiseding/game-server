@@ -14,6 +14,7 @@ import com.jzy.game.engine.thread.ThreadType;
  */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface HandlerEntity {
+	
 	/**
 	 * TCP 消息id
 	 */

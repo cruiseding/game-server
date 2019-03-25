@@ -1,6 +1,7 @@
 package com.jzy.game.plugin.code;
 
 import java.io.File;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -129,7 +130,7 @@ public class MongoEntityBuilder extends AbstractMojo {
 		for (Entry<Args.Two<String, String>, List<FieldModel>> entry : entrySet) {
 			Args.Two<String, String> key = entry.getKey();
 			Map<String, Object> datas = new HashMap<>(); // 数据模型
-			datas.put("date", TimeUtil.getDateFormat1()); // 日期
+			datas.put("date", TimeUtil.getDateTimeFormat(DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss"))); // 日期
 			datas.put("package", entityPackage.replaceAll("\\\\", ".").substring(1)); // 包路径
 			datas.put("tableName", key.a()); // 表名
 			datas.put("className", key.b()); // 类名

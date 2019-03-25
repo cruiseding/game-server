@@ -12,6 +12,7 @@ import com.jzy.game.engine.struct.Person;
  * @mail 359135103@qq.com
  */
 public abstract class TcpHandler extends AbsHandler {
+	
 	private Message message;
 	protected long rid; // 角色ID
 	protected Person person; // 角色

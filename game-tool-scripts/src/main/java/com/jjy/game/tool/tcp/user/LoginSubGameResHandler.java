@@ -1,10 +1,10 @@
 package com.jjy.game.tool.tcp.user;
 
-import com.jjy.game.message.Mid.MID;
-import com.jjy.game.message.bydr.BydrRoomMessage;
-import com.jjy.game.message.hall.HallLoginMessage.LoginSubGameResponse;
-import com.jjy.game.tool.client.Player;
-import static com.jjy.game.tool.client.PressureServiceThread.SEND_TIME;
+import com.jzy.game.message.Mid.MID;
+import com.jzy.game.message.bydr.BydrRoomMessage;
+import com.jzy.game.message.hall.HallLoginMessage.LoginSubGameResponse;
+import com.jzy.game.tool.client.Player;
+import static com.jzy.game.tool.client.PressureServiceThread.SEND_TIME;
 import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.TcpHandler;
 
@@ -17,7 +17,6 @@ import com.jzy.game.engine.handler.TcpHandler;
 @HandlerEntity(mid = MID.LoginSubGameRes_VALUE, msg = LoginSubGameResponse.class)
 public class LoginSubGameResHandler extends TcpHandler {
 
-    @Override
     public void run() {
         LoginSubGameResponse res = getMsg();
         System.err.println(res.toString());

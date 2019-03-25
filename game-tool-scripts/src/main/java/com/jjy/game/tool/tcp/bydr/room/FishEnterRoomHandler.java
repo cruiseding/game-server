@@ -2,15 +2,15 @@ package com.jjy.game.tool.tcp.bydr.room;
 
 import java.util.List;
 
-import com.jjy.game.message.Mid.MID;
-import com.jjy.game.message.bydr.BydrFightMessage.FireRequest;
-import com.jjy.game.message.bydr.BydrFightMessage.FireResultRequest;
-import com.jjy.game.message.bydr.BydrRoomMessage.FishEnterRoomResponse;
-import com.jjy.game.message.bydr.BydrRoomMessage.FishInfo;
-import com.jjy.game.tool.client.Player;
+import com.jzy.game.message.Mid.MID;
+import com.jzy.game.message.bydr.BydrFightMessage.FireRequest;
+import com.jzy.game.message.bydr.BydrFightMessage.FireResultRequest;
+import com.jzy.game.message.bydr.BydrRoomMessage.FishEnterRoomResponse;
+import com.jzy.game.message.bydr.BydrRoomMessage.FishInfo;
+import com.jzy.game.tool.client.Player;
 import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.TcpHandler;
-import com.jzy.game.engine.util.MathUtil;
+import com.jzy.game.engine.math.MathUtil;
 
 /**
  * 鱼进入房间
@@ -21,7 +21,6 @@ import com.jzy.game.engine.util.MathUtil;
 @HandlerEntity(mid=MID.FishEnterRoomRes_VALUE,msg=FishEnterRoomResponse.class)
 public class FishEnterRoomHandler extends TcpHandler {
 
-	@Override
 	public void run() {
 		Player player = (Player) session.getAttribute(Player.PLAYER);
 		FishEnterRoomResponse res=getMsg();

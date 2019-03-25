@@ -3,9 +3,9 @@ package com.jjy.game.tool.tcp.user;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jjy.game.message.Mid.MID;
-import com.jjy.game.message.hall.HallLoginMessage.QuitRequest;
-import com.jjy.game.message.hall.HallLoginMessage.QuitSubGameResponse;
+import com.jzy.game.message.Mid.MID;
+import com.jzy.game.message.hall.HallLoginMessage.QuitRequest;
+import com.jzy.game.message.hall.HallLoginMessage.QuitSubGameResponse;
 import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.HttpHandler;
 import com.jzy.game.engine.handler.TcpHandler;
@@ -20,7 +20,6 @@ import com.jzy.game.engine.handler.TcpHandler;
 public class QuitSubGameResHandler extends TcpHandler {
 	private static final Logger LOGGER = LoggerFactory.getLogger(QuitSubGameResHandler.class);
 
-	@Override
 	public void run() {
 		QuitSubGameResponse res = getMsg();
 		LOGGER.info("退出子游戏：{}", res.getResult());

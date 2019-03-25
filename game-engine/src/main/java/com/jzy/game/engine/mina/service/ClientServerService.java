@@ -21,6 +21,7 @@ import com.jzy.game.engine.thread.timer.event.ServerHeartTimer;
  * @QQ 359135103 2017年6月29日 下午2:15:38
  */
 public class ClientServerService extends Service<MinaServerConfig> {
+	
     protected final TcpServer tcpServer;
     protected final MinaServerConfig minaServerConfig;
     protected final ClientProtocolHandler clientProtocolHandler;
@@ -87,7 +88,6 @@ public class ClientServerService extends Service<MinaServerConfig> {
     protected void onShutdown() {
         super.onShutdown();
         tcpServer.stop();
-
     }
 
     public MinaServerConfig getMinaServerConfig() {
@@ -97,6 +97,5 @@ public class ClientServerService extends Service<MinaServerConfig> {
     public TcpServer getTcpServer() {
         return tcpServer;
     }
-
 
 }

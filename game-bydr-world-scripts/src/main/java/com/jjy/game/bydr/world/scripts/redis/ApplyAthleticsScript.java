@@ -3,12 +3,12 @@ package com.jjy.game.bydr.world.scripts.redis;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jjy.game.bydr.manager.ConfigManager;
-import com.jjy.game.bydr.struct.Team;
-import com.jjy.game.bydr.world.manager.TeamManager;
-import com.jjy.game.model.redis.channel.BydrChannel;
-import com.jjy.game.model.redis.channel.BydrWorldChannel;
-import com.jjy.game.model.redis.key.HallKey;
+import com.jzy.game.bydr.manager.ConfigManager;
+import com.jzy.game.bydr.struct.Team;
+import com.jzy.game.bydr.world.manager.TeamManager;
+import com.jzy.game.model.redis.channel.BydrChannel;
+import com.jzy.game.model.redis.channel.BydrWorldChannel;
+import com.jzy.game.model.redis.key.HallKey;
 import com.jzy.game.engine.redis.IPubSubScript;
 import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.redis.jedis.JedisPubSubMessage;
