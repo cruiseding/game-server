@@ -20,6 +20,7 @@ import com.jzy.game.engine.server.ServerType;
  * @date 2017-04-05 QQ:359135103
  */
 public class ServerManager {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(ServerManager.class);
 
 	private static final ServerManager instance = new ServerManager();

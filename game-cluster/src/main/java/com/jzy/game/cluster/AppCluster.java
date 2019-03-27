@@ -64,36 +64,34 @@ public class AppCluster {
 		} else {
 			path = file.getPath() + File.separatorChar + "target" + File.separatorChar + "config";
 		}
+		
 		log.info("配置路径为：" + path);
-		JedisClusterConfig jedisClusterConfig = FileUtil.getConfigXML(path, "jedisclusterConfig.xml",
-				JedisClusterConfig.class);
+		JedisClusterConfig jedisClusterConfig = FileUtil.getConfigXML(path, "jedisclusterConfig.xml", JedisClusterConfig.class);
 		if (jedisClusterConfig == null) {
 			SysUtil.exit(AppCluster.class, null, "jedisclusterConfig");
 		}
-		ThreadPoolExecutorConfig threadExcutorConfig_http = FileUtil.getConfigXML(path, "threadExcutorConfig_http.xml",
-				ThreadPoolExecutorConfig.class);
-		if (threadExcutorConfig_http == null) {
-			SysUtil.exit(AppCluster.class, null, "threadExcutorConfig_http");
+		
+		ThreadPoolExecutorConfig httpThreadExecutorConfig = FileUtil.getConfigXML(path, "threadExcutorConfig_http.xml", ThreadPoolExecutorConfig.class);
+		if (httpThreadExecutorConfig == null) {
+			SysUtil.exit(AppCluster.class, null, "httpThreadExecutorConfig");
 		}
-		ThreadPoolExecutorConfig threadExcutorConfig_tcp = FileUtil.getConfigXML(path, "threadExcutorConfig_tcp.xml",
-				ThreadPoolExecutorConfig.class);
-		if (threadExcutorConfig_tcp == null) {
+		
+		ThreadPoolExecutorConfig tcpThreadExcutorConfig = FileUtil.getConfigXML(path, "threadExcutorConfig_tcp.xml", ThreadPoolExecutorConfig.class);
+		if (tcpThreadExcutorConfig == null) {
 			SysUtil.exit(AppCluster.class, null, "threadExcutorConfig_tcp");
 		}
-		MinaServerConfig minaServerConfig_http = FileUtil.getConfigXML(path, "minaServerConfig_http.xml",
-				MinaServerConfig.class);
-		if (minaServerConfig_http == null) {
+		
+		MinaServerConfig httpMinaServerConfig = FileUtil.getConfigXML(path, "minaServerConfig_http.xml", MinaServerConfig.class);
+		if (httpMinaServerConfig == null) {
 			SysUtil.exit(AppCluster.class, null, "minaServerConfig_http");
 		}
-		MinaServerConfig minaServerConfig_tcp = FileUtil.getConfigXML(path, "minaServerConfig_tcp.xml",
-				MinaServerConfig.class);
-		if (minaServerConfig_tcp == null) {
+		
+		MinaServerConfig tcpMinaServerConfig = FileUtil.getConfigXML(path, "minaServerConfig_tcp.xml", MinaServerConfig.class);
+		if (tcpMinaServerConfig == null) {
 			SysUtil.exit(AppCluster.class, null, "minaServerConfig_tcp");
 		}
-		//RedisManager redisManager = new RedisManager(jedisClusterConfig);
 
-		clusterServer = new ClusterServer(threadExcutorConfig_http, minaServerConfig_http, threadExcutorConfig_tcp,
-				minaServerConfig_tcp);
+		clusterServer = new ClusterServer(httpThreadExecutorConfig, httpMinaServerConfig, tcpThreadExcutorConfig, tcpMinaServerConfig);
 		new Thread(clusterServer).start();
 	}
 

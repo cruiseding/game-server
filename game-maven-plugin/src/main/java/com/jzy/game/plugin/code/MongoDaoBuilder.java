@@ -178,7 +178,6 @@ public class MongoDaoBuilder extends AbstractMojo {
 			if (file.getPath().contains("entity")) { // 实体类必须在entity目录下
 				files.add(file);
 			}
-
 		}
 	}
 

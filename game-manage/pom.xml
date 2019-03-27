@@ -28,10 +28,10 @@
 
 		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
 		<dependency>
-  <groupId>commons-fileupload</groupId>
-  <artifactId>commons-fileupload</artifactId>
-  <version>1.3.3</version>
-</dependency>
+		  <groupId>commons-fileupload</groupId>
+		  <artifactId>commons-fileupload</artifactId>
+		  <version>1.3.3</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.freemarker</groupId>
@@ -122,8 +122,6 @@
 			<version>1.2.51</version>
 		</dependency>
 
-
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -173,17 +171,17 @@
 		</pluginManagement>
 	</build>
 
-	<distributionManagement>
-		<repository>
-			<id>maven-releases</id>
-			<name>Nexus Releases Repository</name>
-			<url>http://192.168.0.71:8081/repository/maven-releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>maven-snapshots</id>
-			<name>snapshots</name>
-			<url>http://192.168.0.71:8081/repository/maven-snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
+<!-- 	<distributionManagement> -->
+<!-- 		<repository> -->
+<!-- 			<id>maven-releases</id> -->
+<!-- 			<name>Nexus Releases Repository</name> -->
+<!-- 			<url>http://192.168.0.71:8081/repository/maven-releases/</url> -->
+<!-- 		</repository> -->
+<!-- 		<snapshotRepository> -->
+<!-- 			<id>maven-snapshots</id> -->
+<!-- 			<name>snapshots</name> -->
+<!-- 			<url>http://192.168.0.71:8081/repository/maven-snapshots/</url> -->
+<!-- 		</snapshotRepository> -->
+<!-- 	</distributionManagement> -->
 
 </project>
