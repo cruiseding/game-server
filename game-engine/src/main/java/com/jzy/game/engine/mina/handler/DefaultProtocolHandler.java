@@ -102,7 +102,7 @@ public abstract class DefaultProtocolHandler implements IoHandler {
 							long rid = MsgUtils.getMessageRID(bytes, 0);
 							handler.setRid(rid);
 						}
-						messageHandler(session, handlerEntity, message, handler);
+						messageHandle(session, handlerEntity, message, handler);
 						return;
 					}
 				}
@@ -125,7 +125,7 @@ public abstract class DefaultProtocolHandler implements IoHandler {
 	 * @param msgID
 	 * @param bytes
 	 */
-	protected void messageHandler(IoSession session, HandlerEntity handlerEntity, Message message, TcpHandler handler) {
+	protected void messageHandle(IoSession session, HandlerEntity handlerEntity, Message message, TcpHandler handler) {
 		handler.setMessage(message);
 		handler.setSession(session);
 		handler.setCreateTime(System.currentTimeMillis());

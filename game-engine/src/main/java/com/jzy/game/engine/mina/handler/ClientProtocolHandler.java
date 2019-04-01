@@ -57,7 +57,7 @@ public class ClientProtocolHandler extends DefaultProtocolHandler {
 							bytes.length - messageHeaderLength);
 					TcpHandler handler = (TcpHandler) handlerClass.newInstance();
 					if (handler != null) {
-						messageHandler(session, handlerEntity, message, handler);
+						messageHandle(session, handlerEntity, message, handler);
 						return;
 					}
 				}
