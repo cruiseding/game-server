@@ -20,7 +20,7 @@ import com.jzy.game.gate.struct.UserSession;
  * @author CruiseDing
  * @mail 359135103@qq.com
  */
-@HandlerEntity(mid = MID.LoginRes_VALUE, desc = "登陆", thread = ThreadType.IO, msg = LoginResponse.class)
+@HandlerEntity(mid = MID.LoginRes_VALUE, desc = "登陆", threadType = ThreadType.IO, msg = LoginResponse.class)
 public class LoginResHandler extends TcpHandler {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(LoginResHandler.class);

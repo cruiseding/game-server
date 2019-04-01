@@ -7,9 +7,11 @@ import java.util.regex.Pattern;
  * @author CruiseDing
  * @mail 359135103@qq.com
  */
-public final class StringUtil {
+public final class StringUtils {
+	
+	public static final String EMPTY = "";
 
-    private StringUtil() {
+    private StringUtils() {
     }
 
     /**

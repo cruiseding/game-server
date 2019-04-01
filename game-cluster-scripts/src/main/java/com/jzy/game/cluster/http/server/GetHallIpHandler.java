@@ -29,16 +29,16 @@ public class GetHallIpHandler extends HttpHandler {
 			
 			Map<Integer, ServerInfo> servers = ServerManager.getInstance().getServers(ServerType.HALL);
 			if (servers == null||servers.size()<1) {
-				getParameter().appendBody("无可用大厅服");
+				getResponse().appendBody("无可用大厅服");
 			} else {
 				Optional<ServerInfo> findFirst = servers.values().stream()
 						.filter(server -> server.getState() == ServerState.NORMAL.ordinal() && server.getSession() != null
 								&& server.getSession().isConnected())
 						.sorted((s1, s2) -> s1.getOnline() - s2.getOnline()).findFirst();
 				if (findFirst.isPresent()) {
-					getParameter().appendBody(findFirst.get().getIp() + ":" + findFirst.get().getHttpPort());
+					getResponse().appendBody(findFirst.get().getIp() + ":" + findFirst.get().getHttpPort());
 				}else {
-					getParameter().appendBody("无可用大厅服");
+					getResponse().appendBody("无可用大厅服");
 				}
 			}
 		} finally {

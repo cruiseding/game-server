@@ -40,7 +40,7 @@ import com.jzy.game.engine.util.Args;
 import com.jzy.game.engine.util.Args.Two;
 import com.jzy.game.engine.util.FileUtil;
 import com.jzy.game.engine.util.ReflectUtil;
-import com.jzy.game.engine.util.StringUtil;
+import com.jzy.game.engine.util.StringUtils;
 
 /**
  * 行为树 <br>
@@ -218,14 +218,14 @@ public class BehaviorTreeManager {
 		case XML_REPEAT:
 			int times = -1;
 			Attribute timesAttr = element.attribute(XML_ATTRIBUTE_TIMES);
-			if (timesAttr != null && !StringUtil.isNullOrEmpty(timesAttr.getValue())) {
+			if (timesAttr != null && !StringUtils.isNullOrEmpty(timesAttr.getValue())) {
 				times = Integer.parseInt(timesAttr.getValue());
 			}
 			task = new Repeat<>(times);
 			break;
 		case XML_SEAMPHORE_GUARD:
 			Attribute nameAttr = element.attribute(XML_ATTRIBUTE_NAME);
-			if (nameAttr == null || StringUtil.isNullOrEmpty(nameAttr.getValue())) {
+			if (nameAttr == null || StringUtils.isNullOrEmpty(nameAttr.getValue())) {
 				throw new IllegalStateException(String.format("信号量装饰器为设置name属性"));
 			}
 			task = new SemaphoreGuard<>(nameAttr.getValue());
@@ -239,7 +239,7 @@ public class BehaviorTreeManager {
 		case XML_RANDOM:
 			float success=0.5f;
 			Attribute successAttr = element.attribute(XML_ATTRIBUTE_SUCCESS);
-			if(successAttr!=null&&!StringUtil.isNullOrEmpty(successAttr.getValue())) {
+			if(successAttr!=null&&!StringUtils.isNullOrEmpty(successAttr.getValue())) {
 				success=Float.parseFloat(successAttr.getValue());
 			}
 			task=new Random<>(success);
@@ -296,7 +296,7 @@ public class BehaviorTreeManager {
 					LOGGER.warn("配置错误：{}AI 节点{} 属性{} 不存在", element.getDocument().getPath(), classStr, name);
 					continue;
 				}
-				if (StringUtil.isNullOrEmpty(attribute.getValue())) {
+				if (StringUtils.isNullOrEmpty(attribute.getValue())) {
 					LOGGER.warn("配置错误：{}AI 节点{} 属性{} 为空", element.getDocument().getPath(), classStr, name);
 					continue;
 				}

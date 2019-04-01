@@ -32,7 +32,7 @@ import com.jzy.game.hall.script.IRoleScript;
  * @author CruiseDing
  * @mail 359135103@qq.com
  */
-@HandlerEntity(mid = MID.LoginReq_VALUE, desc = "登陆", thread = ThreadType.IO, msg = LoginRequest.class)
+@HandlerEntity(mid = MID.LoginReq_VALUE, desc = "登陆", threadType = ThreadType.IO, msg = LoginRequest.class)
 public class LoginHandler extends TcpHandler {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(LoginHandler.class);

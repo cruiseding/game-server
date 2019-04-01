@@ -15,7 +15,8 @@ import com.jzy.game.engine.script.ITimerEventScript;
  * @QQ 359135103 2017年10月23日 下午3:33:20
  */
 public class ServerInfoTimerScript implements ITimerEventScript {
-	private static final Logger LOGGER=LoggerFactory.getLogger(ServerInfoTimerScript.class);
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ServerInfoTimerScript.class);
 
 	@Override
 	public void secondHandler(LocalTime localTime) {
@@ -34,8 +35,12 @@ public class ServerInfoTimerScript implements ITimerEventScript {
 			double freePro = serverInfo.getFreeMemory() * 1.0 / serverInfo.getTotalMemory();
 			if (freePro < 0.1d) {
 				StringBuffer sb = new StringBuffer(serverInfo.getName());
-				sb.append("<br>IP:").append(serverInfo.getIp()).append(" 空闲内存:").append(serverInfo.getFreeMemory())
-						.append(" 总内存:").append(serverInfo.getTotalMemory());
+				sb.append("<br>IP:")
+				  .append(serverInfo.getIp())
+				  .append(" 空闲内存:")
+				  .append(serverInfo.getFreeMemory())
+				  .append(" 总内存:")
+				  .append(serverInfo.getTotalMemory());
 				MailManager.getInstance().sendTextMailAsync("服务器内存不足", sb.toString(), "359135103@qq.com");
 			}
 		}));

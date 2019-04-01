@@ -47,11 +47,11 @@ public interface IHandler extends Runnable {
 	 * http 参数
 	 * @return
 	 */
-	Object getParameter();
+	Object getResponse();
 
 	/**
 	 * http 参数
 	 * @return
 	 */
-    void setParameter(Object parameter);
+    void setResponse(Object parameter);
 }

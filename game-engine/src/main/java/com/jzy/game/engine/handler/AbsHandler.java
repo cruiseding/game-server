@@ -46,13 +46,13 @@ public abstract class AbsHandler implements IHandler {
 	}
 
 	@Override
-	public Object getParameter() {
+	public Object getResponse() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void setParameter(Object parameter) {
+	public void setResponse(Object parameter) {
 		// TODO Auto-generated method stub
 
 	}

@@ -30,10 +30,13 @@ public class ServerThread extends Thread implements Executor {
 
 	// 线程名称
 	protected final String threadName;
+	
 	// 线程心跳间隔
 	protected final long heart;
+	
 	// 线程处理命令队列
-	protected LinkedBlockingQueue<Runnable> command_queue = new LinkedBlockingQueue<>();
+	protected LinkedBlockingQueue<Runnable> commandQueue = new LinkedBlockingQueue<>();
+	
 	// 是否暂停
 	protected boolean stop;
 
@@ -68,9 +71,9 @@ public class ServerThread extends Thread implements Executor {
 			if (timer != null) {
 				timer.stop(true);
 			}
-			command_queue.clear();
+			commandQueue.clear();
 		});
-		command_queue = new LinkedBlockingQueue<>(commandCount);
+		commandQueue = new LinkedBlockingQueue<>(commandCount);
 	}
 
 	public void showStackTrace() {
@@ -107,7 +110,7 @@ public class ServerThread extends Thread implements Executor {
 		stop = false;
 		int loop = 0;
 		while (!stop && !isInterrupted()) {
-			command = command_queue.poll();
+			command = commandQueue.poll();
 			if (command == null) {
 				try {
 					synchronized (this) {
@@ -126,11 +129,11 @@ public class ServerThread extends Thread implements Executor {
 					long cost = System.currentTimeMillis() - lastExecuteTime;
 					if (cost > 30L) {
 						log.warn("线程：{} 执行 {} 消耗时间过长 {}毫秒,当前命令数 {} 条", threadName, command.getClass().getName(), cost,
-								command_queue.size());
+								commandQueue.size());
 					}
 					if (loop > 300) {
 						loop = 0;
-						log.warn("线程：{} 已循环执行{} 次,当前命令数{}", threadName, loop, command_queue.size());
+						log.warn("线程：{} 已循环执行{} 次,当前命令数{}", threadName, loop, commandQueue.size());
 					}
 				} catch (Exception e) {
 					log.error("ServerThread[" + threadName + "]执行任务错误 ", e);
@@ -145,7 +148,7 @@ public class ServerThread extends Thread implements Executor {
 		if (timer != null) {
 			timer.stop(flag);
 		}
-		command_queue.clear();
+		commandQueue.clear();
 		try {
 			synchronized (this) {
 				notify();
@@ -158,10 +161,10 @@ public class ServerThread extends Thread implements Executor {
 
 	public void execute(Runnable command, boolean checkOnly) {
 		try {
-			if (checkOnly && command_queue.contains(command)) {
+			if (checkOnly && commandQueue.contains(command)) {
 				return;
 			}
-			command_queue.add(command);
+			commandQueue.add(command);
 			synchronized (this) {
 				notify();
 			}
@@ -178,10 +181,10 @@ public class ServerThread extends Thread implements Executor {
 	@Override
 	public void execute(Runnable command) {
 		try {
-			if (command_queue.contains(command)) {
+			if (commandQueue.contains(command)) {
 				return;
 			}
-			command_queue.add(command);
+			commandQueue.add(command);
 			synchronized (this) {
 				notify();
 			}
@@ -191,7 +194,7 @@ public class ServerThread extends Thread implements Executor {
 	}
 
 	public boolean contains(Runnable runnable) {
-		return command_queue.contains(runnable);
+		return commandQueue.contains(runnable);
 	}
 
 	public TimerThread getTimer() {
@@ -223,6 +226,6 @@ public class ServerThread extends Thread implements Executor {
 	}
 
 	public LinkedBlockingQueue<Runnable> getCommands() {
-		return command_queue;
+		return commandQueue;
 	}
 }

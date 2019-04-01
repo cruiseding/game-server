@@ -1,6 +1,6 @@
 package com.jzy.game.plugin.model;
 
-import com.jzy.game.engine.util.StringUtil;
+import com.jzy.game.engine.util.StringUtils;
 
 /**
  * 对象模型
@@ -24,7 +24,7 @@ public class FieldModel {
 		this.fieldType = fieldType;
 		this.fieldName = fieldName;
 		this.description = description;
-		this.fieldNameUpFirst=StringUtil.upFirstChar(fieldName);
+		this.fieldNameUpFirst=StringUtils.upFirstChar(fieldName);
 	}
 
 	public String getFieldType() {

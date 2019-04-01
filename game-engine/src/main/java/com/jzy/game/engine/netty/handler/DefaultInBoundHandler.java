@@ -60,7 +60,7 @@ public abstract class DefaultInBoundHandler extends SimpleChannelInboundHandler<
 	 */
 	protected void messagehandler(TcpHandler handler, HandlerEntity handlerEntity) {
 		if (getService() != null) {
-			Executor executor = getService().getExecutor(handlerEntity.thread());
+			Executor executor = getService().getExecutor(handlerEntity.threadType());
 			if (executor != null) {
 				executor.execute(handler);
 				return;

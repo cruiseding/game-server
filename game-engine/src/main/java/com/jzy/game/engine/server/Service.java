@@ -6,7 +6,6 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.mina.core.session.IoSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +24,11 @@ import com.jzy.game.engine.thread.ThreadType;
 public abstract class Service<Conf extends BaseServerConfig> implements Runnable {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Service.class);
-	/**线程容器*/
+	
+	/**
+	 * 线程容器
+	 * 
+	 */
 	private final Map<ThreadType, Executor> serverThreads = new ConcurrentHashMap<>();
 
 	/**
@@ -40,10 +43,13 @@ public abstract class Service<Conf extends BaseServerConfig> implements Runnable
 			ThreadPoolExecutor ioHandlerThreadExcutor = threadPoolExecutorConfig.newThreadPoolExecutor();
 			serverThreads.put(ThreadType.IO, ioHandlerThreadExcutor);
 
+			ThreadGroup threadGroup = new ThreadGroup("全局同步线程");
+			String groupName = "全局同步线程:" + getClass().getSimpleName();
+			Integer heart = threadPoolExecutorConfig.getHeart();
+			Integer commandSize = threadPoolExecutorConfig.getCommandSize();
+			   
 			//全局sync线程
-			ServerThread syncThread = new ServerThread(new ThreadGroup("全局同步线程"),
-													   "全局同步线程:" + getClass().getSimpleName(), threadPoolExecutorConfig.getHeart(),
-													   threadPoolExecutorConfig.getCommandSize());
+			ServerThread syncThread = new ServerThread(threadGroup, groupName, heart, commandSize);
 			syncThread.start();
 			serverThreads.put(ThreadType.SYNC, syncThread);
 		}
@@ -60,6 +66,7 @@ public abstract class Service<Conf extends BaseServerConfig> implements Runnable
 	 * 初始化线程
 	 */
 	protected void initThread() {
+		//do something in sub-class
 	}
 
 	/**
@@ -91,7 +98,6 @@ public abstract class Service<Conf extends BaseServerConfig> implements Runnable
 				} catch (Exception e) {
 					LOGGER.error("关闭线程", e);
 				}
-
 			}
 		});
 	}
@@ -132,6 +138,7 @@ public abstract class Service<Conf extends BaseServerConfig> implements Runnable
 	private static final class CloseByExit implements Runnable {
 
 		private static final Logger log = LoggerFactory.getLogger(CloseByExit.class);
+		
 		@SuppressWarnings("rawtypes")
 		private final Service server;
 

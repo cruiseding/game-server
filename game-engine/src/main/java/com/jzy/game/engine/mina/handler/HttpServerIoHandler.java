@@ -1,6 +1,7 @@
 package com.jzy.game.engine.mina.handler;
 
 import java.util.concurrent.Executor;
+
 import org.apache.mina.core.service.IoHandler;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
@@ -13,6 +14,7 @@ import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.server.Service;
 import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.StringUtils;
 
 import org.slf4j.Logger;
 import org.apache.mina.http.HttpRequestImpl;
@@ -43,13 +45,15 @@ public abstract class HttpServerIoHandler implements IoHandler {
 		HttpRequestImpl httpRequest = (HttpRequestImpl) message;
 		Class<? extends IHandler> handlerClass = ScriptManager.getInstance()
 				.getHttpHandler(httpRequest.getRequestPath());
-		HandlerEntity handlerEntity = ScriptManager.getInstance().getHttpHandlerEntity(httpRequest.getRequestPath());
+		ScriptManager scriptManager = ScriptManager.getInstance();
+		HandlerEntity handlerEntity = scriptManager.getHttpHandlerEntity(httpRequest.getRequestPath());
 		if (handlerClass == null) {
-			handlerClass = ScriptManager.getInstance().getHttpHandler("");
-			handlerEntity = ScriptManager.getInstance().getHttpHandlerEntity("");
+			handlerClass = scriptManager.getHttpHandler(StringUtils.EMPTY);
+			handlerEntity = scriptManager.getHttpHandlerEntity(StringUtils.EMPTY);
 		}
 		if (handlerClass == null) {
-			LOG.error("Http 容器 未能找到 content = {} 的 httpMessageBean tostring: {}", httpRequest.getRequestPath(),
+			LOG.error("Http 容器 未能找到 content = {} 的 httpMessageBean tostring: {}", 
+					  httpRequest.getRequestPath(),
                       ioSession.getRemoteAddress());
 			return;
 		}
@@ -60,7 +64,7 @@ public abstract class HttpServerIoHandler implements IoHandler {
 			handler.setSession(ioSession);
 			handler.setCreateTime(System.currentTimeMillis());
 
-			Executor executor = getSevice().getExecutor(handlerEntity.thread());
+			Executor executor = getSevice().getExecutor(handlerEntity.threadType());
 			if (executor != null) {
 				executor.execute(handler);
 			} else {

@@ -16,7 +16,7 @@ import com.jzy.game.engine.thread.ThreadType;
  * @author CruiseDing
  * @QQ 359135103 2017年6月29日 上午11:15:57
  */
-@HandlerEntity(mid = MID.ServerRegisterRes_VALUE, msg = ServerRegisterResponse.class, thread = ThreadType.SYNC)
+@HandlerEntity(mid = MID.ServerRegisterRes_VALUE, msg = ServerRegisterResponse.class, threadType = ThreadType.SYNC)
 public class ServerRegisterHandler extends TcpHandler {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ServerRegisterHandler.class);
 

@@ -22,7 +22,7 @@ import org.bson.types.Symbol;
 
 import com.jzy.game.engine.util.Args;
 import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.StringUtil;
+import com.jzy.game.engine.util.StringUtils;
 import com.jzy.game.engine.util.SymbolUtil;
 import com.jzy.game.engine.util.TimeUtil;
 import com.jzy.game.plugin.model.FieldModel;
@@ -155,7 +155,7 @@ public class MongoEntityBuilder extends AbstractMojo {
 			String[] split = sheetName.split("_");
 			StringBuffer sb = new StringBuffer();
 			for (String str : split) {
-				sb.append(StringUtil.upFirstChar(str));
+				sb.append(StringUtils.upFirstChar(str));
 			}
 			return sb.toString();
 		}

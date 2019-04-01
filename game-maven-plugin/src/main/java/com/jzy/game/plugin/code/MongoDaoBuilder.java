@@ -16,7 +16,7 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
 import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.StringUtil;
+import com.jzy.game.engine.util.StringUtils;
 
 /**
  * Mongodb dao代码生成插件 <br>
@@ -103,7 +103,7 @@ public class MongoDaoBuilder extends AbstractMojo {
 		sb.append("/**").append("工具生成，请遵循规范。\n @author CruiseDing\n*/\n");
 		
 		String className = file.getName().substring(0,file.getName().indexOf(".")) + "Dao"; //类名
-		String classObject=StringUtil.lowerFirstChar(className);	//类对象
+		String classObject=StringUtils.lowerFirstChar(className);	//类对象
 		String entityClassName=file.getName().substring(0,file.getName().indexOf("."));
 
 		// 包路径

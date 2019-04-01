@@ -11,19 +11,18 @@ import com.jzy.game.engine.handler.HttpHandler;
  * 未知请求 404
  *
  * @author CruiseDing
- * @date 2017-03-31 QQ:359135103
- * http://127.0.0.1:8680/
+ * @date 2017-03-31 QQ:359135103 http://127.0.0.1:8680/
  */
 @HandlerEntity(path = "")
 public class UnknowHttpRequestHandler extends HttpHandler {
-	private static final Logger LOGGER=LoggerFactory.getLogger(UnknowHttpRequestHandler.class);
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(UnknowHttpRequestHandler.class);
 
 	@Override
 	public void run() {
-		LOGGER.info("{}请求页面错误",getSession().getRemoteAddress().toString());
-		getParameter().setStatus(HttpStatus.CLIENT_ERROR_NOT_FOUND);
+		LOGGER.info("{}请求页面错误", getSession().getRemoteAddress().toString());
+		getResponse().setStatus(HttpStatus.CLIENT_ERROR_NOT_FOUND);
 		responseWithStatus();
-		
 	}
 
 }

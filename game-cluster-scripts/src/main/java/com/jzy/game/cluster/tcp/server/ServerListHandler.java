@@ -20,8 +20,6 @@ import com.jzy.game.engine.server.ServerType;
 @HandlerEntity(mid = MID.ServerListReq_VALUE, msg = ServerListRequest.class)
 public class ServerListHandler extends TcpHandler {
 
-	
-	
 	@Override
 	public void run() {
 		ServerListRequest req = getMsg();
@@ -53,7 +51,6 @@ public class ServerListHandler extends TcpHandler {
 			});
 			getSession().write(builder.build());
 		}
-
 	}
 
 	/**

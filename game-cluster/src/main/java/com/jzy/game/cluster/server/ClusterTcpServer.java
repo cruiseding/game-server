@@ -36,8 +36,7 @@ public class ClusterTcpServer extends Service<MinaServerConfig> {
 	public ClusterTcpServer(ThreadPoolExecutorConfig threadExcutorConfig, MinaServerConfig minaServerConfig) {
 		super(threadExcutorConfig);
 		this.minaServerConfig = minaServerConfig;
-
-		minaServer = new TcpServer(minaServerConfig, new ClusterTcpServerHandler(this));
+		this.minaServer = new TcpServer(minaServerConfig, new ClusterTcpServerHandler(this));
 	}
 
 	@Override
@@ -79,6 +78,7 @@ public class ClusterTcpServer extends Service<MinaServerConfig> {
 	 * @date 2017-03-31 QQ:359135103
 	 */
 	public class ClusterTcpServerHandler extends DefaultProtocolHandler {
+		
 		private final Service<MinaServerConfig> service;
 
 		public ClusterTcpServerHandler(Service<MinaServerConfig> service) {

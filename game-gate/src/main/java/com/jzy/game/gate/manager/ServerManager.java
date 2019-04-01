@@ -12,7 +12,7 @@ import com.jzy.game.message.system.SystemMessage.SystemErrorResponse;
 import com.jzy.game.engine.server.ServerInfo;
 import com.jzy.game.engine.server.ServerState;
 import com.jzy.game.engine.server.ServerType;
-import com.jzy.game.engine.util.StringUtil;
+import com.jzy.game.engine.util.StringUtils;
 import com.jzy.game.gate.struct.UserSession;
 
 /**
@@ -103,7 +103,7 @@ public class ServerManager {
 			return null;
 		}
 		Optional<ServerInfo> findFirst = map.values().stream()
-				.filter(server -> StringUtil.isNullOrEmpty(userSession.getVersion())
+				.filter(server -> StringUtils.isNullOrEmpty(userSession.getVersion())
 						|| userSession.getVersion().equals(server.getVersion())) // 版本号
 				.filter(server -> server.getState() == ServerState.NORMAL.ordinal()) // 状态
 				.sorted((s1, s2) -> s1.getOnline() - s2.getOnline()).findFirst();

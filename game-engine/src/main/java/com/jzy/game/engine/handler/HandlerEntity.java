@@ -38,7 +38,7 @@ public @interface HandlerEntity {
 	 * 
 	 * @return
 	 */
-	ThreadType thread() default ThreadType.IO;
+	ThreadType threadType() default ThreadType.IO;
 
 	/**
 	 * tcp 请求的消息类

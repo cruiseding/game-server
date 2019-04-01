@@ -24,6 +24,7 @@ import com.jzy.game.engine.util.SysUtil;
  * @date 2017-03-31 QQ:359135103
  */
 public class HttpServer implements Runnable {
+	
 	private static final Logger LOG = LoggerFactory.getLogger(HttpServer.class);
 
 	private final MinaServerConfig minaServerConfig;
@@ -32,8 +33,9 @@ public class HttpServer implements Runnable {
 
 	private final HttpServerIoHandler ioHandler;
 
-	protected boolean isRunning;	//通信是否在运行
-	private OrderedThreadPoolExecutor threadpool;	//默认线程池
+	protected boolean isRunning; // 通信是否在运行
+	
+	private OrderedThreadPoolExecutor threadpool; // 默认线程池
 
 	public HttpServer(MinaServerConfig minaServerConfig, HttpServerIoHandler ioHandler) {
 		this.minaServerConfig = minaServerConfig;
@@ -75,8 +77,7 @@ public class HttpServer implements Runnable {
 	 * 绑定端口
 	 *
 	 * @author CruiseDing
-	 * @date 2017-03-31
-	 * QQ:359135103
+	 * @date 2017-03-31 QQ:359135103
 	 */
 	private class BindServer implements Runnable {
 
@@ -88,9 +89,9 @@ public class HttpServer implements Runnable {
 			chain.addLast("codec", new HttpServerCodecImpl());
 
 			// // 线程队列池
-			OrderedThreadPoolExecutor threadpool = new OrderedThreadPoolExecutor(minaServerConfig.getOrderedThreadPoolExecutorSize());
+			OrderedThreadPoolExecutor threadpool = new OrderedThreadPoolExecutor(
+					minaServerConfig.getOrderedThreadPoolExecutorSize());
 			chain.addLast("threadPool", new ExecutorFilter(threadpool));
-
 			acceptor.setReuseAddress(minaServerConfig.isReuseAddress()); // 允许地址重用
 
 			SocketSessionConfig sc = acceptor.getSessionConfig();
@@ -101,7 +102,6 @@ public class HttpServer implements Runnable {
 			sc.setSoLinger(minaServerConfig.getSoLinger());
 			sc.setIdleTime(IdleStatus.READER_IDLE, minaServerConfig.getReaderIdleTime());
 			sc.setIdleTime(IdleStatus.WRITER_IDLE, minaServerConfig.getWriterIdleTime());
-
 			acceptor.setHandler(ioHandler);
 
 			try {

@@ -25,9 +25,9 @@ public class GetGateIpHandler extends HttpHandler {
 			String version = getString("version");
 			ServerInfo serverInfo = ServerManager.getInstance().getIdleGate(version);
 			if (serverInfo == null) {
-				getParameter().appendBody("无可用网关服");
+				getResponse().appendBody("无可用网关服");
 			} else {
-				getParameter().appendBody(serverInfo.getIp() + ":" + serverInfo.getPort());
+				getResponse().appendBody(serverInfo.getIp() + ":" + serverInfo.getPort());
 			}
 		} finally {
 			response();

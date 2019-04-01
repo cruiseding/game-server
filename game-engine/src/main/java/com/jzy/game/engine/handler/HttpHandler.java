@@ -15,10 +15,11 @@ import com.jzy.game.engine.mina.code.HttpResponseImpl;
  */
 public abstract class HttpHandler implements IHandler {
 
-	private HttpResponseImpl response; // 返回消息
-
 	private IoSession session; // 消息来源
+	
 	private HttpRequestImpl request; // 请求消息
+	
+	private HttpResponseImpl response; // 返回消息
 
 	private long createTime;
 
@@ -53,7 +54,7 @@ public abstract class HttpHandler implements IHandler {
 	 * 返回消息
 	 */
 	@Override
-	public HttpResponseImpl getParameter() {
+	public HttpResponseImpl getResponse() {
 		if (response == null) {
             response = new HttpResponseImpl();
 		}
@@ -64,9 +65,9 @@ public abstract class HttpHandler implements IHandler {
 	 * 返回消息
 	 */
 	@Override
-	public void setParameter(Object parameter) {
+	public void setResponse(Object response) {
 		// if (parameter instanceof HttpResponseMessage) {
-        response = (HttpResponseImpl) parameter;
+        response = (HttpResponseImpl) response;
 		// }
 	}
 
@@ -161,7 +162,7 @@ public abstract class HttpHandler implements IHandler {
 	 * @param object
 	 */
 	public void sendMsg(Object object) {
-		getParameter().appendBody(JSON.toJSONString(object));
+		getResponse().appendBody(JSON.toJSONString(object));
 		response();
 	}
 

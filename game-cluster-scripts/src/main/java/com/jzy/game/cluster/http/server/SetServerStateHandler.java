@@ -22,6 +22,7 @@ import com.jzy.game.engine.util.MsgUtil;
  */
 @HandlerEntity(path = "/server/state")
 public class SetServerStateHandler extends HttpHandler {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(SetServerStateHandler.class);
 
 	@Override

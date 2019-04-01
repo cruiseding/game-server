@@ -20,7 +20,7 @@ import com.jzy.game.engine.util.TimeUtil;
  * @author CruiseDing
  * @date 2017-04-21 QQ:359135103
  */
-@HandlerEntity(mid = MID.FireReq_VALUE, msg = FireRequest.class, thread = ThreadType.ROOM)
+@HandlerEntity(mid = MID.FireReq_VALUE, msg = FireRequest.class, threadType = ThreadType.ROOM)
 public class FireHandler extends TcpHandler {
 	private static final Logger LOGGER = LoggerFactory.getLogger(FireHandler.class);
 

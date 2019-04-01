@@ -18,7 +18,7 @@ import com.jzy.game.gate.manager.ServerManager;
  * @author CruiseDing
  * @date 2017-04-09 QQ:359135103
  */
-@HandlerEntity(mid = MID.ServerRegisterReq_VALUE, msg = ServerRegisterRequest.class, thread = ThreadType.SYNC)
+@HandlerEntity(mid = MID.ServerRegisterReq_VALUE, msg = ServerRegisterRequest.class, threadType = ThreadType.SYNC)
 public class ServerRegisterHandler extends TcpHandler {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ServerRegisterHandler.class);
 
