@@ -89,10 +89,10 @@ public abstract class DefaultProtocolHandler implements IoHandler {
 			}
 			int offset = messageHeaderLength > 4 ? 8 : 0;
 			int msgID = MsgUtils.getMessageID(bytes, offset); // 消息ID
-
-			if (ScriptManager.getInstance().tcpMsgIsRegister(msgID)) {
-				Class<? extends IHandler> handlerClass = ScriptManager.getInstance().getTcpHandler(msgID);
-				HandlerEntity handlerEntity = ScriptManager.getInstance().getTcpHandlerEntity(msgID);
+			ScriptManager scriptManager = ScriptManager.getInstance();
+			if (scriptManager.tcpMsgIsRegister(msgID)) {
+				Class<? extends IHandler> handlerClass = scriptManager.getTcpHandler(msgID);
+				HandlerEntity handlerEntity = scriptManager.getTcpHandlerEntity(msgID);
 				if (handlerClass != null) {
 					Message message = MsgUtils.buildMessage(handlerEntity.msg(), bytes, messageHeaderLength,
 							bytes.length - messageHeaderLength);
