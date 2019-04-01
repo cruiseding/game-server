@@ -8,8 +8,8 @@ import com.jzy.game.message.system.SystemMessage.HeartRequest;
 import com.jzy.game.message.system.SystemMessage.HeartResponse;
 import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.TcpHandler;
-import com.jzy.game.engine.util.MsgUtil;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.MsgUtils;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 心跳
@@ -24,7 +24,7 @@ public class HeartHandler extends TcpHandler{
 	@Override
 	public void run() {
 		HeartResponse.Builder builder=HeartResponse.newBuilder();
-		builder.setServerTime(TimeUtil.currentTimeMillis());
+		builder.setServerTime(TimeUtils.currentTimeMillis());
 		session.write(builder.build());
 		//LOGGER.info("{}心跳",MsgUtil.getIp(session));
 	}

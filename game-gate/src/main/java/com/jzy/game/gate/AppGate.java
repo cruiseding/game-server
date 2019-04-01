@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import com.jzy.game.engine.redis.jedis.JedisClusterConfig;
 import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.script.ScriptManager;
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 import com.jzy.game.gate.manager.MongoManager;
 import com.jzy.game.gate.server.GateServer;
 
@@ -55,7 +55,7 @@ public final class AppGate {
 		initConfigPath();
 
 		// redis
-		JedisClusterConfig jedisClusterConfig = FileUtil.getConfigXML(configPath, "jedisClusterConfig.xml", JedisClusterConfig.class);
+		JedisClusterConfig jedisClusterConfig = FileUtils.getConfigXML(configPath, "jedisClusterConfig.xml", JedisClusterConfig.class);
 		if (jedisClusterConfig == null) {
 			LOGGER.error("redis配置{}未找到", configPath);
 			System.exit(1);

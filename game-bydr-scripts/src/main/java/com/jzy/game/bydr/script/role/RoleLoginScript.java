@@ -13,7 +13,7 @@ import com.jzy.game.bydr.struct.role.Role;
 import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.redis.redisson.FastJsonCodec;
 import com.jzy.game.engine.redis.redisson.RedissonManager;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 import com.jzy.game.model.constant.Config;
 import com.jzy.game.model.constant.Reason;
 import com.jzy.game.model.redis.key.HallKey;
@@ -61,7 +61,7 @@ public class RoleLoginScript implements IRoleScript {
 			return;
 		}
 		com.jzy.game.model.struct.Role hallRole = new com.jzy.game.model.struct.Role();
-		JsonUtil.map2Object(hgetAll, hallRole);
+		JsonUtils.map2Object(hgetAll, hallRole);
 		role.setNick(hallRole.getNick());
 		role.setGold(hallRole.getGold());
 		role.setLevel(hallRole.getLevel());

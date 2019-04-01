@@ -24,11 +24,11 @@ import java.nio.ByteOrder;
  * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
-public final class MsgUtil {
+public final class MsgUtils {
 
-	protected static final Logger log = LoggerFactory.getLogger(MsgUtil.class);
+	protected static final Logger log = LoggerFactory.getLogger(MsgUtils.class);
 
-	private MsgUtil() {
+	private MsgUtils() {
 	}
 
 	/**
@@ -65,14 +65,14 @@ public final class MsgUtil {
 																// protobuf长度4字节
 
 		// 消息长度
-		byte[] lengthBytes = IntUtil.short2Bytes((short) (protobufLength + 8), ByteOrder.LITTLE_ENDIAN);
+		byte[] lengthBytes = IntUtils.short2Bytes((short) (protobufLength + 8), ByteOrder.LITTLE_ENDIAN);
 		buf.put(lengthBytes);
 		// buf.putInt(protobufLength + 8);
 		// 消息ID
-		buf.put(IntUtil.writeIntToBytesLittleEnding(msgID));
+		buf.put(IntUtils.writeIntToBytesLittleEnding(msgID));
 		// buf.putInt(msgID);
 		// protobuf长度
-		buf.put(IntUtil.writeIntToBytesLittleEnding(protobufLength));
+		buf.put(IntUtils.writeIntToBytesLittleEnding(protobufLength));
 		// buf.putInt(protobufLength);
 		buf.put(msgData); // 真实数据
 		buf.rewind();

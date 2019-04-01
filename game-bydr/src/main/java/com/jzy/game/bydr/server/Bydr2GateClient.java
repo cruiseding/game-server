@@ -16,7 +16,7 @@ import com.jzy.game.engine.thread.ServerThread;
 import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
 import com.jzy.game.engine.thread.ThreadType;
 import com.jzy.game.engine.thread.timer.event.ServerHeartTimer;
-import com.jzy.game.engine.util.SysUtil;
+import com.jzy.game.engine.util.SysUtils;
 import com.jzy.game.message.ServerMessage;
 import com.jzy.game.message.ServerMessage.ServerRegisterRequest;
 import com.jzy.game.model.constant.NetPort;
@@ -72,8 +72,8 @@ public class Bydr2GateClient extends MutilMinaTcpClientService {
 			info.setState(ServerState.NORMAL.getState());
 			info.setType(getMinaClientConfig().getType().getType());
 			info.setWwwip("");
-			info.setTotalMemory(SysUtil.totalMemory());
-			info.setFreeMemory(SysUtil.freeMemory());
+			info.setTotalMemory(SysUtils.totalMemory());
+			info.setFreeMemory(SysUtils.freeMemory());
 			ScriptManager.getInstance().getBaseScriptEntry().executeScripts(IGameServerCheckScript.class,
 					script -> script.buildServerInfo(info));
 			builder.setServerInfo(info);

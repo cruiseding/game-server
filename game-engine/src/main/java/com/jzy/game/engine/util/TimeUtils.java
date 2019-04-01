@@ -22,9 +22,9 @@ import org.slf4j.Logger;
  * 时间
  *
  */
-public final class TimeUtil {
+public final class TimeUtils {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(TimeUtil.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TimeUtils.class);
 
     /**
      * yyyy-MM-dd HH:mm:ss
@@ -51,7 +51,7 @@ public final class TimeUtil {
      */
     private static long timeOffset;//86400000
 
-    private TimeUtil() {
+    private TimeUtils() {
     }
 
     /**@

@@ -5,7 +5,7 @@ import java.util.Date;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSON;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 import com.jzy.game.model.struct.Item;
 
 /**
@@ -29,7 +29,7 @@ public class JsonUtilTest {
 		item.setConfigId(1);
 		item.setNum(20);
 		item.setCreateTime(new Date());
-		String filed = JsonUtil.toJSONStringWriteClassNameWithFiled(item);
+		String filed = JsonUtils.toJSONStringWriteClassNameWithFiled(item);
 		String jsonString = JSON.toJSONString(item);
 		System.err.println(jsonString);
 		System.err.println(filed);

@@ -13,11 +13,11 @@ import org.slf4j.LoggerFactory;
  * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
-public final class IntUtil {
+public final class IntUtils {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(IntUtil.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(IntUtils.class);
 
-    private IntUtil() {
+    private IntUtils() {
     }
 
     public static int setIntFlag(int src, int index) {

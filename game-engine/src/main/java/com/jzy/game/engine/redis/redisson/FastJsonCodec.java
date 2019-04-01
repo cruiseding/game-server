@@ -9,7 +9,7 @@ import org.redisson.client.protocol.Encoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
@@ -54,7 +54,7 @@ public class FastJsonCodec implements Codec {
 		@Override
 		public ByteBuf encode(Object in) throws IOException {
 			ByteBuf out = ByteBufAllocator.DEFAULT.buffer();
-			out.writeCharSequence(JsonUtil.toJSONStringWriteClassNameWithFiled(in), CharsetUtil.UTF_8);
+			out.writeCharSequence(JsonUtils.toJSONStringWriteClassNameWithFiled(in), CharsetUtil.UTF_8);
 			return out;
 		}
 	};
@@ -66,7 +66,7 @@ public class FastJsonCodec implements Codec {
 			buf.readerIndex(buf.readableBytes());
 			try {
 				if (valueClass != null && str.startsWith("{")) {
-					return JsonUtil.parseObject(str, valueClass);
+					return JsonUtils.parseObject(str, valueClass);
 				} else if (keyClass != null && !str.startsWith("{")) {
 					if (keyClass.isAssignableFrom(Long.class)) {
 						return Long.parseLong(str);

@@ -13,8 +13,8 @@ import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.HttpHandler;
 import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.redis.jedis.JedisManager;
-import com.jzy.game.engine.util.JsonUtil;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.JsonUtils;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.hall.manager.RoleManager;
 import com.jzy.game.hall.server.HallServer;
 
@@ -30,7 +30,7 @@ import com.jzy.game.hall.server.HallServer;
 @HandlerEntity(path="/gm")
 public class GmHandler extends HttpHandler {
 	private static final Logger LOGGER=LoggerFactory.getLogger(GmHandler.class);
-	private static final Map<String, Method> GM_METHOD=JsonUtil.getFieldMethodMap(GmHandler.class, null);
+	private static final Map<String, Method> GM_METHOD=JsonUtils.getFieldMethodMap(GmHandler.class, null);
 
 	@Override
 	public void run() {
@@ -42,7 +42,7 @@ public class GmHandler extends HttpHandler {
 		}
 		String result = execute();
 		
-		LOGGER.info("{}使用GM结果:{}",MsgUtil.getIp(getSession()),result);
+		LOGGER.info("{}使用GM结果:{}",MsgUtils.getIp(getSession()),result);
 		if(getSession()!=null) {
 			sendMsg(result);
 		}

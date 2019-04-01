@@ -10,7 +10,7 @@ import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.mina.handler.ClientProtocolHandler;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.server.Service;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.gate.script.IUserScript;
 import com.jzy.game.gate.server.GateTcpUserServer;
 import com.jzy.game.gate.server.ssl.GateSslContextFactory;
@@ -54,7 +54,7 @@ public class GateTcpUserServerHandler extends ClientProtocolHandler {
 		if (attribute != null) {
 			UserSession userSession = (UserSession) attribute;
 			if (userSession.getRoleId() > 0) {
-				if (userSession.sendToGame(MsgUtil.clientToGame(msgID, bytes))) {
+				if (userSession.sendToGame(MsgUtils.clientToGame(msgID, bytes))) {
 					return;
 				} else {
 					LOGGER.warn("角色[{}]没有连接游戏服务器,消息{}发送失败", userSession.getRoleId(), msgID);
@@ -63,7 +63,7 @@ public class GateTcpUserServerHandler extends ClientProtocolHandler {
 			}
 
 		}
-		LOGGER.warn("{}消息[{}]未找到玩家", MsgUtil.getIp(session), msgID);
+		LOGGER.warn("{}消息[{}]未找到玩家", MsgUtils.getIp(session), msgID);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class GateTcpUserServerHandler extends ClientProtocolHandler {
 		if (attribute != null) {
 			UserSession userSession = (UserSession) attribute;
 			if (userSession.getRoleId() > 0) {
-				if (!userSession.sendToHall(MsgUtil.clientToGame(msgID, bytes))) {
+				if (!userSession.sendToHall(MsgUtils.clientToGame(msgID, bytes))) {
 					LOGGER.warn("角色[{}]没有连接大厅服务器", userSession.getRoleId());
 					return;
 				} else {

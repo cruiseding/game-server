@@ -10,8 +10,8 @@ import com.jzy.game.ai.nav.polygon.Polygon;
 import com.jzy.game.ai.nav.polygon.PolygonData;
 import com.jzy.game.ai.nav.polygon.PolygonNavMesh;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 多边形四叉树测试
@@ -25,10 +25,10 @@ public class PolygonQuadTreeTest {
 
 	@Before
 	public void init() {
-		long start = TimeUtil.currentTimeMillis();
-		String navMeshStr = FileUtil.readTxtFile(meshPath);
+		long start = TimeUtils.currentTimeMillis();
+		String navMeshStr = FileUtils.readTxtFile(meshPath);
 		navMesh = new PolygonNavMesh(navMeshStr);
-		System.out.println("加载地图耗时：" + (TimeUtil.currentTimeMillis() - start));
+		System.out.println("加载地图耗时：" + (TimeUtils.currentTimeMillis() - start));
 	}
 
 	private PolygonGuadTree getTree() {
@@ -97,14 +97,14 @@ public class PolygonQuadTreeTest {
 	 */
 	@Test
 	public void testSerarchWithIn() {
-		long startTime=TimeUtil.currentTimeMillis();
+		long startTime=TimeUtils.currentTimeMillis();
 		for(int i=0;i<1;i++) {
 			List<Polygon> list = getTree().searchWithin(new Vector3(110.2f, 334.6f), 8);
 //			if(list!=null) {
 //				list.forEach(p->System.out.println(p.toString()));
 //			}
 		}
-		System.out.println(TimeUtil.currentTimeMillis()-startTime);
+		System.out.println(TimeUtils.currentTimeMillis()-startTime);
 	}
 
 	/**
@@ -142,16 +142,16 @@ public class PolygonQuadTreeTest {
 	@Test
 	public void testPerformance() {
 		PolygonGuadTree tree = getTree();
-		long startTime = TimeUtil.currentTimeMillis();
+		long startTime = TimeUtils.currentTimeMillis();
 		for (int i = 0; i < 1000000; i++) {
 			tree.get(new Vector3(296, 527), null);
 		}
-		System.err.println(TimeUtil.currentTimeMillis() - startTime);
+		System.err.println(TimeUtils.currentTimeMillis() - startTime);
 
-		startTime = TimeUtil.currentTimeMillis();
+		startTime = TimeUtils.currentTimeMillis();
 		for (int i = 0; i < 1000000; i++) {
 			navMesh.getPolygon(new Vector3(296, 527));
 		}
-		System.out.println(TimeUtil.currentTimeMillis() - startTime);
+		System.out.println(TimeUtils.currentTimeMillis() - startTime);
 	}
 }

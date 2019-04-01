@@ -16,8 +16,8 @@ import com.jzy.game.ai.nav.NavMesh;
 import com.jzy.game.ai.nav.NavMeshData;
 import com.jzy.game.engine.math.MathUtil;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.TimeUtils;
 import com.vividsolutions.jts.geom.Polygon;
 import com.vividsolutions.jts.shape.random.RandomPointsBuilder;
 
@@ -87,7 +87,7 @@ public class NodeNavMesh extends NavMesh implements Serializable, Cloneable {
     public NodeNavMesh(String filePath, boolean editor) {
         LOGGER.info("ss");
         this.editor = editor;
-        String txtFile = FileUtil.readTxtFile(filePath);
+        String txtFile = FileUtils.readTxtFile(filePath);
         if (txtFile == null) {
             LOGGER.warn("navmesh数据{}读取失败", filePath);
             return;
@@ -348,7 +348,7 @@ public class NodeNavMesh extends NavMesh implements Serializable, Cloneable {
 		}
 		List<Vector3> sectors = new ArrayList<>(vertexCount);
 		float degrees = 360f / vertexCount;
-		Random random = new Random(TimeUtil.currentTimeMillis());
+		Random random = new Random(TimeUtils.currentTimeMillis());
 		float randomDegrees = random.nextFloat() * 360;
 		for (int i = 0; i < vertexCount; i++) {
 			Vector3 source = center.translateCopy(i * degrees + randomDegrees, radius);

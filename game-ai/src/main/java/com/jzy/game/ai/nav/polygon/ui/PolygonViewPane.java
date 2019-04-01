@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import com.jzy.game.ai.nav.polygon.Polygon;
 import com.jzy.game.ai.nav.polygon.PolygonNavMesh;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 地图显示面板

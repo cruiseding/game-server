@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import com.jzy.game.engine.mina.code.HttpServerCodecImpl;
 import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.mina.handler.HttpServerIoHandler;
-import com.jzy.game.engine.util.SysUtil;
+import com.jzy.game.engine.util.SysUtils;
 
 /**
  * http服务
@@ -108,7 +108,7 @@ public class HttpServer implements Runnable {
 				acceptor.bind(new InetSocketAddress(minaServerConfig.getHttpPort()));
 				LOG.warn("已开始监听HTTP端口：{}", minaServerConfig.getHttpPort());
 			} catch (IOException e) {
-				SysUtil.exit(getClass(), e, "监听HTTP端口：{}已被占用", minaServerConfig.getHttpPort());
+				SysUtils.exit(getClass(), e, "监听HTTP端口：{}已被占用", minaServerConfig.getHttpPort());
 			}
 		}
 	}

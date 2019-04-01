@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import com.jzy.game.bydr.AppBydr;
 import com.jzy.game.bydr.config.GameConfig;
 import com.jzy.game.engine.script.ScriptManager;
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 import com.jzy.game.model.mongo.bydr.entity.CFish;
 import com.jzy.game.model.script.IConfigScript;
 
@@ -46,7 +46,7 @@ public class ConfigManager {
 	 * 2017年10月18日 下午2:48:45
 	 */
 	public void loadConfig() {
-		gameConfig = FileUtil.getConfigXML(AppBydr.getConfigPath(), "gameConfig.xml", GameConfig.class);
+		gameConfig = FileUtils.getConfigXML(AppBydr.getConfigPath(), "gameConfig.xml", GameConfig.class);
 		if (gameConfig == null) {
 			throw new RuntimeException(String.format("游戏常量%s/gameConfig.xml 文件不存在", AppBydr.getConfigPath()));
 		}

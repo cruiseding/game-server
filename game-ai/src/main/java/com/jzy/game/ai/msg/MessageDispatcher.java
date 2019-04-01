@@ -12,7 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.jzy.game.engine.cache.MemoryPool;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 电报分发管理器 <br>
@@ -683,7 +683,7 @@ public class MessageDispatcher implements Telegraph {
 		} else {
 
 			// Set the timestamp for the delayed telegram
-			telegram.setTimestamp(TimeUtil.currentTimeMillis() + delay);
+			telegram.setTimestamp(TimeUtils.currentTimeMillis() + delay);
 
 			// Put the telegram in the queue
 			boolean added = queue.add(telegram);
@@ -715,7 +715,7 @@ public class MessageDispatcher implements Telegraph {
 	 * </ul>
 	 */
 	public void update() {
-		long currentTime = TimeUtil.currentTimeMillis();
+		long currentTime = TimeUtils.currentTimeMillis();
 
 		// Peek at the queue to see if any telegrams need dispatching.
 		// Remove all telegrams from the front of the queue that have gone
@@ -753,7 +753,7 @@ public class MessageDispatcher implements Telegraph {
 	 *            The callback used to report pending messages individually.
 	 **/
 	public void scanQueue(PendingMessageCallback callback) {
-		float currentTime = TimeUtil.currentTimeMillis();
+		float currentTime = TimeUtils.currentTimeMillis();
 		
 		Iterator<Telegram> iterator = queue.iterator();
 		while (iterator.hasNext()) {

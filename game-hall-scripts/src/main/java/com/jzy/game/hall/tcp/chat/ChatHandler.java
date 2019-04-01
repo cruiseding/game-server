@@ -10,7 +10,7 @@ import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.TcpHandler;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.script.ScriptPool;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.hall.manager.RoleManager;
 import com.jzy.game.hall.script.IGmScript;
 import com.jzy.game.hall.server.HallServer;
@@ -33,7 +33,7 @@ public class ChatHandler extends TcpHandler {
 		Role role = RoleManager.getInstance().getRole(this.rid);
 
 		if (role == null) {
-			LOGGER.warn("{}-{}未登陆", rid, MsgUtil.getIp(session));
+			LOGGER.warn("{}-{}未登陆", rid, MsgUtils.getIp(session));
 			return;
 		}
 		// TODO 消息内容过滤

@@ -6,7 +6,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 
 /**
  * MQ服务
@@ -26,7 +26,7 @@ public abstract class MQService {
 	}
 
 	public MQService(String configPath) {
-		mqConfig = FileUtil.getConfigXML(configPath, "mqConfig.xml", MQConfig.class);
+		mqConfig = FileUtils.getConfigXML(configPath, "mqConfig.xml", MQConfig.class);
 		if (mqConfig == null) {
 			throw new RuntimeException(String.format("配置文件%s/mqConfig.xml未配置", configPath));
 		}

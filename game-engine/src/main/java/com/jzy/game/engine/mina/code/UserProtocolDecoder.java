@@ -4,7 +4,7 @@ import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 
 /**
  * 客户端消息解析
@@ -38,7 +38,7 @@ public class UserProtocolDecoder extends ProtocolDecoderImpl {
             }
             if (session.getLastReadTime() - startTime > 1000L) {
                 if (count > getMaxCountPerSecond()) {
-                    MsgUtil.close(session, "--> 消息过于频繁:%d,超过次数：%d", count, getMaxCountPerSecond());
+                    MsgUtils.close(session, "--> 消息过于频繁:%d,超过次数：%d", count, getMaxCountPerSecond());
                     return false;
                 }
                 startTime = session.getLastReadTime();

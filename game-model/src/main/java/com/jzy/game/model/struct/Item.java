@@ -10,7 +10,7 @@ import com.alibaba.fastjson.annotation.JSONType;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import com.jzy.game.engine.redis.jedis.JedisManager;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 import com.jzy.game.model.constant.Config;
 import com.jzy.game.model.redis.key.HallKey;
 
@@ -77,11 +77,11 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return JsonUtil.toJSONString(this);
+		return JsonUtils.toJSONString(this);
 	}
 
 	public void saveToRedis(long roleId) {
 		String key = HallKey.Role_Map_Packet.getKey(roleId);
-		JedisManager.getJedisCluster().hset(key, String.valueOf(id), JsonUtil.toJSONString(this));
+		JedisManager.getJedisCluster().hset(key, String.valueOf(id), JsonUtils.toJSONString(this));
 	}
 }

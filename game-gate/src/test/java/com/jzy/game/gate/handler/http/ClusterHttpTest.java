@@ -6,7 +6,7 @@ import java.util.Map;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.jzy.game.engine.util.HttpUtil;
+import com.jzy.game.engine.util.HttpUtils;
 
 /**
  * 集群服务器请求测试
@@ -26,7 +26,7 @@ public class ClusterHttpTest {
 	@Test
 	public void testGetHallIp() {
 		Map<String, String> paramsMap = new HashMap<>();
-		String httpPost = HttpUtil.httpPost("http://127.0.0.1:8001/server/hall/ip", paramsMap);
+		String httpPost = HttpUtils.httpPost("http://127.0.0.1:8001/server/hall/ip", paramsMap);
 		System.err.println(httpPost);
 	}
 }

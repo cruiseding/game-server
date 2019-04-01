@@ -6,7 +6,7 @@ import java.util.List;
 import com.jzy.game.ai.nav.triangle.TriangleNavMesh;
 import com.jzy.game.ai.nav.triangle.TrianglePointPath;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 
 /**
@@ -33,9 +33,9 @@ public class TrianglePlayer {
     }
 
     public void path() {
-        long time = TimeUtil.currentTimeMillis();
+        long time = TimeUtils.currentTimeMillis();
         paths= map.findPath(pos, targetAdjusted, navMeshPointPath);
-        time = TimeUtil.currentTimeMillis() - time;
+        time = TimeUtils.currentTimeMillis() - time;
 //        System.out.println("寻路耗时：" + time);
     }
 

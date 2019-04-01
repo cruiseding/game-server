@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.jzy.game.engine.mina.message.MassMessage;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 
 /**群发消息
  * @author wzyi
@@ -37,7 +37,7 @@ public class MassProtocolEncoder extends ProtocolEncoderImpl {
         }
         IoBuffer buf = null;
         if (obj instanceof MassMessage) {
-            buf = MsgUtil.toIobuffer((MassMessage) obj);
+            buf = MsgUtils.toIobuffer((MassMessage) obj);
         } else {
             log.warn("未知的数据类型");
             return;

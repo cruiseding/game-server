@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.HttpHandler;
-import com.jzy.game.engine.util.SysUtil;
+import com.jzy.game.engine.util.SysUtils;
 import com.jzy.game.model.constant.Config;
 
 /**
@@ -24,7 +24,7 @@ public class ThreadInfoHandler extends HttpHandler {
 			sendMsg("验证失败");
 			return;
 		}
-		String info = SysUtil.threadInfo("<br>");
+		String info = SysUtils.threadInfo("<br>");
 		LOGGER.info(info);
 		info=info.trim().replaceAll("/n", "").replaceAll("/t", "&nbsp;&nbsp;");
 		

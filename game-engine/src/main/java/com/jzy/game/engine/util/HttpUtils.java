@@ -29,10 +29,10 @@ import org.slf4j.LoggerFactory;
  *
  * @author CruiseDing
  */
-public final class HttpUtil {
-    private static final Logger LOGGER=LoggerFactory.getLogger(HttpUtil.class);
+public final class HttpUtils {
+    private static final Logger LOGGER=LoggerFactory.getLogger(HttpUtils.class);
 
-    private HttpUtil() {
+    private HttpUtils() {
     }
 
     public static ByteArrayOutputStream URLPost(String strUrl, String content) throws IOException {

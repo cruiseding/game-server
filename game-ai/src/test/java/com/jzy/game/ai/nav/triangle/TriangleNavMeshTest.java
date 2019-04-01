@@ -13,8 +13,8 @@ import com.jzy.game.ai.nav.triangle.TriangleGraphPath;
 import com.jzy.game.ai.nav.triangle.TrianglePointPath;
 import com.jzy.game.ai.pfa.Connection;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 测试寻路
@@ -33,10 +33,10 @@ public class TriangleNavMeshTest {
 
 	@Before
 	public void init() {
-		long start = TimeUtil.currentTimeMillis();
-		String navMeshStr = FileUtil.readTxtFile(meshPath);
+		long start = TimeUtils.currentTimeMillis();
+		String navMeshStr = FileUtils.readTxtFile(meshPath);
 		navMesh = new TriangleNavMesh(navMeshStr);
-		System.out.println("加载地图耗时：" + (TimeUtil.currentTimeMillis() - start));
+		System.out.println("加载地图耗时：" + (TimeUtils.currentTimeMillis() - start));
 	}
 
 	/**
@@ -58,7 +58,7 @@ public class TriangleNavMeshTest {
 	 */
 	@Test
 	public void testTriangle() {
-		long start = TimeUtil.currentTimeMillis();
+		long start = TimeUtils.currentTimeMillis();
 		for (int i = 0; i < 1; i++) {
 			Triangle triangle = navMesh.getTriangle(new Vector3(264, 18, 117));
 			if (triangle != null) {
@@ -67,7 +67,7 @@ public class TriangleNavMeshTest {
 			Assert.assertNotNull(triangle);
 		}
 		
-		System.out.println("获取三角形耗时：" + (TimeUtil.currentTimeMillis() - start));
+		System.out.println("获取三角形耗时：" + (TimeUtils.currentTimeMillis() - start));
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class TriangleNavMeshTest {
 	public  void testPerformance() {
 		TriangleGraphPath path=new TriangleGraphPath();
 		TrianglePointPath pointPath=new TrianglePointPath();
-		long start=TimeUtil.currentTimeMillis();
+		long start=TimeUtils.currentTimeMillis();
 		List<Vector3> list=null;
 		for(int i=0;i<10000;i++) {
 //			list = navMesh.findPath(new Vector3(61,13,191), new Vector3(107,11,146), pointPath);				//1
@@ -90,7 +90,7 @@ public class TriangleNavMeshTest {
 			list = navMesh.findPath(new Vector3(373f,0f,247f), new Vector3(353f,0f,213f), pointPath);				//9
 			
 		}
-		System.err.println("耗时："+(TimeUtil.currentTimeMillis()-start));
+		System.err.println("耗时："+(TimeUtils.currentTimeMillis()-start));
 		if(list!=null) {
             list.forEach(v->System.out.println(v.toString()));
         }

@@ -10,8 +10,8 @@ import com.jzy.game.engine.handler.HttpHandler;
 import com.jzy.game.engine.mail.MailConfig;
 import com.jzy.game.engine.mail.MailManager;
 import com.jzy.game.engine.script.ScriptManager;
-import com.jzy.game.engine.util.MsgUtil;
-import com.jzy.game.engine.util.SymbolUtil;
+import com.jzy.game.engine.util.MsgUtils;
+import com.jzy.game.engine.util.SymbolUtils;
 import com.jzy.game.model.constant.Config;
 import com.jzy.game.model.script.IConfigScript;
 
@@ -40,13 +40,13 @@ public class ReloadConfigHandler extends HttpHandler {
 		if (tableStr != null) {
 			result = ScriptManager.getInstance().getBaseScriptEntry().functionScripts(IConfigScript.class,
 					(IConfigScript script) -> script
-							.reloadConfig(Arrays.asList(tableStr.split(SymbolUtil.DOUHAO_REG))));
+							.reloadConfig(Arrays.asList(tableStr.split(SymbolUtils.DOUHAO_REG))));
 		} else {
 			result = ScriptManager.getInstance().getBaseScriptEntry().functionScripts(IConfigScript.class,
 					(IConfigScript script) -> script.reloadConfig(null));
 		}
 
-		String info = String.format("%s加载配置：%s", MsgUtil.getIp(getSession()), result);
+		String info = String.format("%s加载配置：%s", MsgUtils.getIp(getSession()), result);
 		LOGGER.info(info);
 		MailConfig mailConfig = MailManager.getInstance().getMailConfig();
 		String[] recives = mailConfig.getReciveUser().toArray(new String[mailConfig.getReciveUser().size()]);

@@ -6,7 +6,7 @@ import com.jzy.game.model.mongo.hall.dao.RoleDao;
 import com.jzy.game.model.redis.key.HallKey;
 import com.jzy.game.model.struct.Role;
 import com.jzy.game.engine.redis.jedis.JedisManager;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 import com.jzy.game.hall.manager.RoleManager;
 import com.jzy.game.hall.script.IRoleScript;
 import redis.clients.jedis.Jedis;

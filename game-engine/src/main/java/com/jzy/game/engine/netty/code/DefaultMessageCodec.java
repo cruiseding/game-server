@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 
 import com.google.protobuf.Message;
 import com.jzy.game.engine.mina.message.IDMessage;
-import com.jzy.game.engine.util.MsgUtil;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.MsgUtils;
+import com.jzy.game.engine.util.TimeUtils;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -43,12 +43,12 @@ public class DefaultMessageCodec extends ByteToMessageCodec<Object> {
 	@Override
 	protected void encode(ChannelHandlerContext ctx, Object obj, ByteBuf out) throws Exception {
 		//使用了mina进行转换
-		long start=TimeUtil.currentTimeMillis();
+		long start=TimeUtils.currentTimeMillis();
 		byte[] bytes = null; //消息体
 		if(obj instanceof IDMessage){	//消息头12 消息ID+角色ID
-			bytes=MsgUtil.toIobuffer((IDMessage)obj).array();
+			bytes=MsgUtils.toIobuffer((IDMessage)obj).array();
 		}else if(obj instanceof Message){	//消息头4 消息ID 
-			bytes=MsgUtil.toIobuffer((Message)obj).array();
+			bytes=MsgUtils.toIobuffer((Message)obj).array();
 		}
 		
 		if (bytes != null) {
@@ -64,7 +64,7 @@ public class DefaultMessageCodec extends ByteToMessageCodec<Object> {
 		if (in.readableBytes() < 1) {// 空包不处理
 			return;
 		}
-		long start=TimeUtil.currentTimeMillis();
+		long start=TimeUtils.currentTimeMillis();
 		int length = in.readInt();
 		long userId=0;
 		if(headerLength==12){

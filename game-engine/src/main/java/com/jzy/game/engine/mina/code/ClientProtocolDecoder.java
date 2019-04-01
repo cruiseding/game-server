@@ -18,9 +18,9 @@ import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jzy.game.engine.util.CipherUtil;
-import com.jzy.game.engine.util.IntUtil;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.CipherUtils;
+import com.jzy.game.engine.util.IntUtils;
+import com.jzy.game.engine.util.MsgUtils;
 
 /**
  * 游戏客户端消息解码
@@ -58,7 +58,7 @@ public class ClientProtocolDecoder extends ProtocolDecoderImpl {
 		in.mark(); // 标记阅读位置
 		byte[] bs = new byte[2];
 		in.get(bs, 0, 2);
-		short packageLength = IntUtil.bigEndianByteToShort(bs, 0, 2);
+		short packageLength = IntUtils.bigEndianByteToShort(bs, 0, 2);
 		if (packageLength < 1 || packageLength > maxReadSize) {
 			LOGGER.warn("消息包长度为：{}", packageLength);
 			in.clear();
@@ -73,7 +73,7 @@ public class ClientProtocolDecoder extends ProtocolDecoderImpl {
 		// 消息Id(4字节)+protobufLength(4字节)+消息体+时间戳(8字节)+签名数据长度(4字节)+签名数据+截取签名长度(4字节)
 		bs = new byte[packageLength];
 		in.get(bs);
-		int protobufLength = IntUtil.bigEndianByteToInt(bs, 4, 4);
+		int protobufLength = IntUtils.bigEndianByteToInt(bs, 4, 4);
 		if (packageLength > protobufLength + 8) {
 			LOGGER.debug("消息签名验证");
 			if (checkMsgSign(bs, protobufLength)) {
@@ -108,17 +108,17 @@ public class ClientProtocolDecoder extends ProtocolDecoderImpl {
 	 */
 	private boolean checkMsgSign(byte[] bytes, int protobufLength) throws Exception {
 		// 客户端时间戳
-		long timeStamp = IntUtil.bytes2Long(bytes, 8 + protobufLength, 8, ByteOrder.LITTLE_ENDIAN);
+		long timeStamp = IntUtils.bytes2Long(bytes, 8 + protobufLength, 8, ByteOrder.LITTLE_ENDIAN);
 		// 计算签名
 		String sign1 = calculateSign(bytes, timeStamp);
 		// 解密签名数组
-		int len_md5_data = IntUtil.bigEndianByteToInt(bytes, 16 + protobufLength, 4);
+		int len_md5_data = IntUtils.bigEndianByteToInt(bytes, 16 + protobufLength, 4);
 		byte[] bytesMd5 = new byte[len_md5_data];
 		System.arraycopy(bytes, 20 + protobufLength, bytesMd5, 0, len_md5_data);
 		bytesMd5 = decryptAES(bytesMd5);
 
 		// 截取签名
-		int len_clear_sign = IntUtil.bigEndianByteToInt(bytes, 20 + protobufLength + len_md5_data, 4);
+		int len_clear_sign = IntUtils.bigEndianByteToInt(bytes, 20 + protobufLength + len_md5_data, 4);
 		byte[] clearSignBytes = new byte[len_clear_sign];
 		System.arraycopy(bytesMd5, 0, clearSignBytes, 0, len_clear_sign);
 		String sign2 = new String(clearSignBytes, "utf-8");
@@ -141,7 +141,7 @@ public class ClientProtocolDecoder extends ProtocolDecoderImpl {
 			sb.append(c);
 		}
 		sb.append(timeStamp);
-		return CipherUtil.MD5Encode(sb.toString()).toUpperCase();
+		return CipherUtils.MD5Encode(sb.toString()).toUpperCase();
 	}
 
 	/**
@@ -182,7 +182,7 @@ public class ClientProtocolDecoder extends ProtocolDecoderImpl {
 		long interval= session.getLastReadTime() - startTime;
 		if (interval > 1000L) {
 			if (count > getMaxCountPerSecond()) {
-				MsgUtil.close(session, "%s %d--> %dms内消息过于频繁:%d,超过次数：%d", MsgUtil.getIp(session),session.getId(),interval, count,
+				MsgUtils.close(session, "%s %d--> %dms内消息过于频繁:%d,超过次数：%d", MsgUtils.getIp(session),session.getId(),interval, count,
 						getMaxCountPerSecond());
 				return false;
 			}

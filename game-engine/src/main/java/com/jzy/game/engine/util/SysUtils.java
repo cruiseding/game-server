@@ -24,13 +24,13 @@ import org.slf4j.LoggerFactory;
  * @author CruiseDing
  * @date 2017-03-31 QQ:359135103
  */
-public final class SysUtil {
+public final class SysUtils {
 
-	private static final Logger log = LoggerFactory.getLogger(SysUtil.class);
+	private static final Logger log = LoggerFactory.getLogger(SysUtils.class);
 	private static final Runtime RUNTIME = Runtime.getRuntime();
 	private static final int MB_NUM = 1024 * 1024;
 
-    private SysUtil() {
+    private SysUtils() {
     }
 
     /**

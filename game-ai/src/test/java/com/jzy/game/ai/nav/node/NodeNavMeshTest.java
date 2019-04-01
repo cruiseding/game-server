@@ -7,7 +7,7 @@ import com.jzy.game.ai.nav.node.NodeNavMesh;
 import com.jzy.game.ai.nav.polygon.PolygonNavMesh;
 import com.jzy.game.ai.nav.triangle.TriangleNavMesh;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 测试寻路
@@ -44,7 +44,7 @@ public class NodeNavMeshTest {
 	 */
 	@Test
 	public void testPerformance() {
-		long start = TimeUtil.currentTimeMillis();
+		long start = TimeUtils.currentTimeMillis();
 		PathData path=null;
 		for(int i=0;i<10000;i++) {
 //		    path = navMesh.path(new Vector3(61,13,191), new Vector3(107,11,146));			//1
@@ -56,7 +56,7 @@ public class NodeNavMeshTest {
 			path = navMesh.path(new Vector3(12f,0f,505f), new Vector3(407f,0f,95f));		//8
 //			
 		}
-		System.err.println("耗时："+(TimeUtil.currentTimeMillis()-start));
+		System.err.println("耗时："+(TimeUtils.currentTimeMillis()-start));
 		if(path!=null&&path.points!=null) {
           path.points.forEach(p->System.out.println(p.toString()));
       }

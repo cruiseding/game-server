@@ -35,7 +35,7 @@ import javax.net.ssl.SSLContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 import com.jzy.game.tool.client.PressureClientTool;
 
 /**
@@ -117,7 +117,7 @@ public class ClientSslContextFactory {
 		try {
 			in = ClientSslContextFactory.class.getResourceAsStream(GATE_KEYSTORE);
 			if(in==null) {
-				in=FileUtil.getFileInputStream(PressureClientTool.configPath+java.io.File.separatorChar+GATE_KEYSTORE);
+				in=FileUtils.getFileInputStream(PressureClientTool.configPath+java.io.File.separatorChar+GATE_KEYSTORE);
 			}
 			ks.load(in, GATE_PW);
 		} finally {
@@ -146,7 +146,7 @@ public class ClientSslContextFactory {
 		try {
 			in = ClientSslContextFactory.class.getResourceAsStream(CLIENT_KEYSTORE);
 			if(in==null) {
-				in=FileUtil.getFileInputStream(PressureClientTool.configPath+java.io.File.separatorChar+CLIENT_KEYSTORE);
+				in=FileUtils.getFileInputStream(PressureClientTool.configPath+java.io.File.separatorChar+CLIENT_KEYSTORE);
 			}
 			ks.load(in, GATE_PW);	//TODO 密码暂时都一样
 		} finally {

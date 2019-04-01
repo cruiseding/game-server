@@ -38,8 +38,8 @@ import com.jzy.game.engine.math.Vector3;
 import com.jzy.game.engine.struct.Person;
 import com.jzy.game.engine.util.Args;
 import com.jzy.game.engine.util.Args.Two;
-import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.ReflectUtil;
+import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.ReflectUtils;
 import com.jzy.game.engine.util.StringUtils;
 
 /**
@@ -81,7 +81,7 @@ public class BehaviorTreeManager {
 		if (!f.exists()) {
 			throw new IllegalStateException(String.format("%s 行为树文件不存在", path));
 		}
-		FileUtil.getRfFiles(files, f, new String[] { ".xml" });
+		FileUtils.getRfFiles(files, f, new String[] { ".xml" });
 		try {
 			if (!files.isEmpty()) {
 				for (File file : files) {
@@ -106,7 +106,7 @@ public class BehaviorTreeManager {
 	 * @return
 	 */
 	private Args.Two<String, BehaviorTree<? extends Person>> createBehaviorTree(File file) throws Exception {
-		String xmlStr = FileUtil.readTxtFile(file.getPath());
+		String xmlStr = FileUtils.readTxtFile(file.getPath());
 		Document document = DocumentHelper.parseText(xmlStr);
 		Element rootElement = document.getRootElement(); // 根节点
 
@@ -285,7 +285,7 @@ public class BehaviorTreeManager {
 			if (element.attributeCount() < 2) { // 没有设置属性参数
 				return leafTask;
 			}
-			Map<String, Method> writeMethods = ReflectUtil.getWriteMethod(leafTaskClass);
+			Map<String, Method> writeMethods = ReflectUtils.getWriteMethod(leafTaskClass);
 			Map<String, String> attrMap = new HashMap<>();
 			for (Attribute attribute : (List<Attribute>) element.attributes()) {
 				String name = attribute.getName();
@@ -351,7 +351,7 @@ public class BehaviorTreeManager {
 			return null;
 		}
 		try {
-			return (BehaviorTree<Person>) ReflectUtil.deepCopy(behaviorTree);
+			return (BehaviorTree<Person>) ReflectUtils.deepCopy(behaviorTree);
 		} catch (Exception e) {
 			LOGGER.error("克隆行为树", e);
 		}

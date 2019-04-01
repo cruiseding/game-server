@@ -12,8 +12,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.server.ServerType;
 import com.jzy.game.engine.struct.Person;
-import com.jzy.game.engine.util.JsonUtil;
-import com.jzy.game.engine.util.ReflectUtil;
+import com.jzy.game.engine.util.JsonUtils;
+import com.jzy.game.engine.util.ReflectUtils;
 import com.jzy.game.model.redis.key.HallKey;
 
 /**
@@ -30,7 +30,7 @@ public class Role extends Person {
 
 	/** setter 方法集合 */
     @JSONField(serialize = false)
-    protected static final transient Map<String, Method> WRITEMETHODS = ReflectUtil.getReadMethod(Role.class);
+    protected static final transient Map<String, Method> WRITEMETHODS = ReflectUtils.getReadMethod(Role.class);
 
 	/** 所在游戏服类型 */
 	@JSONField
@@ -190,6 +190,6 @@ public class Role extends Person {
 	 * 2017年9月26日 下午5:06:51
 	 */
 	public void saveToRedis() {
-		JedisManager.getJedisCluster().hmset(getRoleRedisKey(), JsonUtil.object2Map(this));
+		JedisManager.getJedisCluster().hmset(getRoleRedisKey(), JsonUtils.object2Map(this));
 	}
 }

@@ -17,7 +17,7 @@ import com.jzy.game.model.struct.Mail.MailType;
 import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.redis.redisson.FastJsonCodec;
 import com.jzy.game.engine.redis.redisson.RedissonManager;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 import com.jzy.game.hall.manager.MailManager;
 import com.jzy.game.hall.manager.PacketManager;
 import com.jzy.game.hall.manager.RoleManager;

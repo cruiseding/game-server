@@ -32,13 +32,13 @@ import com.jzy.game.engine.struct.json.FieldMethod;
  * @author CruiseDing
  * @QQ 359135103 2017年7月7日 上午11:22:15
  */
-public final class JsonUtil {
-	private static final Logger LOGGER = LoggerFactory.getLogger(JsonUtil.class);
+public final class JsonUtils {
+	private static final Logger LOGGER = LoggerFactory.getLogger(JsonUtils.class);
 
 	/** 缓存类对象的set get 方法 */
 	private static final Map<Class<?>, Map<String, FieldMethod>> fieldGetMethodCache = new ConcurrentHashMap<>();
 
-	private JsonUtil() {
+	private JsonUtils() {
 	}
 
 	/**
@@ -88,7 +88,7 @@ public final class JsonUtil {
 			sb.setLength(sb.length() - 1);
 		}
 		sb.append("}");
-		ReflectUtil.reflectObject(sb.toString().trim(), object, new Feature[0]);
+		ReflectUtils.reflectObject(sb.toString().trim(), object, new Feature[0]);
 	}
 
 	
@@ -179,9 +179,9 @@ public final class JsonUtil {
 					continue;
 				}
 				String fieldGetName = parGetName(field);
-				String fieldSetName = ReflectUtil.parSetName(field);
+				String fieldSetName = ReflectUtils.parSetName(field);
 				Method fieldGetMet = getGetMet(methods, fieldGetName);
-				Method fieldSetMet = ReflectUtil.getSetMet(methods, fieldSetName);
+				Method fieldSetMet = ReflectUtils.getSetMet(methods, fieldSetName);
 				if (fieldGetMet != null && fieldSetMet != null) {
 					FieldMethod fgm = new FieldMethod(fieldGetMet, fieldSetMet, field);
 					fmmap.put(fgm.getName(), fgm);

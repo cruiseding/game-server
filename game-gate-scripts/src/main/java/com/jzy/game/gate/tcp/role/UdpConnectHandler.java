@@ -8,7 +8,7 @@ import com.jzy.game.message.system.SystemMessage.UdpConnectResponse;
 import com.jzy.game.model.constant.Config;
 import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.TcpHandler;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.gate.manager.UserSessionManager;
 import com.jzy.game.gate.struct.UserSession;
 
@@ -36,7 +36,7 @@ public class UdpConnectHandler extends TcpHandler {
 			builder.setResult(2);
 		}
 		// 地址不正确
-		if (!MsgUtil.getIp(session).equals(MsgUtil.getIp(userSession.getClientSession()))) {
+		if (!MsgUtils.getIp(session).equals(MsgUtils.getIp(userSession.getClientSession()))) {
 			builder.setResult(3);
 		}
 		userSession.setClientUdpSession(getSession());

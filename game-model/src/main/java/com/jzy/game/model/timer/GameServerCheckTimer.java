@@ -11,7 +11,7 @@ import com.jzy.game.engine.server.ITcpClientService;
 import com.jzy.game.engine.server.ServerState;
 import com.jzy.game.engine.server.ServerType;
 import com.jzy.game.engine.thread.timer.ScheduledTask;
-import com.jzy.game.engine.util.SysUtil;
+import com.jzy.game.engine.util.SysUtils;
 import com.jzy.game.message.ServerMessage.ServerInfo;
 import com.jzy.game.message.ServerMessage.ServerListRequest;
 import com.jzy.game.message.ServerMessage.ServerRegisterRequest;
@@ -88,8 +88,8 @@ public class GameServerCheckTimer extends ScheduledTask {
 		info.setState(ServerState.NORMAL.getState());
 		info.setWwwip("");
 		info.setVersion(baseServerConfig.getVersion());
-		info.setTotalMemory(SysUtil.totalMemory());
-		info.setFreeMemory(SysUtil.freeMemory());
+		info.setTotalMemory(SysUtils.totalMemory());
+		info.setFreeMemory(SysUtils.freeMemory());
 		if (baseServerConfig instanceof MinaClientConfig) {
 			MinaClientConfig minaClientConfig = (MinaClientConfig) baseServerConfig;
 			info.setType(minaClientConfig.getType().getType());

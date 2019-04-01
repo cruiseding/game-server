@@ -18,7 +18,7 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 
 /**
  * TCP消息处理器生成
@@ -96,8 +96,8 @@ public class TcpHanderBuilder extends AbstractMojo {
 		List<File> msgFiles = new ArrayList<File>();
 		List<File> handlerFiles = new ArrayList<File>();
 
-		FileUtil.getFiles(msgBaseDir, msgFiles, "Message.java", null);
-		FileUtil.getFiles(handlerPath, handlerFiles, "Handler.java", null);
+		FileUtils.getFiles(msgBaseDir, msgFiles, "Message.java", null);
+		FileUtils.getFiles(handlerPath, handlerFiles, "Handler.java", null);
 		List<String> handlerNames = handlerFiles.stream().map(file -> file.getName()).collect(Collectors.toList());
 		for (File file : msgFiles) {
 			try {
@@ -193,7 +193,7 @@ public class TcpHanderBuilder extends AbstractMojo {
 			if (handlerFile.exists()) {
 				continue;
 			}
-			FileUtil.createFile(handlerFile);
+			FileUtils.createFile(handlerFile);
 
 			if (handlerFile.canWrite()) {
 				OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(handlerFile, true), "UTF-8");

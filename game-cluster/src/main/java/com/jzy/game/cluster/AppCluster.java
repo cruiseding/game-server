@@ -8,8 +8,8 @@ import com.jzy.game.cluster.server.ClusterServer;
 import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.redis.jedis.JedisClusterConfig;
 import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
-import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.SysUtil;
+import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.SysUtils;
 
 
 /**
@@ -66,29 +66,29 @@ public class AppCluster {
 		}
 		
 		log.info("配置路径为：" + path);
-		JedisClusterConfig jedisClusterConfig = FileUtil.getConfigXML(path, "jedisclusterConfig.xml", JedisClusterConfig.class);
+		JedisClusterConfig jedisClusterConfig = FileUtils.getConfigXML(path, "jedisclusterConfig.xml", JedisClusterConfig.class);
 		if (jedisClusterConfig == null) {
-			SysUtil.exit(AppCluster.class, null, "jedisclusterConfig");
+			SysUtils.exit(AppCluster.class, null, "jedisclusterConfig");
 		}
 		
-		ThreadPoolExecutorConfig httpThreadExecutorConfig = FileUtil.getConfigXML(path, "threadExcutorConfig_http.xml", ThreadPoolExecutorConfig.class);
+		ThreadPoolExecutorConfig httpThreadExecutorConfig = FileUtils.getConfigXML(path, "threadExcutorConfig_http.xml", ThreadPoolExecutorConfig.class);
 		if (httpThreadExecutorConfig == null) {
-			SysUtil.exit(AppCluster.class, null, "httpThreadExecutorConfig");
+			SysUtils.exit(AppCluster.class, null, "httpThreadExecutorConfig");
 		}
 		
-		ThreadPoolExecutorConfig tcpThreadExcutorConfig = FileUtil.getConfigXML(path, "threadExcutorConfig_tcp.xml", ThreadPoolExecutorConfig.class);
+		ThreadPoolExecutorConfig tcpThreadExcutorConfig = FileUtils.getConfigXML(path, "threadExcutorConfig_tcp.xml", ThreadPoolExecutorConfig.class);
 		if (tcpThreadExcutorConfig == null) {
-			SysUtil.exit(AppCluster.class, null, "threadExcutorConfig_tcp");
+			SysUtils.exit(AppCluster.class, null, "threadExcutorConfig_tcp");
 		}
 		
-		MinaServerConfig httpMinaServerConfig = FileUtil.getConfigXML(path, "minaServerConfig_http.xml", MinaServerConfig.class);
+		MinaServerConfig httpMinaServerConfig = FileUtils.getConfigXML(path, "minaServerConfig_http.xml", MinaServerConfig.class);
 		if (httpMinaServerConfig == null) {
-			SysUtil.exit(AppCluster.class, null, "minaServerConfig_http");
+			SysUtils.exit(AppCluster.class, null, "minaServerConfig_http");
 		}
 		
-		MinaServerConfig tcpMinaServerConfig = FileUtil.getConfigXML(path, "minaServerConfig_tcp.xml", MinaServerConfig.class);
+		MinaServerConfig tcpMinaServerConfig = FileUtils.getConfigXML(path, "minaServerConfig_tcp.xml", MinaServerConfig.class);
 		if (tcpMinaServerConfig == null) {
-			SysUtil.exit(AppCluster.class, null, "minaServerConfig_tcp");
+			SysUtils.exit(AppCluster.class, null, "minaServerConfig_tcp");
 		}
 
 		clusterServer = new ClusterServer(httpThreadExecutorConfig, httpMinaServerConfig, tcpThreadExcutorConfig, tcpMinaServerConfig);

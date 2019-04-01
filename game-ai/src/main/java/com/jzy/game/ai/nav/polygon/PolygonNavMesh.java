@@ -18,7 +18,7 @@ import com.jzy.game.ai.nav.NavMesh;
 import com.jzy.game.ai.pfa.IndexedAStarPathFinder;
 import com.jzy.game.engine.math.MathUtil;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 多边形寻路

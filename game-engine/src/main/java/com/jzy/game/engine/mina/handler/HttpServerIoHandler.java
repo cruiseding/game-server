@@ -13,7 +13,7 @@ import com.jzy.game.engine.handler.IHandler;
 import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.server.Service;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.engine.util.StringUtils;
 
 import org.slf4j.Logger;
@@ -107,14 +107,14 @@ public abstract class HttpServerIoHandler implements IoHandler {
 	@Override
 	public void messageSent(IoSession session, Object message) throws Exception {
 		if (!session.isClosing()) {
-			MsgUtil.close(session, "http isClosing");
+			MsgUtils.close(session, "http isClosing");
 		}
 	}
 
 	@Override
 	public void inputClosed(IoSession session) throws Exception {
 		LOG.error("http inputClosed " + session);
-		MsgUtil.close(session, "http inputClosed");
+		MsgUtils.close(session, "http inputClosed");
 	}
 
 	/**

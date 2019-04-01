@@ -20,8 +20,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.slf4j.LoggerFactory;
 
-import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.JsonUtils;
 
 import org.slf4j.Logger;
 import redis.clients.jedis.HostAndPort;
@@ -79,7 +79,7 @@ public class JedisManager {
 	}
 
 	private static JedisClusterConfig loadJedisClusterConfig(String configPath) {
-		JedisClusterConfig jedisClusterConfig = FileUtil.getConfigXML(configPath, "jedisClusterConfig.xml",
+		JedisClusterConfig jedisClusterConfig = FileUtils.getConfigXML(configPath, "jedisClusterConfig.xml",
 				JedisClusterConfig.class);
 		if (jedisClusterConfig == null) {
 			LOGGER.error("redis配置{}未找到", configPath);
@@ -112,7 +112,7 @@ public class JedisManager {
 		try {
 			String path = configPath + File.separator + "lua"; // lua脚本路径
 			List<File> sources = new ArrayList<>();
-			FileUtil.getFiles(path, sources, ".lua", null);
+			FileUtils.getFiles(path, sources, ".lua", null);
 			if (sources.size() < 1) {
 				LOGGER.warn("{}目录无任何lua脚本");
 				return;
@@ -147,7 +147,7 @@ public class JedisManager {
 	 * @throws Exception
 	 */
 	public void loadScript(String path, String fileName) throws Exception {
-		String script = FileUtil.readTxtFile(path + File.separator, fileName + ".lua");
+		String script = FileUtils.readTxtFile(path + File.separator, fileName + ".lua");
 		if (script == null || script.length() < 1) {
 			throw new Exception(path + "/" + fileName + ".lua 加载出错");
 		}
@@ -223,7 +223,7 @@ public class JedisManager {
 		}
 		Map<K, V> map = new ConcurrentHashMap<>();
 		hgetAll.forEach((k, v) -> {
-			map.put((K) parseKey(k, keyClass), JsonUtil.parseObject(v, valueClass));
+			map.put((K) parseKey(k, keyClass), JsonUtils.parseObject(v, valueClass));
 		});
 		return map;
 	}
@@ -242,7 +242,7 @@ public class JedisManager {
 		if (hget == null) {
 			return null;
 		}
-		return JsonUtil.parseObject(hget, clazz);
+		return JsonUtils.parseObject(hget, clazz);
 	}
 	
 	/**
@@ -256,7 +256,7 @@ public class JedisManager {
 	 * @return
 	 */
 	public Long hset(final String key, final Object field, final Object value) {
-		return getJedisCluster().hset(key, field.toString(), JsonUtil.toJSONStringWriteClassNameWithFiled(value));
+		return getJedisCluster().hset(key, field.toString(), JsonUtils.toJSONStringWriteClassNameWithFiled(value));
 	}
 
 	/**

@@ -17,7 +17,7 @@ import com.jzy.game.message.hall.HallLoginMessage;
 import com.jzy.game.message.hall.HallLoginMessage.LoginRequest;
 import com.jzy.game.message.hall.HallLoginMessage.LoginSubGameRequest;
 import com.jzy.game.engine.server.ServerType;
-import com.jzy.game.engine.util.IntUtil;
+import com.jzy.game.engine.util.IntUtils;
 
 import jdk.nashorn.internal.ir.annotations.Ignore;
 
@@ -123,13 +123,13 @@ public class ClientTest {
 		// protobuf_body_bytes_len）
 
 		IoBuffer buf = IoBuffer.allocate(len + 2);// （total_len = len + short_len）
-		byte[] shorBytes = IntUtil.short2Bytes((short) len, ByteOrder.LITTLE_ENDIAN);
+		byte[] shorBytes = IntUtils.short2Bytes((short) len, ByteOrder.LITTLE_ENDIAN);
 		// 写入字节长度
 		buf.put(shorBytes);
 		// 写入mid
-		buf.put(IntUtil.writeIntToBytesLittleEnding(mid.getNumber()));
+		buf.put(IntUtils.writeIntToBytesLittleEnding(mid.getNumber()));
 		// 写入protobuf长度
-		buf.put(IntUtil.writeIntToBytesLittleEnding(b.length));
+		buf.put(IntUtils.writeIntToBytesLittleEnding(b.length));
 
 		buf.put(b);
 		ByteBuffer writeBuffer = ByteBuffer.wrap(buf.array());

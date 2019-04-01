@@ -15,7 +15,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.server.BaseServerConfig;
 import com.jzy.game.engine.server.Service;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 
 /**
  * 默认消息处理器
@@ -30,6 +30,7 @@ import com.jzy.game.engine.util.MsgUtil;
 public abstract class DefaultProtocolHandler implements IoHandler {
 
 	protected static final Logger log = LoggerFactory.getLogger(DefaultProtocolHandler.class);
+	
 	protected final int messageHeaderLength; // 消息头长度
 
 	/**
@@ -87,18 +88,18 @@ public abstract class DefaultProtocolHandler implements IoHandler {
 				return;
 			}
 			int offset = messageHeaderLength > 4 ? 8 : 0;
-			int msgID = MsgUtil.getMessageID(bytes, offset); // 消息ID
+			int msgID = MsgUtils.getMessageID(bytes, offset); // 消息ID
 
 			if (ScriptManager.getInstance().tcpMsgIsRegister(msgID)) {
 				Class<? extends IHandler> handlerClass = ScriptManager.getInstance().getTcpHandler(msgID);
 				HandlerEntity handlerEntity = ScriptManager.getInstance().getTcpHandlerEntity(msgID);
 				if (handlerClass != null) {
-					Message message = MsgUtil.buildMessage(handlerEntity.msg(), bytes, messageHeaderLength,
+					Message message = MsgUtils.buildMessage(handlerEntity.msg(), bytes, messageHeaderLength,
 							bytes.length - messageHeaderLength);
 					TcpHandler handler = (TcpHandler) handlerClass.newInstance();
 					if (handler != null) {
 						if (offset > 0) { // 偏移量大于0，又发玩家ID
-							long rid = MsgUtil.getMessageRID(bytes, 0);
+							long rid = MsgUtils.getMessageRID(bytes, 0);
 							handler.setRid(rid);
 						}
 						messageHandler(session, handlerEntity, message, handler);
@@ -109,7 +110,7 @@ public abstract class DefaultProtocolHandler implements IoHandler {
 			forward(session, msgID, bytes);
 		} catch (Exception e) {
 			log.error("messageReceived", e);
-			int msgid = MsgUtil.getMessageID(bytes, 0);
+			int msgid = MsgUtils.getMessageID(bytes, 0);
 			log.warn("尝试按0移位处理,id：{}", msgid);
 		}
 	}

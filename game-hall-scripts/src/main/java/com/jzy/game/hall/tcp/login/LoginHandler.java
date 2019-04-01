@@ -21,7 +21,7 @@ import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.redis.jedis.JedisPubSubMessage;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.thread.ThreadType;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 import com.jzy.game.hall.manager.RoleManager;
 import com.jzy.game.hall.manager.UserManager;
 import com.jzy.game.hall.script.IRoleScript;
@@ -74,7 +74,7 @@ public class LoginHandler extends TcpHandler {
 		}else {
 			//以redis数据为准
 			Map<String, String> hgetAll = JedisManager.getJedisCluster().hgetAll(HallKey.Role_Map_Info.getKey(role.getId()));
-			JsonUtil.map2Object(hgetAll, role);
+			JsonUtils.map2Object(hgetAll, role);
 		}
 		LOGGER.debug("{}_key:{}", role.getNick(), HallKey.Role_Map_Info.getKey(role.getId()));
 

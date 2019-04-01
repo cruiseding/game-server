@@ -18,7 +18,7 @@ package com.jzy.game.ai.btree.leaf;
 
 import com.jzy.game.ai.btree.LeafTask;
 import com.jzy.game.ai.btree.annotation.TaskAttribute;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 等待执行指定次数<br>
@@ -74,7 +74,7 @@ public class Wait<E> extends LeafTask<E> {
 	@Override
 	public void start() {
 		timeout = seconds;
-		startTime = TimeUtil.currentTimeMillis();
+		startTime = TimeUtils.currentTimeMillis();
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class Wait<E> extends LeafTask<E> {
 	 */
 	@Override
 	public Status execute() {
-		return TimeUtil.currentTimeMillis() - startTime < timeout ? Status.RUNNING : Status.SUCCEEDED;
+		return TimeUtils.currentTimeMillis() - startTime < timeout ? Status.RUNNING : Status.SUCCEEDED;
 	}
 
 	// @Override

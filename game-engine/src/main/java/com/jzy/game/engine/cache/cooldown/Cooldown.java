@@ -3,7 +3,7 @@ package com.jzy.game.engine.cache.cooldown;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.jzy.game.engine.cache.IMemoryObject;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 import java.io.Serializable;
 import java.util.function.Consumer;
@@ -92,7 +92,7 @@ public class Cooldown implements IMemoryObject, Serializable {
 	 */
 	@JSONField(serialize = false)
 	public long getRemainTime() {
-		return getEndTime() - TimeUtil.currentTimeMillis();
+		return getEndTime() - TimeUtils.currentTimeMillis();
 	}
 
 	@JSONField(serialize = false)

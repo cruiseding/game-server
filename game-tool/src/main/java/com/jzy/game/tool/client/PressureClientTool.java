@@ -19,7 +19,7 @@ import com.jzy.game.engine.mina.config.MinaClientConfig;
 import com.jzy.game.engine.mina.config.MinaClientConfig.MinaClienConnToConfig;
 import com.jzy.game.engine.mina.service.SingleMinaTcpClientService;
 import com.jzy.game.engine.script.ScriptManager;
-import com.jzy.game.engine.util.HttpUtil;
+import com.jzy.game.engine.util.HttpUtils;
 import com.jzy.game.tool.client.ssl.ClientSslContextFactory;
 
 import javax.swing.JTextArea;
@@ -124,7 +124,7 @@ public class PressureClientTool {
             minaClientConfig.setOrderedThreadPoolExecutorSize(1);
             MinaClienConnToConfig connTo = new MinaClienConnToConfig();
             String url="http://"+this.clusterIp+":8001/server/gate/ip";
-            String get = HttpUtil.URLGet(url);
+            String get = HttpUtils.URLGet(url);
             LOGGER.info("hall host:{}", get);
             if (get.contains(":")) {
                 String[] split = get.split(":");

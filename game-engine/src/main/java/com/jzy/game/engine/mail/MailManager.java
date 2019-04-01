@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.jzy.game.engine.handler.TcpHandler;
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 
 /**
  * 邮件发送
@@ -50,7 +50,7 @@ public class MailManager {
 	 * @param configPath
 	 */
 	public void initMailConfig(String configPath) {
-		mailConfig = FileUtil.getConfigXML(configPath, "mailConfig.xml", MailConfig.class);
+		mailConfig = FileUtils.getConfigXML(configPath, "mailConfig.xml", MailConfig.class);
 		if (mailConfig == null) {
 			LOGGER.warn("{}/mailConfig.xml未找到配置文件");
 			mailConfig = new MailConfig();

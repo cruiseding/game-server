@@ -21,10 +21,10 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.bson.types.Symbol;
 
 import com.jzy.game.engine.util.Args;
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 import com.jzy.game.engine.util.StringUtils;
-import com.jzy.game.engine.util.SymbolUtil;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.SymbolUtils;
+import com.jzy.game.engine.util.TimeUtils;
 import com.jzy.game.plugin.model.FieldModel;
 import com.jzy.game.plugin.util.Args.Three;
 import com.jzy.game.plugin.util.ExcelUtil;
@@ -88,8 +88,8 @@ public class MongoEntityBuilder extends AbstractMojo {
 		Map<Args.Two<String, String>, List<FieldModel>> builderEntityMap = new HashMap<>(); // 需要生成的entity类
 
 		String entityPath = sourceDirectory.getPath()+ entityPackage;
-		FileUtil.getFiles(entityPath, classFileList, "java", null);
-		FileUtil.getFiles(configTablePath, sourceFileList, "xlsx", null);
+		FileUtils.getFiles(entityPath, classFileList, "java", null);
+		FileUtils.getFiles(configTablePath, sourceFileList, "xlsx", null);
 		if (classFileList != null) {
 			entityClassNames = classFileList.stream()
 					.map(file -> file.getName().substring(0, file.getName().indexOf("."))).collect(Collectors.toList());
@@ -130,7 +130,7 @@ public class MongoEntityBuilder extends AbstractMojo {
 		for (Entry<Args.Two<String, String>, List<FieldModel>> entry : entrySet) {
 			Args.Two<String, String> key = entry.getKey();
 			Map<String, Object> datas = new HashMap<>(); // 数据模型
-			datas.put("date", TimeUtil.getDateTimeFormat(DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss"))); // 日期
+			datas.put("date", TimeUtils.getDateTimeFormat(DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss"))); // 日期
 			datas.put("package", entityPackage.replaceAll("\\\\", ".").substring(1)); // 包路径
 			datas.put("tableName", key.a()); // 表名
 			datas.put("className", key.b()); // 类名

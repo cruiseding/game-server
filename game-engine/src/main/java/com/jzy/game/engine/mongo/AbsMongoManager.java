@@ -4,7 +4,7 @@ import org.mongodb.morphia.Morphia;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 
@@ -28,7 +28,7 @@ public abstract class AbsMongoManager {
      * @param configPath
      */
     public void createConnect(String configPath) {
-        mongoConfig = FileUtil.getConfigXML(configPath, "mongoClientConfig.xml", MongoClientConfig.class);
+        mongoConfig = FileUtils.getConfigXML(configPath, "mongoClientConfig.xml", MongoClientConfig.class);
         if (mongoConfig == null) {
             throw new RuntimeException(String.format("mongodb 配置文件 %s/MongoClientConfig.xml 未找到", configPath));
         }

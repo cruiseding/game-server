@@ -14,7 +14,7 @@ import com.jzy.game.message.Mid.MID;
 import com.jzy.game.message.bydr.BydrRoomMessage.EnterRoomResponse;
 import com.jzy.game.message.hall.HallLoginMessage.LoginResponse;
 import com.jzy.game.message.hall.HallLoginMessage.LoginSubGameResponse;
-import com.jzy.game.engine.util.IntUtil;
+import com.jzy.game.engine.util.IntUtils;
 
 public class TCPClientReadThread implements Runnable {
 
@@ -83,7 +83,7 @@ public class TCPClientReadThread implements Runnable {
 			// 读取short len
 			byte[] dst = new byte[2];
 			buffer.get(dst, 0, 2);
-			int len = IntUtil.bytes2Short(dst, ByteOrder.LITTLE_ENDIAN);
+			int len = IntUtils.bytes2Short(dst, ByteOrder.LITTLE_ENDIAN);
 			int lastLen = buffer.remaining();
 			if (lastLen < len) {
 				buffer.reset();
@@ -93,13 +93,13 @@ public class TCPClientReadThread implements Runnable {
 			// 读取int mid
 			dst = new byte[4];
 			buffer.get(dst, 0, 4);
-			int mid = IntUtil.bytes2Int(dst, ByteOrder.LITTLE_ENDIAN);
+			int mid = IntUtils.bytes2Int(dst, ByteOrder.LITTLE_ENDIAN);
 			System.out.println("mid: " + mid);
 
 			// 读取冗余的protobuf len
 			dst = new byte[4];
 			buffer.get(dst, 0, 4);
-			int protobufLen = IntUtil.bytes2Int(dst, ByteOrder.LITTLE_ENDIAN);
+			int protobufLen = IntUtils.bytes2Int(dst, ByteOrder.LITTLE_ENDIAN);
 			// System.out.println("protobufLen: " + protobufLen);
 
 			byte[] bytes = new byte[protobufLen];

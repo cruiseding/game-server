@@ -15,7 +15,7 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 import com.jzy.game.engine.util.StringUtils;
 
 /**
@@ -97,7 +97,7 @@ public class MongoDaoBuilder extends AbstractMojo {
 		if (daoFile.exists()) {
 			return String.format("%s 类已经存在", daoFile.getName());
 		}
-		FileUtil.createFile(daoFile);
+		FileUtils.createFile(daoFile);
 		// 生成类文件
 		StringBuilder sb = new StringBuilder();
 		sb.append("/**").append("工具生成，请遵循规范。\n @author CruiseDing\n*/\n");

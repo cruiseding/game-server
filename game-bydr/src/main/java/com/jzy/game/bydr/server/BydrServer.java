@@ -20,8 +20,8 @@ import com.jzy.game.engine.server.ServerInfo;
 import com.jzy.game.engine.server.Service;
 import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
 import com.jzy.game.engine.thread.ThreadType;
-import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.SysUtil;
+import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.SysUtils;
 import com.jzy.game.message.ServerMessage;
 import com.jzy.game.model.constant.Config;
 import com.jzy.game.model.constant.NetPort;
@@ -80,35 +80,35 @@ public class BydrServer implements Runnable {
 	public BydrServer(String configPath) {
 
 		//线程池配置
-		ThreadPoolExecutorConfig threadPoolExecutorConfig = FileUtil.getConfigXML(configPath,"threadPoolExecutorConfig.xml", ThreadPoolExecutorConfig.class);
+		ThreadPoolExecutorConfig threadPoolExecutorConfig = FileUtils.getConfigXML(configPath,"threadPoolExecutorConfig.xml", ThreadPoolExecutorConfig.class);
 		if (threadPoolExecutorConfig == null) {
 			LOGGER.error("{}/threadPoolExecutorConfig.xml未找到", configPath);
 			System.exit(0);
 		}
 		
 		// 加载连接网关配置
-		MinaClientConfig minaClientConfig_gate = FileUtil.getConfigXML(configPath, "minaClientConfig_gate.xml",MinaClientConfig.class);
-		NettyClientConfig nettyClientConfig_gate = FileUtil.getConfigXML(configPath, "nettyClientConfig_gate.xml",NettyClientConfig.class);
+		MinaClientConfig minaClientConfig_gate = FileUtils.getConfigXML(configPath, "minaClientConfig_gate.xml",MinaClientConfig.class);
+		NettyClientConfig nettyClientConfig_gate = FileUtils.getConfigXML(configPath, "nettyClientConfig_gate.xml",NettyClientConfig.class);
 		if (minaClientConfig_gate == null&&nettyClientConfig_gate==null) {
 			LOGGER.error("{}未配置网关连接客户端", configPath);
 			System.exit(0);
 		}
 
 		// 加载连接集群配置
-		MinaClientConfig minaClientConfig_cluster = FileUtil.getConfigXML(configPath, "minaClientConfig_cluster.xml",MinaClientConfig.class);
-		NettyClientConfig nettyClinetConfig_cluster = FileUtil.getConfigXML(configPath, "nettyClientConfig_cluster.xml",NettyClientConfig.class);
+		MinaClientConfig minaClientConfig_cluster = FileUtils.getConfigXML(configPath, "minaClientConfig_cluster.xml",MinaClientConfig.class);
+		NettyClientConfig nettyClinetConfig_cluster = FileUtils.getConfigXML(configPath, "nettyClientConfig_cluster.xml",NettyClientConfig.class);
 		if (minaClientConfig_cluster == null&&nettyClinetConfig_cluster==null) {
 			LOGGER.error("{}未配置集群连接客户端", configPath);
 			System.exit(0);
 		}
 
 		// HTTP通信
-		MinaServerConfig minaServerConfig_http = FileUtil.getConfigXML(configPath, "minaServerConfig_http.xml",MinaServerConfig.class);
+		MinaServerConfig minaServerConfig_http = FileUtils.getConfigXML(configPath, "minaServerConfig_http.xml",MinaServerConfig.class);
 		
 		gameHttpServer = new BydrHttpServer(minaServerConfig_http);
 
 		// 游戏前端消息服务 配置为空，不开启，开启后消息可以不经过网关直接发送到本服务器
-		MinaServerConfig minaServerConfig = FileUtil.getConfigXML(configPath, "minaServerConfig.xml",MinaServerConfig.class);
+		MinaServerConfig minaServerConfig = FileUtils.getConfigXML(configPath, "minaServerConfig.xml",MinaServerConfig.class);
 		if (minaServerConfig != null) {
             bydrTcpServer = new ClientServerService(minaServerConfig);
 		}

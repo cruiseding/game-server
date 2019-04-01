@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jzy.game.engine.util.SymbolUtil;
+import com.jzy.game.engine.util.SymbolUtils;
 
 
 /**
@@ -31,10 +31,10 @@ public class RangeTime {
     private static final Pattern pattern = Pattern.compile("\\[.*?\\]");
 
     public RangeTime(String timeReg) {
-        if (SymbolUtil.isNullOrEmpty(timeReg)) {
+        if (SymbolUtils.isNullOrEmpty(timeReg)) {
             throw new RuntimeException(String.format("配置问题：%s 时间字符串未空", timeReg));
         }
-        times = timeReg.split(SymbolUtil.FENHAO_REG);
+        times = timeReg.split(SymbolUtils.FENHAO_REG);
 
         year = new RangeReg[times.length];
         month = new RangeReg[times.length];
@@ -182,7 +182,7 @@ public class RangeTime {
      * @return 满足条件的时间字符串
      */
     private String checkConfigTimeStr(Calendar calendar, String timeStr) {
-        if (SymbolUtil.isNullOrEmpty(timeStr)) {
+        if (SymbolUtils.isNullOrEmpty(timeStr)) {
             return null;
         }
         Matcher matcher = pattern.matcher(timeStr);
@@ -242,7 +242,7 @@ public class RangeTime {
                 return nowItemStr;
             }
         } else if (items.indexOf(",") > 0) {//或划分
-            String[] weekssplit = items.split(SymbolUtil.DOUHAO_REG);
+            String[] weekssplit = items.split(SymbolUtils.DOUHAO_REG);
             for (String item : weekssplit) {
                 if (nowItemStr.equals(item)) {
                     return nowItemStr;
@@ -274,7 +274,7 @@ public class RangeTime {
         String ret = null;
         //全天24小时
         if (!"0-86400".equals(itemTime) && !"".equals(itemTime.trim())) {
-            String[] items = itemTime.split(SymbolUtil.DOUHAO_REG);
+            String[] items = itemTime.split(SymbolUtils.DOUHAO_REG);
 
             for (String item : items) {
                 String[] itemTimes = item.split("-");

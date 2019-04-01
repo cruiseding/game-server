@@ -8,7 +8,7 @@ import org.redisson.config.Config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 
 /**
  * Redisson 工具
@@ -49,7 +49,7 @@ public final class RedissonManager {
 		if (redisson != null) {
 			LOGGER.warn("Redisson客户端已经连接");
 		}
-		redissonClusterConfig = FileUtil.getConfigXML(configPath, "redissonClusterConfig.xml",
+		redissonClusterConfig = FileUtils.getConfigXML(configPath, "redissonClusterConfig.xml",
 				RedissonClusterConfig.class);
 		if (redissonClusterConfig == null) {
 			LOGGER.warn("{}/redissonClusterConfig.xml文件不存在", configPath);

@@ -13,7 +13,7 @@ import com.jzy.game.engine.handler.TcpHandler;
 import com.jzy.game.engine.mina.message.IDMessage;
 import com.jzy.game.engine.server.ServerInfo;
 import com.jzy.game.engine.server.ServerType;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.gate.manager.ServerManager;
 import com.jzy.game.gate.manager.UserSessionManager;
 import com.jzy.game.gate.server.GateServer;
@@ -56,7 +56,7 @@ public class LoginReqHandler extends TcpHandler {
 		IoSession hallSession = serverInfo.getMostIdleIoSession();
 		Builder builder = request.toBuilder();
 		builder.setSessionId(session.getId());
-		builder.setIp(MsgUtil.getIp(session));
+		builder.setIp(MsgUtils.getIp(session));
 		builder.setGateId(GateServer.getInstance().getGateTcpUserServer().getMinaServerConfig().getId());
 		if (serverInfo == null || hallSession == null) {
 			LOGGER.warn("大厅服务器未准备就绪");

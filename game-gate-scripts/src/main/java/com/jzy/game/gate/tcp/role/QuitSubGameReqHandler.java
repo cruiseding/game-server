@@ -13,7 +13,7 @@ import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.TcpHandler;
 import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.server.ServerType;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.gate.struct.UserSession;
 
 /**
@@ -32,7 +32,7 @@ public class QuitSubGameReqHandler extends TcpHandler {
 		QuitSubGameRequest req=getMsg();
 		Object attribute = getSession().getAttribute(Config.USER_SESSION);
 		if(attribute==null){
-			LOGGER.warn("{} 无用户会话",MsgUtil.getIp(getSession()));
+			LOGGER.warn("{} 无用户会话",MsgUtils.getIp(getSession()));
 			return;
 		}
 		if(req==null){

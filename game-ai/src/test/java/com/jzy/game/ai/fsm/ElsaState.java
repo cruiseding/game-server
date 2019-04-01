@@ -19,7 +19,7 @@ package com.jzy.game.ai.fsm;
 import com.jzy.game.ai.msg.MessageManager;
 import com.jzy.game.ai.msg.Telegram;
 import com.jzy.game.engine.math.MathUtil;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /** @author davebaol */
 public enum ElsaState implements State<Elsa> {
@@ -94,7 +94,7 @@ public enum ElsaState implements State<Elsa> {
 		public boolean onMessage(Elsa elsa, Telegram telegram) {
 			if (telegram.message == MessageType.STEW_READY) {
 
-				talk(elsa, "Message STEW_READY received at time: " + TimeUtil.currentTimeMillis());
+				talk(elsa, "Message STEW_READY received at time: " + TimeUtils.currentTimeMillis());
 
 				talk(elsa, "StewReady! Lets eat");
 
@@ -131,7 +131,7 @@ public enum ElsaState implements State<Elsa> {
 
 			if (telegram.message == MessageType.HI_HONEY_I_M_HOME) {
 
-				talk(elsa, "Message HI_HONEY_I_M_HOME handled at time: " + TimeUtil.currentTimeMillis());
+				talk(elsa, "Message HI_HONEY_I_M_HOME handled at time: " + TimeUtils.currentTimeMillis());
 
 				talk(elsa, "Hi honey. Let me make you some of mah fine country stew");
 

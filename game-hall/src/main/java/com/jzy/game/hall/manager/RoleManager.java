@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.redis.jedis.JedisPubSubMessage;
 import com.jzy.game.engine.script.ScriptManager;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 import com.jzy.game.hall.script.IRoleScript;
 import com.jzy.game.model.constant.Reason;
 import com.jzy.game.model.redis.channel.HallChannel;
@@ -74,7 +74,7 @@ public class RoleManager {
 		Map<String, String> hgetAll = JedisManager.getJedisCluster().hgetAll(role.getRoleRedisKey());
 		// 从redis读取最新数据
 		if (hgetAll != null && role != null) {
-			JsonUtil.map2Object(hgetAll, role);
+			JsonUtils.map2Object(hgetAll, role);
 		}
 		return role;
 	}

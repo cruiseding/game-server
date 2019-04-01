@@ -6,7 +6,7 @@ import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.HttpHandler;
 import com.jzy.game.engine.mail.MailConfig;
 import com.jzy.game.engine.mail.MailManager;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.model.constant.Config;
 
 /**
@@ -26,7 +26,7 @@ public class ExitServerHandler extends HttpHandler {
 			sendMsg("验证失败");
 			return;
 		}
-		String info = String.format("%s关闭服务器", MsgUtil.getIp(getSession()));
+		String info = String.format("%s关闭服务器", MsgUtils.getIp(getSession()));
 		LOGGER.info(info);
 		sendMsg(info);
 		MailConfig mailConfig = MailManager.getInstance().getMailConfig();

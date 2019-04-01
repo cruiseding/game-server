@@ -7,7 +7,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /** 
  * A*寻路
@@ -132,7 +132,7 @@ public class IndexedAStarPathFinder<N> implements PathFinder<N> {
 	@Override
 	public boolean search (PathFinderRequest<N> request, long timeToRun) {
 
-		long lastTime = TimeUtil.nanoTime();
+		long lastTime = TimeUtils.nanoTime();
 
 		// We have to initialize the search if the status has just changed
 		if (request.statusChanged) {
@@ -144,7 +144,7 @@ public class IndexedAStarPathFinder<N> implements PathFinder<N> {
 		do {
 
 			// Check the available time
-			long currentTime = TimeUtil.nanoTime();
+			long currentTime = TimeUtils.nanoTime();
 			timeToRun -= currentTime - lastTime;
 			if (timeToRun <= 100) return false;	//忽略100纳秒计算
 

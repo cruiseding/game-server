@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.jzy.game.ai.nav.node.TriangleBlock;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * navmesh主界面
@@ -272,7 +272,7 @@ public class PolygonNavStart extends javax.swing.JFrame {
      */
     public void showLog(String log){
         logTextArea.append("\r\n");
-        String time = TimeUtil.getDateTimeFormat(TimeUtil.YYYYMMDDHHMMSS);
+        String time = TimeUtils.getDateTimeFormat(TimeUtils.YYYYMMDDHHMMSS);
         logTextArea.append(time+":"+log);
     }
 

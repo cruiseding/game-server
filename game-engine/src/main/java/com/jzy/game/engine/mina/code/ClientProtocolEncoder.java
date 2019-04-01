@@ -6,8 +6,8 @@
 package com.jzy.game.engine.mina.code;
 
 import com.google.protobuf.Message;
-import com.jzy.game.engine.util.IntUtil;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.IntUtils;
+import com.jzy.game.engine.util.MsgUtils;
 
 import java.nio.ByteOrder;
 
@@ -31,18 +31,18 @@ public class ClientProtocolEncoder extends ProtocolEncoderImpl {
 		if (getOverScheduledWriteBytesHandler() != null
 				&& session.getScheduledWriteMessages() > getMaxScheduledWriteMessages()
 				&& getOverScheduledWriteBytesHandler().test(session)) {
-			LOGGER.warn("{}消息{}大于最大累积{}",MsgUtil.getIp(session), session.getScheduledWriteMessages(),getMaxScheduledWriteMessages());
+			LOGGER.warn("{}消息{}大于最大累积{}",MsgUtils.getIp(session), session.getScheduledWriteMessages(),getMaxScheduledWriteMessages());
 			return;
 		}
 
 		IoBuffer buf = null;
 		if (obj instanceof Message) {
-			buf = MsgUtil.toGameClientIobuffer((Message) obj);
+			buf = MsgUtils.toGameClientIobuffer((Message) obj);
 		} else if (obj instanceof byte[]) {
 			byte[] data = (byte[]) obj; // 消息ID（4字节）+protobuf
 			buf = IoBuffer.allocate(data.length + 6);
 			// 消息长度
-			byte[] lengthBytes = IntUtil.short2Bytes((short) (data.length + 4), ByteOrder.LITTLE_ENDIAN);
+			byte[] lengthBytes = IntUtils.short2Bytes((short) (data.length + 4), ByteOrder.LITTLE_ENDIAN);
 			buf.put(lengthBytes);
 
 			// 消息ID ,将顺序改变为前端客户端顺序
@@ -54,7 +54,7 @@ public class ClientProtocolEncoder extends ProtocolEncoderImpl {
 			buf.put(idBytes);
 			// protobuf长度
 			int protobufLength = data.length - 4; // 移除消息ID长度
-			buf.put(IntUtil.writeIntToBytesLittleEnding(protobufLength));
+			buf.put(IntUtils.writeIntToBytesLittleEnding(protobufLength));
 			// 数据
 			buf.put(data, 4, protobufLength);
 

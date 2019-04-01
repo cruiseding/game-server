@@ -35,11 +35,11 @@ import com.alibaba.fastjson.parser.deserializer.ParseProcess;
  * @mail 359135103@qq.com
  * @phone 18782024395
  */
-public final class ReflectUtil {
+public final class ReflectUtils {
 
-	private static final Logger log = LoggerFactory.getLogger(ReflectUtil.class);
+	private static final Logger log = LoggerFactory.getLogger(ReflectUtils.class);
 
-	private ReflectUtil() {
+	private ReflectUtils() {
 	}
 
 	/**

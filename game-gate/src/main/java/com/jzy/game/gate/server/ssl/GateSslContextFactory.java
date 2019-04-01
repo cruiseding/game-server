@@ -34,7 +34,7 @@ import javax.net.ssl.SSLContext;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 import com.jzy.game.gate.AppGate;
 
 /**
@@ -119,7 +119,7 @@ public final class GateSslContextFactory {
 		try {
 			in = GateSslContextFactory.class.getResourceAsStream(GATE_KEYSTORE);
 			if (in == null) {
-				in = FileUtil.getFileInputStream(AppGate.getConfigPath()+File.separatorChar+GATE_KEYSTORE);
+				in = FileUtils.getFileInputStream(AppGate.getConfigPath()+File.separatorChar+GATE_KEYSTORE);
 			}
 			ks.load(in, GATE_PW);
 		} finally {
@@ -148,7 +148,7 @@ public final class GateSslContextFactory {
 		try {
 			in = GateSslContextFactory.class.getResourceAsStream(CLIENT_KEYSTORE);
 			if (in == null) {
-				in = FileUtil.getFileInputStream(AppGate.getConfigPath()+File.separatorChar+CLIENT_KEYSTORE);
+				in = FileUtils.getFileInputStream(AppGate.getConfigPath()+File.separatorChar+CLIENT_KEYSTORE);
 			}
 			ks.load(in, GATE_PW); // TODO 密码暂时都一样
 		} finally {

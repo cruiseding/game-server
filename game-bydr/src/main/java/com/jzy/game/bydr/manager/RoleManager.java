@@ -15,7 +15,7 @@ import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.redis.redisson.FastJsonCodec;
 import com.jzy.game.engine.redis.redisson.RedissonManager;
 import com.jzy.game.engine.script.ScriptManager;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 import com.jzy.game.model.constant.Reason;
 import com.jzy.game.model.redis.key.BydrKey;
 import com.jzy.game.model.redis.key.HallKey;
@@ -96,7 +96,7 @@ public class RoleManager {
 			return null;
 		}
 		Role role = new Role();
-		JsonUtil.map2Object(roleMap, role);
+		JsonUtils.map2Object(roleMap, role);
 
 		// TODO 其他角色数据
 		
@@ -119,7 +119,7 @@ public class RoleManager {
 	public void saveRoleData(Role role) {
 		String key = BydrKey.Role_Map.getKey(role.getId());
 		LOGGER.debug("{}存储数据", key);
-		JedisManager.getJedisCluster().hmset(key, JsonUtil.object2Map(role));
+		JedisManager.getJedisCluster().hmset(key, JsonUtils.object2Map(role));
 		//
 	}
 }

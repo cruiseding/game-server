@@ -28,7 +28,7 @@ import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.HttpHandler;
 import com.jzy.game.engine.handler.IHandler;
 import com.jzy.game.engine.handler.TcpHandler;
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 
 import org.slf4j.Logger;
 
@@ -231,9 +231,9 @@ public final class ScriptPool {
 	 * @return
 	 */
 	String compile() {
-		FileUtil.deleteDirectory(outDir); // 删除之前的class文件
+		FileUtils.deleteDirectory(outDir); // 删除之前的class文件
 		List<File> sourceFileList = new ArrayList<>();
-		FileUtil.getFiles(sourceDir, sourceFileList, ".java", null); // 获取源文件
+		FileUtils.getFiles(sourceDir, sourceFileList, ".java", null); // 获取源文件
 		return compile(sourceFileList);
 	}
 	// </editor-fold>
@@ -285,7 +285,7 @@ public final class ScriptPool {
 				options.add(outDir); // 指定输出目录
 
 				ArrayList<File> jarsList = new ArrayList<>();
-				FileUtil.getFiles(jarsDir, jarsList, ".jar", null);
+				FileUtils.getFiles(jarsDir, jarsList, ".jar", null);
 				String jarString = "";
 				jarString = jarsList.stream().map(jar -> jar.getPath() + File.pathSeparator).reduce(jarString,
 																									String::concat);
@@ -338,7 +338,7 @@ public final class ScriptPool {
 		if (compile == null || compile.isEmpty()) {
 			List<File> sourceFileList = new ArrayList<>(0);
 			// 得到编译后的class文件
-			FileUtil.getFiles(outDir, sourceFileList, ".class", null);
+			FileUtils.getFiles(outDir, sourceFileList, ".class", null);
 			String[] fileNames = new String[sourceFileList.size()]; // 类路径列表
 			for (int i = 0; i < sourceFileList.size(); i++) {
 				fileNames[i] = sourceFileList.get(i).getPath();
@@ -373,9 +373,9 @@ public final class ScriptPool {
 	 * @return
 	 */
 	public String loadJava(String... source) {
-		FileUtil.deleteDirectory(outDir);
+		FileUtils.deleteDirectory(outDir);
 		List<File> sourceFileList = new ArrayList<>();
-		FileUtil.getFiles(sourceDir, sourceFileList, ".java", fileAbsolutePath -> {
+		FileUtils.getFiles(sourceDir, sourceFileList, ".java", fileAbsolutePath -> {
 			if (source == null) {
 				return true;
 			}
@@ -390,7 +390,7 @@ public final class ScriptPool {
 		StringBuilder loadJava = new StringBuilder();
 		if (result == null || result.isEmpty()) {
 			sourceFileList.clear();
-			FileUtil.getFiles(outDir, sourceFileList, ".class", fileAbsolutePath -> {
+			FileUtils.getFiles(outDir, sourceFileList, ".class", fileAbsolutePath -> {
 				if (source == null) {
 					return true;
 				}

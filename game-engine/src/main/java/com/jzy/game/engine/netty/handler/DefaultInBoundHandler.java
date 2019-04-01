@@ -13,8 +13,8 @@ import com.jzy.game.engine.mina.message.IDMessage;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.server.BaseServerConfig;
 import com.jzy.game.engine.server.Service;
-import com.jzy.game.engine.util.MsgUtil;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.MsgUtils;
+import com.jzy.game.engine.util.TimeUtils;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -37,9 +37,9 @@ public abstract class DefaultInBoundHandler extends SimpleChannelInboundHandler<
 		}
 		Class<? extends IHandler> handlerClass = ScriptManager.getInstance().getTcpHandler(msg.getMsgId());
 		TcpHandler handler = (TcpHandler) handlerClass.newInstance();
-		handler.setCreateTime(TimeUtil.currentTimeMillis());
+		handler.setCreateTime(TimeUtils.currentTimeMillis());
 		HandlerEntity handlerEntity = ScriptManager.getInstance().getTcpHandlerEntity(msg.getMsgId());
-		Message message = MsgUtil.buildMessage(handlerEntity.msg(), (byte[]) msg.getMsg());
+		Message message = MsgUtils.buildMessage(handlerEntity.msg(), (byte[]) msg.getMsg());
 		handler.setMessage(message);
 		handler.setRid(msg.getUserID());
 		handler.setChannel(ctx.channel());

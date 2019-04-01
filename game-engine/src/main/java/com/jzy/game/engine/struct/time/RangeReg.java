@@ -1,6 +1,6 @@
 package com.jzy.game.engine.struct.time;
 
-import com.jzy.game.engine.util.SymbolUtil;
+import com.jzy.game.engine.util.SymbolUtils;
 
 /**
  * 区间表达
@@ -24,7 +24,7 @@ public class RangeReg {
             type = Type.TO;
         } else if (range.indexOf(",") > 0) {//或划分
             type = Type.OR;
-        } else if (SymbolUtil.isNullOrEmpty(range)) {
+        } else if (SymbolUtils.isNullOrEmpty(range)) {
             type = Type.NULL;
         } else {
             type = Type.ONLY;

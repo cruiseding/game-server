@@ -21,9 +21,9 @@ import java.util.jar.JarFile;
  *
  * @author codingtony
  */
-public final class ClassUtil {
+public final class ClassUtils {
 
-    private ClassUtil() {
+    private ClassUtils() {
     }
 
     /**

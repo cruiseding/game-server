@@ -2,7 +2,7 @@ package com.jjy.game.engine.util;
 
 import org.junit.Test;
 
-import com.jzy.game.engine.util.SysUtil;
+import com.jzy.game.engine.util.SysUtils;
 
 /**
  * 系统工具测试
@@ -14,7 +14,7 @@ public class SysUtilTest {
 
 	@Test
 	public void testJvmInfo() {
-		System.err.println(SysUtil.jvmInfo("\r\n"));
+		System.err.println(SysUtils.jvmInfo("\r\n"));
 //		System.err.println(SysUtil.jvmInfo("<br>"));
 	}
 }

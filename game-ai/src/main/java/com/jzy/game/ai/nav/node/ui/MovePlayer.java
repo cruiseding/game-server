@@ -3,7 +3,7 @@ package com.jzy.game.ai.nav.node.ui;
 import com.jzy.game.ai.nav.node.NodeNavMesh;
 import com.jzy.game.ai.nav.node.PathData;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 
 /**
@@ -30,9 +30,9 @@ public class MovePlayer {
     }
 
     public void path() {
-        long time = TimeUtil.currentTimeMillis();
+        long time = TimeUtils.currentTimeMillis();
         pathData = map.path(pos, targetAdjusted);
-        time = TimeUtil.currentTimeMillis() - time;
+        time = TimeUtils.currentTimeMillis() - time;
 //        System.out.println("寻路耗时：" + time);
     }
 

@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory;
 
 import com.jzy.game.engine.cache.MemoryPool;
 import com.jzy.game.engine.struct.Person;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 import org.slf4j.Logger;
 
@@ -54,14 +54,14 @@ public class CooldownManager {
 		}
 		if (person.getCooldowns().containsKey(cooldownKey)) {
 			cooldown = person.getCooldowns().get(cooldownKey);
-			cooldown.setStart(TimeUtil.currentTimeMillis());
+			cooldown.setStart(TimeUtils.currentTimeMillis());
 			cooldown.setDelay(delay);
 		} else {
 			// 初始化冷却信息
 			cooldown = createCooldown();
 			cooldown.setType(type);
 			cooldown.setKey(cooldownKey);
-			cooldown.setStart(TimeUtil.currentTimeMillis());
+			cooldown.setStart(TimeUtils.currentTimeMillis());
 			cooldown.setDelay(delay);
 			// 添加冷却
 			person.getCooldowns().put(cooldownKey, cooldown);
@@ -205,7 +205,7 @@ public class CooldownManager {
 		Cooldown cooldown = person.getCooldowns().get(cooldownKey);
 		if (cooldown != null) {
 			// 放宽100毫秒冷却
-			return TimeUtil.currentTimeMillis() <= cooldown.getStart() + cooldown.getDelay() - allow;
+			return TimeUtils.currentTimeMillis() <= cooldown.getStart() + cooldown.getDelay() - allow;
 		}
 		return false;
 	}

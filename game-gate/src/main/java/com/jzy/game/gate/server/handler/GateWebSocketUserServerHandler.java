@@ -11,7 +11,7 @@ import com.jzy.game.engine.mina.handler.DefaultProtocolHandler;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.server.BaseServerConfig;
 import com.jzy.game.engine.server.Service;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.gate.script.IUserScript;
 import com.jzy.game.gate.struct.UserSession;
 import com.jzy.game.message.hall.HallLoginMessage.LoginRequest;
@@ -61,7 +61,7 @@ public class GateWebSocketUserServerHandler extends DefaultProtocolHandler {
 			}
 
 		}
-		LOGGER.warn("{}消息[{}]未找到玩家:{}", MsgUtil.getIp(session), msgID,bytes.toString());
+		LOGGER.warn("{}消息[{}]未找到玩家:{}", MsgUtils.getIp(session), msgID,bytes.toString());
 		try {
 			LoginRequest loginRequest = LoginRequest.newBuilder().mergeFrom(bytes, 0, bytes.length).build();
 			
@@ -106,7 +106,7 @@ public class GateWebSocketUserServerHandler extends DefaultProtocolHandler {
 	@Override
 	public void sessionClosed(IoSession session) {
 		super.sessionClosed(session);
-		LOGGER.debug("{}关闭连接",MsgUtil.getIp(session));
+		LOGGER.debug("{}关闭连接",MsgUtils.getIp(session));
 		ScriptManager.getInstance().getBaseScriptEntry().executeScripts(IUserScript.class,
 				script -> script.quit(session, Reason.SessionClosed));
 	}

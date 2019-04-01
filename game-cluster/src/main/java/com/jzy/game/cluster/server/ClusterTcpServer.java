@@ -14,8 +14,8 @@ import com.jzy.game.engine.thread.ServerThread;
 import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
 import com.jzy.game.engine.thread.ThreadType;
 import com.jzy.game.engine.thread.timer.event.ServerHeartTimer;
-import com.jzy.game.engine.util.IntUtil;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.IntUtils;
+import com.jzy.game.engine.util.MsgUtils;
 
 /**
  * TCP连接
@@ -91,7 +91,7 @@ public class ClusterTcpServer extends Service<MinaServerConfig> {
 			// 客户端长时间不发送请求，将断开链接LoginTcpServer->minaServerConfig->readerIdleTime
 			// 60
 			// 1分钟
-			MsgUtil.close(ioSession, "链接空闲:" + ioSession.toString() + " " + idleStatus.toString()); 
+			MsgUtils.close(ioSession, "链接空闲:" + ioSession.toString() + " " + idleStatus.toString()); 
 		}
 
 		@Override
@@ -108,7 +108,7 @@ public class ClusterTcpServer extends Service<MinaServerConfig> {
 
 		@Override
 		protected void forward(IoSession session, int msgID, byte[] bytes) {
-			log.warn("无法找到消息处理器：msgID{},bytes{}", msgID, IntUtil.BytesToStr(bytes));
+			log.warn("无法找到消息处理器：msgID{},bytes{}", msgID, IntUtils.BytesToStr(bytes));
 		}
 
 		@Override

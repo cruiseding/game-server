@@ -20,7 +20,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.jzy.game.ai.msg.MessageManager;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * A simple test to demonstrate state machines combined with message handling.
@@ -36,7 +36,7 @@ public class StateMachineTest {
 	@Before
 	public void create() {
 
-		elapsedTime = TimeUtil.currentTimeMillis();
+		elapsedTime = TimeUtils.currentTimeMillis();
 
 		// Create Bob and his wife
 		bob = new Bob();
@@ -52,7 +52,7 @@ public class StateMachineTest {
 	public void testStateMachine() throws Exception {
 
 		while (true) {
-			elapsedTime=TimeUtil.currentTimeMillis();
+			elapsedTime=TimeUtils.currentTimeMillis();
 			bob.update(elapsedTime);
 			elsa.update(elapsedTime);
 

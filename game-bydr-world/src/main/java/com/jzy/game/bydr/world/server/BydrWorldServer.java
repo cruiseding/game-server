@@ -8,7 +8,7 @@ import com.jzy.game.bydr.world.AppBydrWorld;
 import com.jzy.game.engine.mina.config.MinaClientConfig;
 import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.redis.jedis.JedisPubListener;
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 import com.jzy.game.model.redis.channel.BydrWorldChannel;
 import com.jzy.game.model.timer.GameServerCheckTimer;
 
@@ -33,7 +33,7 @@ public class BydrWorldServer implements Runnable {
 	public BydrWorldServer(String configPath) {
 
 		// 加载连接集群配置
-		MinaClientConfig minaClientConfig_cluster = FileUtil.getConfigXML(configPath, "minaClientConfig_cluster.xml",
+		MinaClientConfig minaClientConfig_cluster = FileUtils.getConfigXML(configPath, "minaClientConfig_cluster.xml",
 				MinaClientConfig.class);
 		if (minaClientConfig_cluster == null) {
 			LOGGER.error("{}/minaClientConfig_hall.xml未找到", configPath);
@@ -41,7 +41,7 @@ public class BydrWorldServer implements Runnable {
 		}
 
 		// HTTP
-		MinaServerConfig minaServerConfig_http = FileUtil.getConfigXML(configPath, "minaServerConfig_http.xml",
+		MinaServerConfig minaServerConfig_http = FileUtils.getConfigXML(configPath, "minaServerConfig_http.xml",
 				MinaServerConfig.class);
 		gameHttpServer = new BydrHttpServer(minaServerConfig_http);
 		

@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.annotation.JSONField;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 
 import io.netty.channel.Channel;
 
@@ -103,7 +103,7 @@ public class ServerInfo {
 			return null;
 		}
 		IoSession session = null;
-		sessions.stream().sorted(MsgUtil.sessionIdleComparator);
+		sessions.stream().sorted(MsgUtils.sessionIdleComparator);
 		while (session == null && !sessions.isEmpty()) {
 			session = sessions.poll();
 			log.debug("空闲session {}", session.getId());

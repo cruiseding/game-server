@@ -6,7 +6,7 @@ import org.apache.mina.util.ConcurrentHashSet;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.jzy.game.engine.redis.jedis.JedisManager;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 import com.jzy.game.model.redis.key.BydrKey;
 
 /**
@@ -120,6 +120,6 @@ public class Team {
 
 
 	public void saveToRedis(){
-		JedisManager.getJedisCluster().hset(BydrKey.Team_Map.getKey(), String.valueOf(id), JsonUtil.toJSONString(this));
+		JedisManager.getJedisCluster().hset(BydrKey.Team_Map.getKey(), String.valueOf(id), JsonUtils.toJSONString(this));
 	}
 }

@@ -10,7 +10,7 @@ import com.jzy.game.engine.redis.jedis.JedisPubListener;
 import com.jzy.game.engine.server.ServerInfo;
 import com.jzy.game.engine.server.ServerState;
 import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 import com.jzy.game.hall.AppHall;
 import com.jzy.game.message.ServerMessage;
 import com.jzy.game.message.ServerMessage.ServerRegisterRequest;
@@ -48,26 +48,26 @@ public class HallServer implements Runnable {
     public HallServer(String configPath) {
 
         // 加载连接大厅客户端配置
-        ThreadPoolExecutorConfig hallClientThreatPool = FileUtil.getConfigXML(configPath, "hallClientThreadPoolExecutorConfig.xml", ThreadPoolExecutorConfig.class);
+        ThreadPoolExecutorConfig hallClientThreatPool = FileUtils.getConfigXML(configPath, "hallClientThreadPoolExecutorConfig.xml", ThreadPoolExecutorConfig.class);
         if (hallClientThreatPool == null) {
             LOGGER.error("{}/hallClientThreadPoolExecutorConfig.xml未找到", configPath);
             System.exit(0);
         }
-        MinaClientConfig minaClientConfig_gate = FileUtil.getConfigXML(configPath, "minaClientConfig_gate.xml", MinaClientConfig.class);
+        MinaClientConfig minaClientConfig_gate = FileUtils.getConfigXML(configPath, "minaClientConfig_gate.xml", MinaClientConfig.class);
         if (minaClientConfig_gate == null) {
             LOGGER.error("{}/minaClientConfig_hall.xml未找到", configPath);
             System.exit(0);
         }
 
         // 加载连接集群配置
-        MinaClientConfig minaClientConfig_cluster = FileUtil.getConfigXML(configPath, "minaClientConfig_cluster.xml", MinaClientConfig.class);
+        MinaClientConfig minaClientConfig_cluster = FileUtils.getConfigXML(configPath, "minaClientConfig_cluster.xml", MinaClientConfig.class);
         if (minaClientConfig_cluster == null) {
             LOGGER.error("{}/minaClientConfig_hall.xml未找到", configPath);
             System.exit(0);
         }
 
         // http配置
-        MinaServerConfig minaServerConfig_http = FileUtil.getConfigXML(configPath, "minaServerConfig_http.xml", MinaServerConfig.class);
+        MinaServerConfig minaServerConfig_http = FileUtils.getConfigXML(configPath, "minaServerConfig_http.xml", MinaServerConfig.class);
         if (minaServerConfig_http == null) {
             LOGGER.error("{}/minaServerConfig_http.xml未找到", configPath);
             System.exit(0);

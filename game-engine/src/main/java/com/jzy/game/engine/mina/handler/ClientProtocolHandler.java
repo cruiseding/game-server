@@ -12,8 +12,8 @@ import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.server.BaseServerConfig;
 import com.jzy.game.engine.server.Service;
-import com.jzy.game.engine.util.IntUtil;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.IntUtils;
+import com.jzy.game.engine.util.MsgUtils;
 
 /**
  * 游戏前端消息处理器
@@ -44,7 +44,7 @@ public class ClientProtocolHandler extends DefaultProtocolHandler {
 				log.error("messageReceived:消息长度{}小于等于消息头长度{}", bytes.length, messageHeaderLength);
 				return;
 			}
-			int mid = IntUtil.bigEndianByteToInt(bytes, 0, 4); // 消息ID
+			int mid = IntUtils.bigEndianByteToInt(bytes, 0, 4); // 消息ID
 			// int protoLength=IntUtil.bigEndianByteToInt(bytes, 6, 4); //TODO
 			// 消息长度,不需要？
 
@@ -53,7 +53,7 @@ public class ClientProtocolHandler extends DefaultProtocolHandler {
 				HandlerEntity handlerEntity = ScriptManager.getInstance().getTcpHandlerEntity(mid);
 				if (handlerClass != null) {
 //					log.info("{} {} bytes:{}",messageHeaderLenght, bytes.length, bytes );
-					Message message = MsgUtil.buildMessage(handlerEntity.msg(), bytes, messageHeaderLength,
+					Message message = MsgUtils.buildMessage(handlerEntity.msg(), bytes, messageHeaderLength,
 							bytes.length - messageHeaderLength);
 					TcpHandler handler = (TcpHandler) handlerClass.newInstance();
 					if (handler != null) {

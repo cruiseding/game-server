@@ -5,7 +5,7 @@
  */
 package com.jzy.game.tool.db;
 
-import com.jzy.game.engine.util.HttpUtil;
+import com.jzy.game.engine.util.HttpUtils;
 import com.jzy.game.tool.util.Args;
 import com.jzy.game.tool.util.Config;
 import com.jzy.game.tool.util.ExcelUtil;
@@ -203,7 +203,7 @@ public class DBTool extends javax.swing.JFrame {
         //加载服务器配置
         String loadConfigUrl = getDBConfig().getLoadConfigUrl();
         if(loadConfigUrl!=null&&!loadConfigUrl.equalsIgnoreCase("")){
-            String log = HttpUtil.URLGet(loadConfigUrl);
+            String log = HttpUtils.URLGet(loadConfigUrl);
             logTextArea.append("游戏服-"+getDBConfig().getDbName()+log+"更新配置成功\r\n");
         }
         

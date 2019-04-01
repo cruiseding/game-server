@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import com.jzy.game.engine.mina.message.MassMessage;
 import com.jzy.game.engine.server.BaseServerConfig;
 import com.jzy.game.engine.server.Service;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 
 import org.slf4j.Logger;
 
@@ -61,13 +61,13 @@ public abstract class MassProtocolHandler implements IoHandler {
 	@Override
 	public void exceptionCaught(IoSession session, Throwable throwable) {
 		log.error("连接{}异常：{}", session, throwable);
-		MsgUtil.close(session, "发生错误");
+		MsgUtils.close(session, "发生错误");
 	}
 
 	@Override
 	public void inputClosed(IoSession session) throws Exception {
 		log.warn("连接{}inputClosed已关闭", session);
-		MsgUtil.close(session, "http inputClosed");
+		MsgUtils.close(session, "http inputClosed");
 	}
 
 	@Override

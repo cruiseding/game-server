@@ -9,7 +9,7 @@ import com.jzy.game.engine.handler.HttpHandler;
 import com.jzy.game.engine.server.ServerInfo;
 import com.jzy.game.engine.server.ServerState;
 import com.jzy.game.engine.server.ServerType;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 
 /**
  * 设置服务器状态
@@ -42,7 +42,7 @@ public class SetServerStateHandler extends HttpHandler {
 			return;
 		}
 		server.setState(serverState);
-		LOGGER.info("{}设置服务器{}_{} 状态：{}", MsgUtil.getIp(getSession()), serverType, serverId, serverState);
+		LOGGER.info("{}设置服务器{}_{} 状态：{}", MsgUtils.getIp(getSession()), serverType, serverId, serverState);
 		sendMsg("服务器状态设置未：" + ServerState.valueOf(serverState));
 	}
 	

@@ -12,7 +12,7 @@ import com.jzy.game.bydr.struct.room.Room;
 import com.jzy.game.engine.handler.HandlerEntity;
 import com.jzy.game.engine.handler.TcpHandler;
 import com.jzy.game.engine.thread.ThreadType;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 开炮
@@ -53,7 +53,7 @@ public class FireHandler extends TcpHandler {
 		role.getFireGolds().add(req.getGold());
 		role.changeGold(-req.getGold(), Reason.RoleFire);
 		role.addBetGold(req.getGold());
-		role.setFireTime(TimeUtil.currentTimeMillis());
+		role.setFireTime(TimeUtils.currentTimeMillis());
 		room.addAllFireCount();
 		role.addFireCount();
 

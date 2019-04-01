@@ -18,7 +18,7 @@ package com.jzy.game.ai.fsm;
 
 import com.jzy.game.ai.msg.MessageManager;
 import com.jzy.game.ai.msg.Telegram;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.TimeUtils;
 
 /** @author davebaol */
 public enum BobState implements State<Bob> {
@@ -101,7 +101,7 @@ public enum BobState implements State<Bob> {
 		public boolean onMessage(Bob bob, Telegram telegram) {
 			if (telegram.message == MessageType.STEW_READY) {
 
-				talk(bob, "Message STEW_READY handled at time: " + TimeUtil.currentTimeMillis());
+				talk(bob, "Message STEW_READY handled at time: " + TimeUtils.currentTimeMillis());
 
 				talk(bob, "Okay Hun, ahm a comin'!");
 

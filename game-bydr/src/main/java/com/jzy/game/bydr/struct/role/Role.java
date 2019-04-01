@@ -20,7 +20,7 @@ import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.redis.redisson.RedissonManager;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.struct.Person;
-import com.jzy.game.engine.util.ReflectUtil;
+import com.jzy.game.engine.util.ReflectUtils;
 import com.jzy.game.model.constant.Reason;
 import com.jzy.game.model.redis.key.BydrKey;
 import com.jzy.game.model.redis.key.HallKey;
@@ -38,7 +38,7 @@ public class Role extends Person{
 	private static final Logger LOGGER=LoggerFactory.getLogger(Role.class);
 	
 	/** setter 方法集合 */
-    protected static final transient Map<String, Method> WRITEMETHODS = ReflectUtil.getReadMethod(Role.class);
+    protected static final transient Map<String, Method> WRITEMETHODS = ReflectUtils.getReadMethod(Role.class);
 	
 	private String head;
 	private int gender;

@@ -6,7 +6,7 @@ import com.jzy.game.cluster.AppCluster;
 import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
-import com.jzy.game.engine.util.SysUtil;
+import com.jzy.game.engine.util.SysUtils;
 import com.jzy.game.model.constant.NetPort;
 
 /**
@@ -46,7 +46,7 @@ public class ClusterServer implements Runnable {
 		log.info("ClusterServer::clusterTcpServer::start!!!");
 		new Thread(clusterTcpServer).start();
 
-		ScriptManager.getInstance().init((str) -> SysUtil.exit(this.getClass(), null, "加载脚本错误"));
+		ScriptManager.getInstance().init((str) -> SysUtils.exit(this.getClass(), null, "加载脚本错误"));
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException ex) {

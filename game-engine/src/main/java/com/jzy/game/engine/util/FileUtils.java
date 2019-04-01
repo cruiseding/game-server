@@ -18,11 +18,11 @@ import org.simpleframework.xml.core.Persister;
 /**
  *文件工具
  */
-public final class FileUtil {
+public final class FileUtils {
 
-    private static final Logger log = LoggerFactory.getLogger(FileUtil.class);
+    private static final Logger log = LoggerFactory.getLogger(FileUtils.class);
 
-    private FileUtil() {
+    private FileUtils() {
     }
 
     /**

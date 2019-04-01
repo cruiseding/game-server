@@ -7,8 +7,8 @@ import org.junit.Test;
 import com.jzy.game.ai.nav.node.NodeNavMesh;
 import com.jzy.game.ai.nav.triangle.TriangleNavMesh;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.FileUtil;
-import com.jzy.game.engine.util.TimeUtil;
+import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.TimeUtils;
 
 /**
  * 多边形寻路测试
@@ -23,10 +23,10 @@ public class PolygonNavMeshTest {
     PolygonNavMesh navMesh;
     @Before
     public void init() {
-        long start = TimeUtil.currentTimeMillis();
-        String navMeshStr = FileUtil.readTxtFile(meshPath);
+        long start = TimeUtils.currentTimeMillis();
+        String navMeshStr = FileUtils.readTxtFile(meshPath);
         navMesh = new PolygonNavMesh(navMeshStr);
-        System.out.println("加载地图耗时：" + (TimeUtil.currentTimeMillis() - start));
+        System.out.println("加载地图耗时：" + (TimeUtils.currentTimeMillis() - start));
     }
     
     
@@ -63,7 +63,7 @@ public class PolygonNavMeshTest {
     public void testPerformance() {
         PolygonPointPath pointPath=new PolygonPointPath();
         List<Vector3> paths=null;
-        long start=TimeUtil.currentTimeMillis();
+        long start=TimeUtils.currentTimeMillis();
         for(int i=0;i<10000;i++) {
 //            paths = navMesh.findPath(new Vector3(61,13,191), new Vector3(107,11,146), pointPath);         //1
 //            paths = navMesh.findPath(new Vector3(61,13,191), new Vector3(305,35,213),  pointPath);          //2
@@ -75,7 +75,7 @@ public class PolygonNavMeshTest {
 //        	paths = navMesh.findPath(new Vector3(12f,0f,505f), new Vector3(407f,0f,95f),  pointPath);		//8
         	paths = navMesh.findPath(new Vector3(373f,0f,247f), new Vector3(353f,0f,213f),  pointPath);		//9
         }
-        System.err.println("耗时："+(TimeUtil.currentTimeMillis()-start));
+        System.err.println("耗时："+(TimeUtils.currentTimeMillis()-start));
         if(paths!=null) {
             paths.forEach(p->System.out.println(p.toString()));
         }
@@ -111,11 +111,11 @@ public class PolygonNavMeshTest {
      */
     @Test
     public void testFindRandomPointInPath() {
-    	long begin=TimeUtil.currentTimeMillis();
+    	long begin=TimeUtils.currentTimeMillis();
     	for(int i=0;i<10000;i++) {
     		navMesh.getRandomPointsInPath(new Vector3(205,19,113), 5f, 0.2f);
 //    		navMesh.getRandomPointsInPath(new Vector3(109.2f,10f,59.2f), 10f, 0.2f);
     	}
-    	System.out.println("耗时："+(TimeUtil.currentTimeMillis()-begin));
+    	System.out.println("耗时："+(TimeUtils.currentTimeMillis()-begin));
     }
 }

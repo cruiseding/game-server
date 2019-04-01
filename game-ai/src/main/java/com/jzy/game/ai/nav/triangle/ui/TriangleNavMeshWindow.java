@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import com.jzy.game.ai.nav.NavMeshData;
 import com.jzy.game.ai.nav.triangle.TriangleNavMesh;
 import com.jzy.game.engine.math.Vector3;
-import com.jzy.game.engine.util.FileUtil;
+import com.jzy.game.engine.util.FileUtils;
 
 /**
  * 地图显示窗口
@@ -222,7 +222,7 @@ public class TriangleNavMeshWindow {
 		TriangleNavMesh map = null;
         lastFilePath=filePath;
 		try {
-			String navMeshStr = FileUtil.readTxtFile(filePath);
+			String navMeshStr = FileUtils.readTxtFile(filePath);
 			map = new TriangleNavMesh(navMeshStr,scale);	
 			if (map != null && player != null) {
 				player.setMap(map);

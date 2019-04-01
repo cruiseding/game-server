@@ -10,7 +10,7 @@ import com.jzy.game.engine.mina.handler.DefaultProtocolHandler;
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.engine.server.BaseServerConfig;
 import com.jzy.game.engine.server.Service;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.gate.manager.UserSessionManager;
 import com.jzy.game.gate.script.IGateServerScript;
 import com.jzy.game.gate.server.GateTcpGameServer;
@@ -36,7 +36,7 @@ public class GateTcpGameServerHandler extends DefaultProtocolHandler {
 	 */
 	@Override
 	protected void forward(IoSession session, int msgID, byte[] bytes) {
-		long rid = MsgUtil.getMessageRID(bytes, 0);
+		long rid = MsgUtils.getMessageRID(bytes, 0);
 		if (rid > 0) {
 			UserSession userSession = UserSessionManager.getInstance().getUserSessionbyRoleId(rid);
 			if (userSession != null) {

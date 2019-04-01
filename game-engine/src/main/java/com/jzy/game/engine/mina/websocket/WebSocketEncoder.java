@@ -10,7 +10,7 @@ import org.apache.mina.filter.codec.ProtocolEncoderAdapter;
 import org.apache.mina.filter.codec.ProtocolEncoderOutput;
 
 import com.google.protobuf.Message;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 
 /**
  * Encodes incoming buffers in a manner that makes the receiving client type transparent to the 
@@ -42,7 +42,7 @@ public class WebSocketEncoder extends ProtocolEncoderAdapter{
             resultBuffer = isRemoteWebSocket ? buildWSDataFrameBuffer(packet.getPacket()) : packet.getPacket();
         }else if(message instanceof Message) {	//自定义protobuf，消息头只有ID，无长度，和app客户端不一致
         	Message msg=(Message)message;
-        	int msgId=MsgUtil.getMessageID(msg);
+        	int msgId=MsgUtils.getMessageID(msg);
         	byte[] msgData=msg.toByteArray();
         	IoBuffer iobuffer = IoBuffer.allocate(4+msgData.length);
         	iobuffer.putInt(msgId);

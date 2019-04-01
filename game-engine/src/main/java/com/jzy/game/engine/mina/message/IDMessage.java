@@ -3,7 +3,7 @@ package com.jzy.game.engine.mina.message;
 import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;
 
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 
 import io.netty.channel.Channel;
 
@@ -61,7 +61,7 @@ public final class IDMessage implements Runnable{
     @Override
     public void run() {
         if (session!=null&&session.isConnected()) {
-            IoBuffer buf=MsgUtil.toIobuffer(this);
+            IoBuffer buf=MsgUtils.toIobuffer(this);
             session.write(buf);
         }else if(channel!=null&&channel.isActive()){
         	channel.write(this);		

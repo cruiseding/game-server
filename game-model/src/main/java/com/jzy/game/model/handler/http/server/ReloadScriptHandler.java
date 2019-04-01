@@ -7,7 +7,7 @@ import com.jzy.game.engine.handler.HttpHandler;
 import com.jzy.game.engine.mail.MailConfig;
 import com.jzy.game.engine.mail.MailManager;
 import com.jzy.game.engine.script.ScriptManager;
-import com.jzy.game.engine.util.MsgUtil;
+import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.model.constant.Config;
 
 /**
@@ -43,7 +43,7 @@ public class ReloadScriptHandler extends HttpHandler {
 			}
 		}
 		
-		String info = String.format("%s加载脚本：%s", MsgUtil.getIp(getSession()),loadClasss);
+		String info = String.format("%s加载脚本：%s", MsgUtils.getIp(getSession()),loadClasss);
 		LOGGER.info(info);
 		MailConfig mailConfig = MailManager.getInstance().getMailConfig();
 		String[] recives = mailConfig.getReciveUser().toArray(new String[mailConfig.getReciveUser().size()]);
