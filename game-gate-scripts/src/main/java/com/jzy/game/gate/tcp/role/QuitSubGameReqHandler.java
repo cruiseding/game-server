@@ -17,35 +17,35 @@ import com.jzy.game.engine.util.MsgUtils;
 import com.jzy.game.gate.struct.UserSession;
 
 /**
- * 退出子游戏
- * // TODO 处理用户session 请求处理，还是返回处理，根据客户端需求
+ * 退出子游戏 // TODO 处理用户session 请求处理，还是返回处理，根据客户端需求
+ * 
  * @author CruiseDing
- * @QQ 359135103
- * 2017年7月26日 下午5:34:06
+ * @QQ 359135103 2017年7月26日 下午5:34:06
  */
-@HandlerEntity(mid=MID.QuitSubGameReq_VALUE,msg=QuitSubGameRequest.class)
+@HandlerEntity(mid = MID.QuitSubGameReq_VALUE, msg = QuitSubGameRequest.class)
 public class QuitSubGameReqHandler extends TcpHandler {
-	private static final Logger LOGGER=LoggerFactory.getLogger(QuitSubGameReqHandler.class);
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(QuitSubGameReqHandler.class);
 
 	@Override
 	public void run() {
-		QuitSubGameRequest req=getMsg();
+		QuitSubGameRequest req = getMsg();
 		Object attribute = getSession().getAttribute(Config.USER_SESSION);
-		if(attribute==null){
-			LOGGER.warn("{} 无用户会话",MsgUtils.getIp(getSession()));
+		if (attribute == null) {
+			LOGGER.warn("{} 无用户会话", MsgUtils.getIp(getSession()));
 			return;
 		}
-		if(req==null){
-			req=QuitSubGameRequest.newBuilder().build();
+		if (req == null) {
+			req = QuitSubGameRequest.newBuilder().build();
 		}
-		
-		UserSession userSession=(UserSession)attribute;
+
+		UserSession userSession = (UserSession) attribute;
 		userSession.sendToGame(req);
 		userSession.removeGame();
-		
-		//清空角色服务器ID，服务类型，网关统一处理，避免游戏服重复处理
+
+		// 清空角色服务器ID，服务类型，网关统一处理，避免游戏服重复处理
 		String key = HallKey.Role_Map_Info.getKey(userSession.getRoleId());
-		Map<String, String> redisMap=new HashMap<String, String>();
+		Map<String, String> redisMap = new HashMap<String, String>();
 		redisMap.put("gameType", ServerType.NONE.toString());
 		redisMap.put("gameId", String.valueOf(0));
 		JedisManager.getJedisCluster().hmset(key, redisMap);

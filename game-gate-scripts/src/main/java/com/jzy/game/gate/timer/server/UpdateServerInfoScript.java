@@ -18,6 +18,7 @@ import com.jzy.game.gate.server.GateServer;
  * @date 2017-04-09 QQ:359135103
  */
 public class UpdateServerInfoScript implements ITimerEventScript {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UpdateServerInfoScript.class);
 
 	@Override
@@ -27,6 +28,7 @@ public class UpdateServerInfoScript implements ITimerEventScript {
 			MinaServerConfig minaServerConfig = GateServer.getInstance().getGateTcpUserServer().getMinaServerConfig();
 			ServerRegisterRequest request = GateServer.getInstance().buildServerRegisterRequest(minaServerConfig);
 			GateServer.getInstance().getClusterClient().sendMsg(request);
+			
 			// LOGGER.debug("更新服务器信息");
 			// 重连服务器监测
 			GateServer.getInstance().getClusterClient().getTcpClient().checkStatus();

@@ -22,7 +22,8 @@ import com.jzy.game.gate.struct.UserSession;
  */
 @HandlerEntity(mid = MID.ChangeRoleServerReq_VALUE, msg = ChangeRoleServerRequest.class)
 public class ChangeRoleServerHandler extends TcpHandler {
-	private static final Logger LOGGER=LoggerFactory.getLogger(ChangeRoleServerHandler.class);
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ChangeRoleServerHandler.class);
 
 	@Override
 	public void run() {
@@ -31,14 +32,14 @@ public class ChangeRoleServerHandler extends TcpHandler {
 		builder.setResult(0);
 		long roleId = req.getRoleId();
 		UserSession userSession = UserSessionManager.getInstance().getUserSessionbyRoleId(roleId);
-		LOGGER.debug("角色{}进行跨服",roleId);
+		LOGGER.debug("角色{}进行跨服", roleId);
 		if (userSession == null) {
 			builder.setResult(1);
 		} else {
 			ServerType serverType = ServerType.valueof(req.getServerType());
 			ServerInfo serverInfo = null;
 			if (req.getServerId() < 1) { // 找空闲服务器
-				serverInfo = ServerManager.getInstance().getIdleGameServer(serverType,userSession);
+				serverInfo = ServerManager.getInstance().getIdleGameServer(serverType, userSession);
 			} else {
 				serverInfo = ServerManager.getInstance().getGameServerInfo(serverType, req.getServerId());
 			}
@@ -48,22 +49,21 @@ public class ChangeRoleServerHandler extends TcpHandler {
 				if (serverType == ServerType.HALL) {
 					userSession.setHallServerId(serverInfo.getId());
 					userSession.setHallSession(serverInfo.getMostIdleIoSession());
-					//TODO 重发连接大厅消息
+					// TODO 重发连接大厅消息
 				} else {
 					userSession.setGameSession(serverInfo.getMostIdleIoSession());
 					userSession.setServerId(serverInfo.getId());
 					userSession.setServerType(serverType);
-					//发送登录消息
-					LoginSubGameRequest.Builder loginGameBuilder=LoginSubGameRequest.newBuilder();
+					// 发送登录消息
+					LoginSubGameRequest.Builder loginGameBuilder = LoginSubGameRequest.newBuilder();
 					loginGameBuilder.setGameType(serverType.getType());
 					loginGameBuilder.setRid(roleId);
 					loginGameBuilder.setType(2);
 					userSession.sendToGame(loginGameBuilder.build());
-					
 				}
 			}
 		}
-		LOGGER.debug("跨服结果：{}",builder.build().toString());
+		LOGGER.debug("跨服结果：{}", builder.build().toString());
 		sendIdMsg(builder.build());
 	}
 

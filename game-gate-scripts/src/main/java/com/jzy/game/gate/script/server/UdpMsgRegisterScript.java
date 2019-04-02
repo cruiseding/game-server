@@ -14,7 +14,9 @@ import com.jzy.game.gate.script.IGateServerScript;
  * @QQ 359135103 2017年9月1日 下午2:43:00
  */
 public class UdpMsgRegisterScript implements IGateServerScript, IInitScript {
+	
 	private Set<Integer> udpMsgIds = new HashSet<>(); // udp支持的消息
+	
 	private Set<ServerType> udpServers = new HashSet<>(); // udp支持的服务器
 
 	@Override
@@ -24,7 +26,7 @@ public class UdpMsgRegisterScript implements IGateServerScript, IInitScript {
 
 		// 注册udp消息,只需要注册返回消息
 		udpMsgIds.add(MID.HeartRes_VALUE);
-		udpMsgIds.add(MID.EnterRoomRes_VALUE);	
+		udpMsgIds.add(MID.EnterRoomRes_VALUE);
 		udpMsgIds.add(MID.ChatRes_VALUE);
 	}
 

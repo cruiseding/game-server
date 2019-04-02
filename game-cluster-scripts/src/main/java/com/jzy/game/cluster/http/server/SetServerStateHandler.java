@@ -45,7 +45,5 @@ public class SetServerStateHandler extends HttpHandler {
 		LOGGER.info("{}设置服务器{}_{} 状态：{}", MsgUtils.getIp(getSession()), serverType, serverId, serverState);
 		sendMsg("服务器状态设置未：" + ServerState.valueOf(serverState));
 	}
-	
-	
 
 }

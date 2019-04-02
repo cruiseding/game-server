@@ -14,40 +14,42 @@ import com.jzy.game.gate.struct.UserSession;
 
 /**
  * 事件消息
+ * 
  * @author CruiseDing
- * @QQ 359135103
- * 2017年10月17日 下午5:05:36
+ * @QQ 359135103 2017年10月17日 下午5:05:36
  */
-@HandlerEntity(mid=MID.ServerEventReq_VALUE,msg=ServerEventRequest.class)
+@HandlerEntity(mid = MID.ServerEventReq_VALUE, msg = ServerEventRequest.class)
 public class ServerEventHandler extends TcpHandler {
-	private static final Logger LOGGER=LoggerFactory.getLogger(ServerEventHandler.class);
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ServerEventHandler.class);
+
 	@Override
 	public void run() {
-		ServerEventRequest request=getMsg();
+		ServerEventRequest request = getMsg();
 		switch (request.getType()) {
-		case 1:	//gm踢玩家下线
-			tickRole(request);
-			break;
-
-		default:
-			break;
-		}
-		LOGGER.info("处理事件{}",request.toString());
-	}
+			case 1: // gm踢玩家下线
+				tickRole(request);
+				break;
 	
+			default:
+				break;
+		}
+		LOGGER.info("处理事件{}", request.toString());
+	}
+
 	/**
 	 * 
 	 * @author CruiseDing
-	 * @QQ 359135103
-	 * 2017年10月17日 下午5:08:15
+	 * @QQ 359135103 2017年10月17日 下午5:08:15
 	 * @param request
 	 */
 	private void tickRole(ServerEventRequest request) {
 		UserSession userSession = UserSessionManager.getInstance().getUserSessionbyRoleId(request.getId());
-		if(userSession==null) {
+		if (userSession == null) {
 			return;
 		}
-		ScriptManager.getInstance().getBaseScriptEntry().executeScripts(IUserScript.class, script->script.quit(userSession.getClientSession(), Reason.GmTickRole));
+		ScriptManager.getInstance().getBaseScriptEntry().executeScripts(IUserScript.class,
+				script -> script.quit(userSession.getClientSession(), Reason.GmTickRole));
 	}
 
 }

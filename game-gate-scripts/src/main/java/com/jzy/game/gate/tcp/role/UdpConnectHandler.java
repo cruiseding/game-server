@@ -20,6 +20,7 @@ import com.jzy.game.gate.struct.UserSession;
  */
 @HandlerEntity(mid = MID.UdpConnectReq_VALUE, msg = UdpConnectRequest.class)
 public class UdpConnectHandler extends TcpHandler {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UdpConnectHandler.class);
 
 	@Override

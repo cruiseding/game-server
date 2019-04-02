@@ -16,7 +16,10 @@ import com.jzy.game.gate.struct.UserSession;
 
 /**
  * 登陆返回
- *<p>处理用户的连接session,设置UserSession用户ID，角色ID</p>
+ * <p>
+ * 处理用户的连接session,设置UserSession用户ID，角色ID
+ * </p>
+ * 
  * @author CruiseDing
  * @mail 359135103@qq.com
  */
@@ -40,7 +43,5 @@ public class LoginResHandler extends TcpHandler {
 		UserSessionManager.getInstance().loginHallSuccess(userSession, response.getUid(), response.getRid());
 		userSession.sendToClient(response);
 	}
-
-	
 
 }

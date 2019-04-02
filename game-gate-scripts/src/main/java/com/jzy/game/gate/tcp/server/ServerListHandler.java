@@ -23,7 +23,6 @@ public class ServerListHandler extends TcpHandler {
 				ServerManager.getInstance().updateServerInfo(info);
 			});
 		}
-
 	}
 
 }

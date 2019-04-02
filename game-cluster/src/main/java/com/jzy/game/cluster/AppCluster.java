@@ -9,6 +9,7 @@ import com.jzy.game.engine.mina.config.MinaServerConfig;
 import com.jzy.game.engine.redis.jedis.JedisClusterConfig;
 import com.jzy.game.engine.thread.ThreadPoolExecutorConfig;
 import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.StringUtils;
 import com.jzy.game.engine.util.SysUtils;
 
 
@@ -54,7 +55,7 @@ public class AppCluster {
 	private static final Logger log = LoggerFactory.getLogger(AppCluster.class);
 
 	private static ClusterServer clusterServer;
-	public static String path = "";
+	public static String path = StringUtils.EMPTY;
 
 	public static void main(String[] args) {
 		File file = new File(System.getProperty("user.dir"));

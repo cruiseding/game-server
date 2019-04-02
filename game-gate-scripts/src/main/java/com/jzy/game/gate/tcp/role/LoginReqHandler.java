@@ -31,6 +31,7 @@ import com.jzy.game.gate.struct.UserSession;
  */
 @HandlerEntity(mid = MID.LoginReq_VALUE, desc = "登陆", msg = LoginRequest.class)
 public class LoginReqHandler extends TcpHandler {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(LoginReqHandler.class);
 
 	@Override
@@ -38,13 +39,12 @@ public class LoginReqHandler extends TcpHandler {
 		LoginRequest request = getMsg();
 		UserSession userSession = UserSessionManager.getInstance().getUserSessionBySessionId(session.getId());
 		if (userSession == null) {
-			session.write(
-					ServerManager.getInstance().buildSystemErrorResponse(SystemErroCode.ConectReset, "连接会话已失效，请重连"));
+			session.write(ServerManager.getInstance().buildSystemErrorResponse(SystemErroCode.ConectReset, "连接会话已失效，请重连"));
 			LOGGER.warn("连接会话已失效，请重连");
 			return;
 		}
-		
-		ServerInfo serverInfo = ServerManager.getInstance().getIdleGameServer(ServerType.HALL,userSession);
+
+		ServerInfo serverInfo = ServerManager.getInstance().getIdleGameServer(ServerType.HALL, userSession);
 		if (serverInfo == null) {
 			SystemErrorResponse.Builder sysBuilder = SystemErrorResponse.newBuilder();
 			sysBuilder.setErrorCode(SystemErroCode.HallNotFind);
@@ -63,7 +63,7 @@ public class LoginReqHandler extends TcpHandler {
 			session.write(ServerManager.getInstance().buildSystemErrorResponse(SystemErroCode.HallNotFind, "没可用大厅服"));
 			return;
 		}
-		
+
 		userSession.setHallServerId(serverInfo.getId());
 		userSession.setHallSession(hallSession);
 		userSession.setVersion(request.getVersion());

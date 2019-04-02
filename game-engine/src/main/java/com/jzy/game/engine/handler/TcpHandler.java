@@ -5,16 +5,18 @@ import com.jzy.game.engine.mina.message.IDMessage;
 import com.jzy.game.engine.struct.Person;
 
 /**
- * Tcp 处理器
- * <br>也可能处理udp请求
+ * Tcp 处理器 <br>
+ * 也可能处理udp请求
  * 
  * @author CruiseDing
  * @mail 359135103@qq.com
  */
 public abstract class TcpHandler extends AbsHandler {
-	
+
 	private Message message;
+	
 	protected long rid; // 角色ID
+	
 	protected Person person; // 角色
 
 	@Override

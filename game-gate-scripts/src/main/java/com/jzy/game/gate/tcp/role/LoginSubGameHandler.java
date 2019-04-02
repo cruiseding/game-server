@@ -52,7 +52,7 @@ public class LoginSubGameHandler extends TcpHandler {
 
 		// 随机选择一个空闲的服务器
 		if (serverInfo == null) {
-			serverInfo = ServerManager.getInstance().getIdleGameServer(serverType,userSession);
+			serverInfo = ServerManager.getInstance().getIdleGameServer(serverType, userSession);
 		}
 
 		if (serverInfo == null) {
@@ -65,12 +65,12 @@ public class LoginSubGameHandler extends TcpHandler {
 		userSession.setServerType(serverType);
 		userSession.setServerId(serverInfo.getId());
 
-		//设置玩家登录游戏服属性
-		Map<String, String> redisMap=new HashMap<>(2);
+		// 设置玩家登录游戏服属性
+		Map<String, String> redisMap = new HashMap<>(2);
 		redisMap.put("gameId", String.valueOf(serverInfo.getId()));
 		redisMap.put("gameType", String.valueOf(serverType.getType()));
 		JedisManager.getJedisCluster().hmset(key, redisMap);
-		
+
 		userSession.sendToGame(request);
 
 	}

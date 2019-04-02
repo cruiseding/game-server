@@ -17,6 +17,7 @@ import com.jzy.game.engine.thread.ThreadType;
  */
 @HandlerEntity(mid = MID.ServerRegisterRes_VALUE, msg = ServerRegisterResponse.class,threadType=ThreadType.SYNC)
 public class ServerRegisterResHandler extends TcpHandler {
+	
 	private static final Logger LOGGER=LoggerFactory.getLogger(ServerRegisterResHandler.class);
 
 	@Override

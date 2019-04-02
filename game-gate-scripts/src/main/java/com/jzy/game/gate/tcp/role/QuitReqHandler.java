@@ -10,17 +10,17 @@ import com.jzy.game.gate.script.IUserScript;
 
 /**
  * 退出游戏
+ * 
  * @author CruiseDing
- * @QQ 359135103
- * 2017年7月26日 下午5:27:23
+ * @QQ 359135103 2017年7月26日 下午5:27:23
  */
-@HandlerEntity(mid=MID.QuitReq_VALUE,msg=QuitRequest.class)
+@HandlerEntity(mid = MID.QuitReq_VALUE, msg = QuitRequest.class)
 public class QuitReqHandler extends TcpHandler {
 
 	@Override
 	public void run() {
-		ScriptManager.getInstance().getBaseScriptEntry().executeScripts(IUserScript.class, script->script.quit(getSession(), Reason.UserQuit));
-
+		ScriptManager.getInstance().getBaseScriptEntry().executeScripts(IUserScript.class,
+				script -> script.quit(getSession(), Reason.UserQuit));
 	}
 
 }

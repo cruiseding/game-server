@@ -33,7 +33,7 @@ public class ServerRegisterHandler extends TcpHandler {
 			LOGGER.info("服务器：{} 连接注册到网关服 {} ip:{}", gameInfo.getName(), getSession().getId(),
 					getSession().getRemoteAddress().toString());
 		} else {
-			LOGGER.warn("网关服务没有{}服:{}",ServerType.valueof(serverInfo.getType()).toString(), serverInfo.getId());
+			LOGGER.warn("网关服务没有{}服:{}", ServerType.valueof(serverInfo.getType()).toString(), serverInfo.getId());
 		}
 
 	}
