@@ -17,44 +17,46 @@ import com.jjy.game.manage.constant.SessionKey;
  */
 @Controller
 public class IndexController {
-    @RequestMapping("/")
-    public String index(HttpSession session, HttpServletRequest request) {
-        request.getCookies();
-        return "/login";
-    }
+	
+	@RequestMapping("/")
+	public String index(HttpSession session, HttpServletRequest request) {
+		request.getCookies();
+		return "/login";
+	}
 
-    @RequestMapping("/test")
-    public String test() {
-        System.out.println("test");
-        return "/test";
-    }
+	@RequestMapping("/test")
+	public String test() {
+		System.out.println("test");
+		return "/test";
+	}
 
-    @RequestMapping("/login")
-    public String signin() {
-        return "/login";
-    }
+	@RequestMapping("/login")
+	public String signin() {
+		return "/login";
+	}
 
-    @RequestMapping("/register")
-    public String register() {
-        return "/register";
-    }
+	@RequestMapping("/register")
+	public String register() {
+		return "/register";
+	}
 
-    @RequestMapping("/home")
-    public ModelAndView home(HttpSession session) {
-        ModelAndView view = new ModelAndView("/home");
-        String userName = (String) session.getAttribute(SessionKey.USER_NAME);
-        if (userName != null) {
-            view.addObject("userName", userName);
-        }
-        return view;
-    }
+	@RequestMapping("/home")
+	public ModelAndView home(HttpSession session) {
+		ModelAndView view = new ModelAndView("/home");
+		String userName = (String) session.getAttribute(SessionKey.USER_NAME);
+		if (userName != null) {
+			view.addObject("userName", userName);
+		}
+		return view;
+	}
 
-    /**
-     * 空内容
-     * @return
-     */
-    @RequestMapping("/empty")
-    public String empty() {
-        return "/empty";
-    }
+	/**
+	 * 空内容
+	 * 
+	 * @return
+	 */
+	@RequestMapping("/empty")
+	public String empty() {
+		return "/empty";
+	}
 }

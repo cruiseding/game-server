@@ -76,15 +76,15 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-			 	<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-plugin-plugin</artifactId>
-					<version>3.5</version>
-					<configuration>
-						<goalPrefix>game</goalPrefix>
-						<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
-					</configuration>
-				</plugin>
+<!-- 			 	<plugin> -->
+<!-- 					<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 					<artifactId>maven-plugin-plugin</artifactId> -->
+<!-- 					<version>3.5</version> -->
+<!-- 					<configuration> -->
+<!-- 						<goalPrefix>game</goalPrefix> -->
+<!-- 						<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound> -->
+<!-- 					</configuration> -->
+<!-- 				</plugin> -->
 				<!-- 解除mina包引入错误 -->
 				<plugin>
 					<groupId>org.apache.felix</groupId>

@@ -1,6 +1,6 @@
 package com.jjy.game.manage.controller;
 
-import com.jzy.game.engine.util.HttpUtil;
+import com.jzy.game.engine.util.HttpUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +30,7 @@ public class BydrController {
     public ModelAndView client(){
         //http://127.0.0.1:8001/server/gate/ip
         String url = clusterUrl + "/server/gate/ip";
-        String urlGet = HttpUtil.URLGet(url);
+        String urlGet = HttpUtils.URLGet(url);
         String [] strs= urlGet.split(":");
         //ws://127.0.0.1:8005/
         String wsUrl="ws://"+strs[0]+":"+gateWebSocketPort;

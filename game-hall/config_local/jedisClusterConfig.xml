@@ -26,6 +26,7 @@
       <port>7005</port>
     </com.jzy.game.engine.redis.config_-JedisClusterNodesConfig>
   </nodes>
+  <password>${REDIS_PASSWORD}</password>
   <poolMaxTotal>500</poolMaxTotal>
   <poolMaxIdle>5</poolMaxIdle>
   <connectionTimeout>2000</connectionTimeout>

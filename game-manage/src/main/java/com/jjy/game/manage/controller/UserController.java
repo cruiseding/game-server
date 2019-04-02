@@ -1,11 +1,8 @@
 package com.jjy.game.manage.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.jjy.game.manage.constant.SessionKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.jjy.game.manage.constant.SessionKey;
 import com.jjy.game.manage.service.UserService;
-import com.jzy.game.engine.util.StringUtil;
+import com.jzy.game.engine.util.StringUtils;
 
 /**
  * 用户
@@ -46,7 +44,7 @@ public class UserController {
 	@RequestMapping(value = "/login")
 	public ModelAndView login(HttpSession session, HttpServletResponse response, String userName, String password) {
 
-		if (StringUtil.isNullOrEmpty(userName) || StringUtil.isNullOrEmpty(password)) {
+		if (StringUtils.isNullOrEmpty(userName) || StringUtils.isNullOrEmpty(password)) {
 			return new ModelAndView("redirect:/login");
 		}
 

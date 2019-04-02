@@ -9,6 +9,7 @@ package com.jjy.game.manage.core.vo;
  * @param <T>
  */
 public class ResultVO<T> {
+	
 	private Integer status;
 	private String message;
 	private T result;
