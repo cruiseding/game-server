@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
 public class MongoManager extends AbsMongoManager {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MongoManager.class);
+    
     private static final MongoManager INSTANCE_MANAGER = new MongoManager();
 
     private MongoManager() {

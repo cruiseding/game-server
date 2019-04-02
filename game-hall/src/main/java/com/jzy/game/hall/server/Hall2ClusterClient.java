@@ -21,7 +21,5 @@ public class Hall2ClusterClient extends SingleMinaTcpClientService{
 		// ServerThread executor = getExecutor(ThreadType.SYNC);
 		// executor.addTimerEvent(new ServerHeartTimer()); //TODO 临时添加
 	}
-	
-	
 
 }

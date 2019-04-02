@@ -21,7 +21,9 @@ import com.jzy.game.model.struct.Mail.MailType;
  * @QQ 359135103 2017年9月21日 下午3:25:17
  */
 public class MailManager {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(MailManager.class);
+	
 	private static volatile MailManager mailManager;
 
 	private MailManager() {

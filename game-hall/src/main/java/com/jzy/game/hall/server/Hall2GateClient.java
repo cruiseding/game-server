@@ -26,6 +26,7 @@ import com.jzy.game.model.script.IGameServerCheckScript;
  * @QQ 359135103 2017年6月28日 下午4:12:57
  */
 public class Hall2GateClient extends MutilMinaTcpClientService {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(Hall2GateClient.class);
 
 	public Hall2GateClient(ThreadPoolExecutorConfig threadPoolExecutorConfig, MinaClientConfig minaClientConfig) {
@@ -36,7 +37,6 @@ public class Hall2GateClient extends MutilMinaTcpClientService {
 	protected void running() {
 		ServerThread syncThread = getExecutor(ThreadType.SYNC);
 		syncThread.addTimerEvent(new ServerHeartTimer());
-
 	}
 
 	/**

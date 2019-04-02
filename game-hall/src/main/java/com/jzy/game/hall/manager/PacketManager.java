@@ -17,7 +17,9 @@ import com.jzy.game.model.struct.Role;
  * @QQ 359135103 2017年9月18日 下午2:49:17
  */
 public class PacketManager {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(PacketManager.class);
+	
 	private static volatile PacketManager packetManager;
 
 	private PacketManager() {

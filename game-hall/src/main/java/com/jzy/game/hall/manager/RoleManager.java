@@ -26,6 +26,7 @@ import com.jzy.game.model.struct.Role;
 public class RoleManager {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(RoleManager.class);
+	
 	private static volatile RoleManager roleManager;
 
 	/** role 数据需要实时存数据库 */

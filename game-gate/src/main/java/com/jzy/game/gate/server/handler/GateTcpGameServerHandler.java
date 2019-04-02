@@ -18,10 +18,12 @@ import com.jzy.game.gate.struct.UserSession;
 
 /**
  * 游戏服、大厅服等内部共用的服务器
+ * 
  * @author CruiseDing
  * @QQ 359135103 2017年6月30日 下午2:05:46
  */
 public class GateTcpGameServerHandler extends DefaultProtocolHandler {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(GateTcpGameServer.class);
 
 	private final Service<MinaServerConfig> service;
@@ -41,15 +43,16 @@ public class GateTcpGameServerHandler extends DefaultProtocolHandler {
 			UserSession userSession = UserSessionManager.getInstance().getUserSessionbyRoleId(rid);
 			if (userSession != null) {
 //				LOGGER.debug("{} bytes:{}", bytes.length, bytes);
-				//udp转发
-				if(userSession.getClientUdpSession()!=null){
-					if(ScriptManager.getInstance().getBaseScriptEntry().predicateScripts(IGateServerScript.class, (IGateServerScript script)->script.isUdpMsg(userSession.getServerType(),msgID))){
+				// udp转发
+				if (userSession.getClientUdpSession() != null) {
+					if (ScriptManager.getInstance().getBaseScriptEntry().predicateScripts(IGateServerScript.class,
+							(IGateServerScript script) -> script.isUdpMsg(userSession.getServerType(), msgID))) {
 						userSession.sendToClientUdp(Arrays.copyOfRange(bytes, 8, bytes.length));
 						return;
 					}
 				}
-				
-				//tcp返回
+
+				// tcp返回
 				userSession.sendToClient(Arrays.copyOfRange(bytes, 8, bytes.length)); // 前8字节为角色ID
 				return;
 			}
@@ -68,5 +71,4 @@ public class GateTcpGameServerHandler extends DefaultProtocolHandler {
 		super.sessionOpened(session);
 	}
 
-	
 }

@@ -6,7 +6,7 @@ import java.util.function.Consumer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.jzy.game.engine.redis.jedis.JedisManager;
+
 import com.jzy.game.engine.script.ScriptManager;
 import com.jzy.game.hall.script.IUserScript;
 import com.jzy.game.model.struct.User;
@@ -18,7 +18,9 @@ import com.jzy.game.model.struct.User;
  * @QQ 359135103 2017年7月7日 下午4:00:13
  */
 public class UserManager {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserManager.class);
+	
 	private static volatile UserManager userManager;
 
 	private UserManager() {

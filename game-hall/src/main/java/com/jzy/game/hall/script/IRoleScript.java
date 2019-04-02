@@ -28,7 +28,6 @@ public interface IRoleScript extends IScript {
 	 * @return
 	 */
 	public default Role createRole(long userId, Consumer<Role> roleConsumer) {
-
 		return null;
 	}
 	
