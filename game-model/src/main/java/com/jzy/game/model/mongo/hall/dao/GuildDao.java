@@ -1,7 +1,7 @@
 package com.jzy.game.model.mongo.hall.dao;
 
 import org.mongodb.morphia.dao.BasicDAO;
-import com.jzy.game.engine.mongo.AbsMongoManager;
+import com.jzy.game.engine.mongo.AbstractMongoManager;
 import com.jzy.game.model.struct.Guild;
 
 /**
@@ -13,11 +13,11 @@ import com.jzy.game.model.struct.Guild;
 public class GuildDao extends BasicDAO<Guild, Long>{
 	private static volatile GuildDao guildDao;
 
-	public GuildDao(AbsMongoManager mongoManager) {
+	public GuildDao(AbstractMongoManager mongoManager) {
 		super(Guild.class, mongoManager.getMongoClient(), mongoManager.getMorphia(), mongoManager.getMongoConfig().getDbName());
 	}
 	
-	public static GuildDao getDB(AbsMongoManager mongoManager) {
+	public static GuildDao getDB(AbstractMongoManager mongoManager) {
 		if(guildDao==null) {
 			synchronized (GuildDao.class) {
 				if(guildDao==null) {

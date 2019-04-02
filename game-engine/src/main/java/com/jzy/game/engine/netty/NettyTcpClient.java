@@ -33,6 +33,7 @@ import io.netty.util.concurrent.GlobalEventExecutor;
  * @QQ 359135103 2017年8月24日 下午8:13:14
  */
 public class NettyTcpClient implements Runnable {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(NettyTcpClient.class);
 
 	/** 配置 */
@@ -78,7 +79,6 @@ public class NettyTcpClient implements Runnable {
 	@Override
 	public void run() {
 		connect();
-
 	}
 
 	/**

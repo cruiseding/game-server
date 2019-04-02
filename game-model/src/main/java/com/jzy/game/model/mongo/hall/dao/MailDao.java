@@ -6,7 +6,7 @@ import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.dao.BasicDAO;
 import org.mongodb.morphia.query.Query;
 import org.mongodb.morphia.query.UpdateOperations;
-import com.jzy.game.engine.mongo.AbsMongoManager;
+import com.jzy.game.engine.mongo.AbstractMongoManager;
 import com.jzy.game.model.struct.Mail;
 import com.jzy.game.model.struct.Mail.MailState;
 import com.mongodb.WriteResult;
@@ -20,12 +20,12 @@ import com.mongodb.WriteResult;
 public class MailDao extends BasicDAO<Mail, Long> {
 	private static volatile MailDao mailDao;
 
-	public MailDao(AbsMongoManager mongoManager) {
+	public MailDao(AbstractMongoManager mongoManager) {
 		super(Mail.class, mongoManager.getMongoClient(), mongoManager.getMorphia(),
 				mongoManager.getMongoConfig().getDbName());
 	}
 
-	public static MailDao getDB(AbsMongoManager mongoManager) {
+	public static MailDao getDB(AbstractMongoManager mongoManager) {
 		if (mailDao == null) {
 			synchronized (MailDao.class) {
 				if (mailDao == null) {

@@ -5,7 +5,7 @@
  */
 package com.jzy.game.model.mongo.hall.dao;
 
-import com.jzy.game.engine.mongo.AbsMongoManager;
+import com.jzy.game.engine.mongo.AbstractMongoManager;
 import com.jzy.game.model.struct.Role;
 import org.mongodb.morphia.dao.BasicDAO;
 
@@ -19,12 +19,12 @@ public class RoleDao extends BasicDAO<Role, Long> {
 
 	private static volatile RoleDao roleDao;
 
-	private RoleDao(AbsMongoManager mongoManager) {
+	private RoleDao(AbstractMongoManager mongoManager) {
 		super(Role.class, mongoManager.getMongoClient(), mongoManager.getMorphia(),
 				mongoManager.getMongoConfig().getDbName());
 	}
 
-	public static RoleDao getDB(AbsMongoManager mongoManager) {
+	public static RoleDao getDB(AbstractMongoManager mongoManager) {
 		if (roleDao == null) {
 			synchronized (RoleDao.class) {
 				if (roleDao == null) {

@@ -18,10 +18,9 @@ import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
  * 2017年8月25日 上午9:28:47
  */
 public class DefaultClientChannelInitializer extends ChannelInitializer<SocketChannel> {
+	
 	protected final NettyClientService nettyClientService;
 	protected ServerInfo serverInfo;
-	
-	
 	
 	public DefaultClientChannelInitializer(NettyClientService nettyClientService, ServerInfo serverInfo) {
         this.nettyClientService = nettyClientService;

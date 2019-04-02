@@ -5,7 +5,7 @@
  */
 package com.jzy.game.model.mongo.hall.dao;
 
-import com.jzy.game.engine.mongo.AbsMongoManager;
+import com.jzy.game.engine.mongo.AbstractMongoManager;
 import com.jzy.game.model.struct.HallInfo;
 import org.mongodb.morphia.dao.BasicDAO;
 import org.mongodb.morphia.query.Query;
@@ -21,12 +21,12 @@ public class HallInfoDao extends BasicDAO<HallInfo, Integer> {
 
 	private static volatile HallInfoDao hallInfoDao;
 
-	private HallInfoDao(AbsMongoManager mongoManager) {
+	private HallInfoDao(AbstractMongoManager mongoManager) {
 		super(HallInfo.class, mongoManager.getMongoClient(), mongoManager.getMorphia(),
 				mongoManager.getMongoConfig().getDbName());
 	}
 
-	public static HallInfoDao getDB(AbsMongoManager mongoManager) {
+	public static HallInfoDao getDB(AbstractMongoManager mongoManager) {
 		if (hallInfoDao == null) {
 			synchronized (HallInfoDao.class) {
 				if (hallInfoDao == null) {

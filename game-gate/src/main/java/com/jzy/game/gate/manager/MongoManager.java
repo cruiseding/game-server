@@ -5,7 +5,7 @@
  */
 package com.jzy.game.gate.manager;
 
-import com.jzy.game.engine.mongo.AbsMongoManager;
+import com.jzy.game.engine.mongo.AbstractMongoManager;
 import com.jzy.game.model.mongo.hall.dao.HallInfoDao;
 import com.jzy.game.model.mongo.hall.dao.RoleDao;
 import com.jzy.game.model.mongo.hall.dao.UserDao;
@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
  * @author CruiseDing
  * @QQ 359135103
  */
-public class MongoManager extends AbsMongoManager {
+public class MongoManager extends AbstractMongoManager {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MongoManager.class);
     

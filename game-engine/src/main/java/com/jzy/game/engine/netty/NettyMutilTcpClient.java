@@ -17,17 +17,17 @@ import io.netty.channel.socket.SocketChannel;
  * netty多连接tcp，连接多个服务器
  * 
  * @author CruiseDing
- * @QQ 359135103
- * 2017年8月28日 下午1:52:40
+ * @QQ 359135103 2017年8月28日 下午1:52:40
  */
 public class NettyMutilTcpClient {
-	private static final Logger LOGGER=LoggerFactory.getLogger(NettyMutilTcpClient.class);
 	
-	private final Map<Integer, NettyTcpClient> tcpClients=new ConcurrentHashMap<>();
+	private static final Logger LOGGER = LoggerFactory.getLogger(NettyMutilTcpClient.class);
+
+	private final Map<Integer, NettyTcpClient> tcpClients = new ConcurrentHashMap<>();
 
 	public NettyMutilTcpClient() {
-    }
-	
+	}
+
 	/**
 	 * 添加客户端
 	 * 
@@ -35,14 +35,15 @@ public class NettyMutilTcpClient {
 	 * @param config
 	 * @param clientProtocolHandler
 	 */
-	public void addTcpClient(NettyClientService service, NettyClientConfig config, ChannelInitializer<SocketChannel> channelInitializer) {
+	public void addTcpClient(NettyClientService service, NettyClientConfig config,
+			ChannelInitializer<SocketChannel> channelInitializer) {
 		NettyTcpClient client = null;
 		if (tcpClients.containsKey(config.getId())) {
 			client = tcpClients.get(config.getId());
 			client.setNettyClientConfig(config);
 			return;
 		}
-		client = new NettyTcpClient(service, channelInitializer,config);
+		client = new NettyTcpClient(service, channelInitializer, config);
 //		new Thread(client).start();
 		tcpClients.put(config.getId(), client);
 	}
@@ -55,7 +56,7 @@ public class NettyMutilTcpClient {
 	 * @param clientProtocolHandler
 	 */
 	public void addTcpClient(NettyClientService service, NettyClientConfig config) {
-        addTcpClient(service, config, new DefaultClientChannelInitializer(service));
+		addTcpClient(service, config, new DefaultClientChannelInitializer(service));
 	}
 
 	public NettyTcpClient getTcpClient(Integer id) {
@@ -81,8 +82,7 @@ public class NettyMutilTcpClient {
 	/**
 	 * 向服务器发送数据
 	 *
-	 * @param sid
-	 *            客户端ID
+	 * @param sid 客户端ID
 	 * @param obj 消息
 	 * @return
 	 */
@@ -96,16 +96,15 @@ public class NettyMutilTcpClient {
 		}
 		return client.getService().sendMsg(obj);
 	}
-	
-	
+
 	/**
 	 * 监测服务器状态
+	 * 
 	 * @author CruiseDing
-	 * @QQ 359135103
-	 * 2017年8月28日 下午5:31:05
+	 * @QQ 359135103 2017年8月28日 下午5:31:05
 	 */
-	public void checkStatus(){
-		tcpClients.forEach((id,client)->client.checkStatus());
+	public void checkStatus() {
+		tcpClients.forEach((id, client) -> client.checkStatus());
 	}
 
 	public Map<Integer, NettyTcpClient> getTcpClients() {

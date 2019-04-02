@@ -5,17 +5,17 @@ package com.jzy.game.model.mongo.bydr.dao;
 
 import java.util.List;
 import org.mongodb.morphia.dao.BasicDAO;
-import com.jzy.game.engine.mongo.AbsMongoManager;
+import com.jzy.game.engine.mongo.AbstractMongoManager;
 import com.jzy.game.model.mongo.bydr.entity.CRoom;
 
 public class CRoomDao extends BasicDAO<CRoom, Integer> {
 	private static volatile CRoomDao cRoomDao;
 
-	public CRoomDao(AbsMongoManager mongoManager) {
+	public CRoomDao(AbstractMongoManager mongoManager) {
 		super(CRoom.class, mongoManager.getMongoClient(), mongoManager.getMorphia(),mongoManager.getMongoConfig().getDbName());
 	}
 
-	public static CRoomDao getDB(AbsMongoManager mongoManager) {
+	public static CRoomDao getDB(AbstractMongoManager mongoManager) {
 		if(cRoomDao == null) {
 			synchronized (CRoomDao.class){
 				if(cRoomDao == null){

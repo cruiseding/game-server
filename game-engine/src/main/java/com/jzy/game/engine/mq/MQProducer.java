@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
  * @QQ 359135103 2017年7月28日 上午10:38:30
  */
 public class MQProducer extends MQService {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(MQProducer.class);
 
 	public MQProducer(MQConfig mqConfig) {

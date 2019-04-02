@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.jzy.game.engine.util.FileUtils;
+import com.jzy.game.engine.util.StringUtils;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 
@@ -14,9 +15,9 @@ import com.mongodb.MongoClientURI;
  * @author CruiseDing
  * @date 2017-04-14 QQ:359135103
  */
-public abstract class AbsMongoManager {
+public abstract class AbstractMongoManager {
 
-    static Logger log = LoggerFactory.getLogger(AbsMongoManager.class);
+    static Logger log = LoggerFactory.getLogger(AbstractMongoManager.class);
 
     private MongoClient mongoClient;
     private Morphia morphia;
@@ -35,7 +36,7 @@ public abstract class AbsMongoManager {
         MongoClientURI uri = new MongoClientURI(mongoConfig.getUrl());
         mongoClient = new MongoClient(uri);
         morphia = new Morphia();
-        morphia.mapPackage("");
+        morphia.mapPackage(StringUtils.EMPTY);
 
         initDao();
     }

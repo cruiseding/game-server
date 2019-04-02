@@ -19,9 +19,11 @@ import com.jzy.game.engine.script.ScriptManager;
  * @QQ 359135103 2017年7月28日 上午10:37:44
  */
 public class MQConsumer extends MQService implements Runnable {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(MQConsumer.class);
 
 	private final String queueName; // 队列名称
+	
 	private boolean connected; // 是否连接
 
 	public MQConsumer(MQConfig mqConfig) {

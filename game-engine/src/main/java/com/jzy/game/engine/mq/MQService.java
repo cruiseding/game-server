@@ -15,7 +15,9 @@ import com.jzy.game.engine.util.FileUtils;
  * @QQ 359135103 2017年7月28日 下午1:31:13
  */
 public abstract class MQService {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(MQService.class);
+	
 	protected ActiveMQConnectionFactory activeMQConnectionFactory; // 连接工厂
 	protected Connection connection; // 连接
 	protected final MQConfig mqConfig; // 配置

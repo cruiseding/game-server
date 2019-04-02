@@ -5,7 +5,7 @@
  */
 package com.jzy.game.model.mongo.hall.dao;
 
-import com.jzy.game.engine.mongo.AbsMongoManager;
+import com.jzy.game.engine.mongo.AbstractMongoManager;
 import com.jzy.game.model.struct.User;
 import org.mongodb.morphia.dao.BasicDAO;
 import org.mongodb.morphia.query.Query;
@@ -20,11 +20,11 @@ public class UserDao extends BasicDAO<User, Long> {
 
     private static volatile UserDao userDao;
 
-    private UserDao(AbsMongoManager mongoManager) {
+    private UserDao(AbstractMongoManager mongoManager) {
         super(User.class, mongoManager.getMongoClient(), mongoManager.getMorphia(), mongoManager.getMongoConfig().getDbName());
     }
 
-    public static UserDao getDB(AbsMongoManager mongoManager) {
+    public static UserDao getDB(AbstractMongoManager mongoManager) {
         if (userDao == null) {
             synchronized (UserDao.class) {
                 if (userDao == null) {
