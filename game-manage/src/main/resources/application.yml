@@ -1,0 +1,14 @@
+userName:jzy
+password:111
+
+server
+   auth:daa0cf5b-e72d-422c-b278-450b28a702c6
+
+cluster
+   ip:127.0.0.1
+   port:8001
+   url:http://127.0.0.1:8001
+
+gate
+   websocket
+      port:8007 #网关websocket端口
