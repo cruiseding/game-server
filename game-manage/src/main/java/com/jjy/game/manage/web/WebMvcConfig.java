@@ -3,6 +3,7 @@ package com.jjy.game.manage.web;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +12,8 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfig;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerView;
-import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 import com.jjy.game.manage.interceptor.UserInterceptor;
 
@@ -21,6 +22,9 @@ import com.jjy.game.manage.interceptor.UserInterceptor;
 @ComponentScan("com.jjy.game.manage.controller")
 public class WebMvcConfig implements WebMvcConfigurer {
 	
+	@Autowired
+	private UserInterceptor userInterceptor;
+	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/assets/**").addResourceLocations("/assets/");
@@ -28,7 +32,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(getUserInterceptor()).addPathPatterns("/server/**", "/gm/**");
+		registry.addInterceptor(userInterceptor).addPathPatterns("/server/**", "/gm/**");
 	}
 	
 	@Override
@@ -50,9 +54,4 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		return new UserInterceptor();
 	}
 	
-	@Bean 
-	public FreeMarkerViewResolver getFreemarkerViewResolver() {
-		return new FreeMarkerViewResolver();
-	}
-
 }

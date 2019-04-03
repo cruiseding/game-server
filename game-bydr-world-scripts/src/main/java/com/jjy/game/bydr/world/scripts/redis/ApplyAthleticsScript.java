@@ -12,7 +12,7 @@ import com.jzy.game.model.redis.key.HallKey;
 import com.jzy.game.engine.redis.IPubSubScript;
 import com.jzy.game.engine.redis.jedis.JedisManager;
 import com.jzy.game.engine.redis.jedis.JedisPubSubMessage;
-import com.jzy.game.engine.util.JsonUtil;
+import com.jzy.game.engine.util.JsonUtils;
 
 /**
  * 申请竞技赛
@@ -49,7 +49,7 @@ public class ApplyAthleticsScript implements IPubSubScript {
 		
 		JedisPubSubMessage resMsg=new JedisPubSubMessage();
 		resMsg.setIds(team.getRoleIds());
-		resMsg.setJson(JsonUtil.toJSONString(team));
+		resMsg.setJson(JsonUtils.toJSONString(team));
 		resMsg.setServer(team.getServerId());
 		
 		//TODO 匹配完成后队伍是否还需要存在？删除队伍等操作......(玩家进入房间后，通知销毁)

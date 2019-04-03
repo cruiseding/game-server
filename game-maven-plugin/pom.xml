@@ -12,15 +12,15 @@
 	<name>game-plugin Maven Plugin</name>
 
 	<!-- FIXME change it to the project's website -->
-	<url>http://maven.apache.org</url>
+<!-- 	<url>http://maven.apache.org</url> -->
 
-	<repositories>
-		<repository>
-			<id>mvnrepository</id>
-			<name>mvnrepository</name>
-			<url>http://central.maven.org/maven2/</url>
-		</repository>
-	</repositories>
+<!-- 	<repositories> -->
+<!-- 		<repository> -->
+<!-- 			<id>mvnrepository</id> -->
+<!-- 			<name>mvnrepository</name> -->
+<!-- 			<url>http://central.maven.org/maven2/</url> -->
+<!-- 		</repository> -->
+<!-- 	</repositories> -->
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -76,15 +76,15 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-<!-- 			 	<plugin> -->
-<!-- 					<groupId>org.apache.maven.plugins</groupId> -->
-<!-- 					<artifactId>maven-plugin-plugin</artifactId> -->
-<!-- 					<version>3.5</version> -->
-<!-- 					<configuration> -->
-<!-- 						<goalPrefix>game</goalPrefix> -->
-<!-- 						<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound> -->
-<!-- 					</configuration> -->
-<!-- 				</plugin> -->
+			 	<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-plugin-plugin</artifactId>
+					<version>3.5</version>
+					<configuration>
+						<goalPrefix>game</goalPrefix>
+						<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+					</configuration>
+				</plugin>
 				<!-- 解除mina包引入错误 -->
 				<plugin>
 					<groupId>org.apache.felix</groupId>
