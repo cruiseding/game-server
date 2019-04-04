@@ -1,32 +1,23 @@
 
 
 server:
-   auth:daa0cf5b-e72d-422c-b278-450b28a702c6
+   auth: daa0cf5b-e72d-422c-b278-450b28a702c6
 
 cluster:
-   ip:127.0.0.1
-   port:8001
-   url:http://127.0.0.1:8001
+   ip: 127.0.0.1
+   port: 8001
+   url: http://127.0.0.1:8001
 
 gate:
    websocket:
-      port:8007 #网关websocket端口
+     port: 8007 #网关websocket端口
 
-spring:  
-    freemarker:
-      template-loader-path: /page/
-      charset: UTF-8
-      content-type: text/html
-      freemarkerSettings:
-         template_update_delay:5
-         locale:zh_CN
-
-#mongodb
 mongo:
    db:
-     host:mongodb://47.105.165.12:27017
-     databaseName:game-manage      
+     uri: mongodb://47.105.165.12:27017
+     databaseName: game-manage
+
 
 login:
-   userName:jzy
-   password:111
+   userName: jzy
+   password: 111

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import com.jjy.game.manage.constant.Constant;
 import com.jjy.game.manage.core.ext.DataStoreFactoryBean;
 import com.jjy.game.manage.core.ext.MorphiaFactoryBean;
 import com.mongodb.MongoClientOptions;
@@ -21,7 +22,7 @@ public class MongoConfig {
 	@Value("${mongo.db.databaseName}")
 	private String dbName;
 	
-	@Value("${mongo.db.host}")
+	@Value("${mongo.db.uri}")
 	private String uri;
 
 	@Bean("mongoOptions")
@@ -49,7 +50,7 @@ public class MongoConfig {
 	@Bean("morphia")
 	public MorphiaFactoryBean morphia() {
 		MorphiaFactoryBean mfb = new MorphiaFactoryBean();
-		String[] mapPackages = {"com.jjy.game.manage"};
+		String[] mapPackages = {Constant.MORPHIA_SCAN_PACKAGE};
 		mfb.setMapPackages(mapPackages);
 		return mfb;
 	}
