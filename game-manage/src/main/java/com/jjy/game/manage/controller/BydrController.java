@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 捕鱼达人
+ * 
  * @author CruiseDing
  * @QQ 359135103
  * @Date 2017/9/20 0020
@@ -16,25 +17,24 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/bydr")
 public class BydrController {
 
-    @Value("${cluster.url}")
-    private String clusterUrl;
+	@Value("${cluster.url}")
+	private String clusterUrl;
 
-    @Value("${gate.websocket.port}")
-    private int gateWebSocketPort;
+	@Value("${gate.websocket.port}")
+	private int gateWebSocketPort;
 
-    /**
-     * 客户端页面
-     * @return
-     */
-    @RequestMapping(value = "/client")
-    public ModelAndView client(){
-        //http://127.0.0.1:8001/server/gate/ip
-        String url = clusterUrl + "/server/gate/ip";
-        String urlGet = HttpUtils.URLGet(url);
-        String [] strs= urlGet.split(":");
-        //ws://127.0.0.1:8005/
-        String wsUrl="ws://"+strs[0]+":"+gateWebSocketPort;
-        //TODO 获取网关连接地址
-        return new ModelAndView("bydr-client","wsUrl",wsUrl);
-    }
+	/**
+	 * 客户端页面
+	 */
+	@RequestMapping(value = "/client")
+	public ModelAndView client() {
+		// http://127.0.0.1:8001/server/gate/ip
+		String url = clusterUrl + "/server/gate/ip";
+		String urlGet = HttpUtils.URLGet(url);
+		String[] strs = urlGet.split(":");
+		// ws://127.0.0.1:8005/
+		String wsUrl = "ws://" + strs[0] + ":" + gateWebSocketPort;
+		// TODO 获取网关连接地址
+		return new ModelAndView("bydr-client", "wsUrl", wsUrl);
+	}
 }

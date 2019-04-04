@@ -24,14 +24,16 @@ import com.jzy.game.engine.util.StringUtils;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+	
 	@Autowired
 	private UserService userService;
 
-	@Value("${userName}")
+	@Value("${login.userName}")
 	private String userName;
 
-	@Value("${password}")
+	@Value("${login.password}")
 	private String password;
 
 	/**

@@ -1,6 +1,4 @@
 
-userName:jzy
-password:111
 
 server:
    auth:daa0cf5b-e72d-422c-b278-450b28a702c6
@@ -16,6 +14,19 @@ gate:
 
 spring:  
     freemarker:
-      template-loader-path: classpath:/genCodeTemplateV1/
+      template-loader-path: /page/
       charset: UTF-8
       content-type: text/html
+      freemarkerSettings:
+         template_update_delay:5
+         locale:zh_CN
+
+#mongodb
+mongo:
+   db:
+     host:mongodb://47.105.165.12:27017
+     databaseName:game-manage      
+
+login:
+   userName:jzy
+   password:111

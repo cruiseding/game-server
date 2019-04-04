@@ -1,18 +1,33 @@
 package com.jjy.game.manage.web;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.validation.MessageCodesResolver;
+import org.springframework.validation.Validator;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
+import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+import org.springframework.web.servlet.HandlerExceptionResolver;
+import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
+import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.view.freemarker.FreeMarkerConfig;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerView;
 
 import com.jjy.game.manage.interceptor.UserInterceptor;
@@ -49,9 +64,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		registry.freeMarker().attributes(attributes);
 	}
 	
-	@Bean
-	public UserInterceptor getUserInterceptor() {
-		return new UserInterceptor();
-	}
+    @Bean(name = "multipartResolver")
+    public MultipartResolver multipartResolver(){
+	     CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+	     resolver.setDefaultEncoding("UTF-8");
+	     resolver.setResolveLazily(true);//resolveLazily属性启用是为了推迟文件解析，以在在UploadAction中捕获文件大小异常
+	     resolver.setMaxInMemorySize(4096);
+	     resolver.setMaxUploadSize(104857600);//上传文件大小 50M 50*1024*1024
+	     return resolver;
+    }   
 	
 }

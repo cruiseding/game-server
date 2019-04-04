@@ -18,8 +18,9 @@ import com.jzy.game.engine.util.HttpUtils;
  * @author CruiseDing
  * @QQ 359135103 2017年8月4日 下午5:05:36
  */
-@RequestMapping("/gm")
+
 @Controller
+@RequestMapping("/gm")
 public class GMController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(GMController.class);
 
